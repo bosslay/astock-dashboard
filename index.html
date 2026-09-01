@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>A-Stock Oracle · 选股看板</title>
+<meta name="theme-color" content="#0F172A">
+<!-- Vercel Analytics -->
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+  /* ── ui-ux-pro-max: Flat Design · slate dark · Inter · 移动端优先 ── */
+  :root {
+    --bg: #0F172A;
+    --card: #111827;
+    --muted: #1E293B;
+    --border: #334155;
+    --fg: #F8FAFC;
+    --muted-fg: #94A3B8;
+    --accent: #34D399;          /* 股票绿 (A股涨) */
+    --danger: #F87171;          /* A股跌 */
+    --info: #60A5FA;
+    --warn: #FBBF24;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg); color: var(--fg);
+    line-height: 1.5; min-height: 100vh;
+    padding: max(12px, env(safe-area-inset-top)) 12px max(24px, env(safe-area-inset-bottom));
+    overscroll-behavior: contain;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; }
+
+  header { display: flex; align-items: center; justify-content: space-between;
+           margin-bottom: 14px; }
+  header h1 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em;
+              display: flex; align-items: center; gap: 8px; }
+  .logo-dot { width: 10px; height: 10px; border-radius: 3px;
+              background: var(--accent); display: inline-block; }
+  .updated { font-size: 11px; color: var(--muted-fg);
+             font-variant-numeric: tabular-nums; }
+
+  /* 宏观状态条 */
+  .regime-bar {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 12px 14px; margin-bottom: 10px;
+  }
+  .regime-badge {
+    font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 8px;
+    background: rgba(52,211,153,.12); color: var(--accent); white-space: nowrap;
+  }
+  .regime-desc { font-size: 12px; color: var(--muted-fg); line-height: 1.4; }
+
+  /* 核心 KPI 卡 */
+  .kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+          margin-bottom: 10px; }
+  .kpi { background: var(--card); border: 1px solid var(--border);
+         border-radius: 12px; padding: 12px 14px; }
+  .kpi .label { font-size: 11px; color: var(--muted-fg); margin-bottom: 4px; }
+  .kpi .value { font-size: 22px; font-weight: 600; letter-spacing: -0.02em;
+                font-variant-numeric: tabular-nums; }
+  .kpi .sub { font-size: 11px; color: var(--muted-fg); margin-top: 2px; }
+  .up { color: var(--accent); }
+  .down { color: var(--danger); }
+  .flat { color: var(--info); }
+
+  .sec-title { font-size: 12px; font-weight: 600; color: var(--muted-fg);
+               text-transform: uppercase; letter-spacing: 0.06em;
+               margin: 18px 0 8px; display: flex; align-items: center;
+               gap: 8px; }
+  .sec-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* 信号格 (全球宏观) */
+  .signals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .signal { background: var(--muted); border-radius: 10px; padding: 9px 12px; }
+  .signal .s-label { font-size: 10px; color: var(--muted-fg); }
+  .signal .s-val { font-size: 14px; font-weight: 600; margin-top: 1px;
+                   font-variant-numeric: tabular-nums; }
+
+  /* ── 推荐时间轴 (荐股 != 买入) ── */
+  .timeline { position: relative; padding-left: 20px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 5px; top: 4px; bottom: 4px;
+    width: 2px; background: var(--border); border-radius: 1px;
+  }
+  .tl-item { position: relative; margin-bottom: 12px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -20px; top: 16px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--muted-fg); border: 2px solid var(--bg);
+  }
+  .tl-item.today::before { background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(52,211,153,.2); }
+  .tl-card { background: var(--card); border: 1px solid var(--border);
+             border-radius: 12px; padding: 12px 14px; }
+  .tl-item.today .tl-card {
+    border-color: rgba(52,211,153,.4);
+    background: linear-gradient(180deg, rgba(52,211,153,.06), var(--card));
+  }
+  .tl-head { display: flex; align-items: center; justify-content: space-between;
+             margin-bottom: 8px; }
+  .tl-date { font-size: 13px; font-weight: 600; }
+  .tl-date .tl-macro { font-size: 10px; color: var(--muted-fg); font-weight: 400;
+                       margin-left: 6px; }
+  .tl-badge { font-size: 10px; padding: 2px 8px; border-radius: 20px;
+              background: var(--muted); color: var(--muted-fg); }
+  .tl-item.today .tl-badge { background: rgba(52,211,153,.15); color: var(--accent); }
+  .tl-stocks { display: flex; flex-direction: column; gap: 6px; }
+  .tl-stock { display: flex; align-items: center; gap: 8px;
+              font-size: 12px; }
+  .tl-stock .s-name { font-weight: 500; flex-shrink: 0;
+    cursor: pointer; border-radius: 4px; padding: 1px 3px; margin-left: -3px;
+    transition: background .15s ease; }
+  .tl-stock .s-name:hover { background: rgba(52,211,153,.12); }
+  .tl-stock .s-name:active { background: rgba(52,211,153,.25); }
+  .tl-stock .s-name.copied { background: rgba(52,211,153,.25); color: var(--accent); }
+  .tl-stock .s-code { font-size: 10px; color: var(--muted-fg);
+                      font-variant-numeric: tabular-nums; }
+  .tl-stock .s-ind { font-size: 10px; color: var(--muted-fg); flex-shrink: 0; }
+  .tl-stock .s-price { margin-left: auto; color: var(--muted-fg);
+                       font-variant-numeric: tabular-nums; flex-shrink: 0; }
+  .tl-stock .s-score { font-size: 10px; color: var(--info); width: 52px;
+                       text-align: right; font-variant-numeric: tabular-nums;
+                       flex-shrink: 0; }
+  .tl-empty { color: var(--muted-fg); font-size: 12px; padding: 8px 0; }
+
+  /* 行业分布 */
+  .ind-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .ind-name { font-size: 12px; width: 72px; flex-shrink: 0; color: var(--fg); }
+  .ind-track { flex: 1; height: 8px; background: var(--muted);
+               border-radius: 4px; overflow: hidden; }
+  .ind-fill { height: 100%; border-radius: 4px; }
+  .ind-pct { font-size: 11px; color: var(--muted-fg); width: 44px; text-align: right;
+             font-variant-numeric: tabular-nums; }
+
+  /* 净值图 */
+  canvas { width: 100%; height: 170px; display: block; touch-action: pan-y; }
+  .legend { display: flex; gap: 14px; font-size: 11px; color: var(--muted-fg);
+            margin-top: 6px; }
+  .legend i { display: inline-block; width: 18px; height: 3px; border-radius: 2px;
+              margin-right: 5px; vertical-align: middle; }
+
+  .empty { color: var(--muted-fg); font-size: 12px; text-align: center;
+           padding: 20px 12px; border: 1px dashed var(--border); border-radius: 10px; }
+  @media (min-width: 640px) {
+    .wrap { max-width: 720px; }
+    .kpis { grid-template-columns: repeat(4, 1fr); }
+    .signals { grid-template-columns: repeat(3, 1fr); }
+    header h1 { font-size: 19px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1><span class="logo-dot"></span>A-Stock Oracle</h1>
+  <span class="updated" id="updated">—</span>
+</header>
+
+<!-- 宏观状态 -->
+<div class="regime-bar">
+  <span class="regime-badge" id="regime">—</span>
+  <span class="regime-desc" id="regime-desc"></span>
+</div>
+
+<!-- 核心 KPI -->
+<div class="kpis">
+  <div class="kpi"><div class="label">今日推荐</div>
+    <div class="value" id="k-count">—</div><div class="sub" id="k-count-sub"></div></div>
+  <div class="kpi"><div class="label">累计推荐</div>
+    <div class="value" id="k-total">—</div><div class="sub">0day 起</div></div>
+  <div class="kpi"><div class="label">宏观状态</div>
+    <div class="value" id="k-regime">—</div><div class="sub" id="k-regime-sub"></div></div>
+  <div class="kpi"><div class="label">覆盖行业</div>
+    <div class="value" id="k-ind">—</div><div class="sub">推荐标的</div></div>
+</div>
+
+<!-- 全球宏观信号 -->
+<div class="sec-title">全球宏观信号</div>
+<div class="signals" id="signals"></div>
+
+<!-- 推荐时间轴 -->
+<div class="sec-title">每日推荐</div>
+<div class="timeline" id="timeline"></div>
+
+<!-- 行业分布 -->
+<div class="sec-title">行业分布</div>
+<div id="industry"></div>
+
+</div>
+
+<script>
+const DATA_URL = new URL('dashboard_data.json', window.location.href).href;
+
+function fmtPct(v, d = 1) {
+  if (v == null || isNaN(v)) return '—';
+  return (v > 0 ? '+' : '') + Number(v).toFixed(d) + '%';
+}
+function cls(v) { return v > 0 ? 'up' : (v < 0 ? 'down' : 'flat'); }
+function fmtNum(v, d = 2) { return v == null ? '—' : Number(v).toFixed(d); }
+
+async function load() {
+  try {
+    const res = await fetch(DATA_URL, { cache: 'no-store' });
+    const d = await res.json();
+    render(d);
+  } catch (err) {
+    document.getElementById('updated').textContent = '加载失败';
+    document.getElementById('regime').textContent = 'ERR';
+    document.getElementById('regime-desc').textContent = err.message;
+  }
+}
+
+function render(d) {
+  document.getElementById('updated').textContent =
+    (d.generated_at || '').replace('T', ' ').slice(5, 16) || '—';
+  renderRegime(d.macro || {});
+  renderKpis(d.gate || {}, d.summary || {}, d.legacy || {});
+  renderSignals((d.macro || {}).signals || {});
+  renderTimeline((d.legacy || {}).history || []);
+  renderIndustry(d.industry_dist || {});
+}
+
+const REGIME_LABEL = {
+  risk_on: '进取', risk_off: '防守', transition: '观望',
+  accumulation: '左侧建仓', distribution: '右侧离场', unknown: '中性'
+};
+function renderRegime(m) {
+  const b = document.getElementById('regime');
+  const lbl = REGIME_LABEL[m.regime] || m.regime || '—';
+  b.textContent = lbl;
+  if (m.regime === 'risk_off' || m.regime === 'distribution') {
+    b.style.background = 'rgba(248,113,113,.12)'; b.style.color = '#F87171';
+  } else if (m.regime === 'risk_on' || m.regime === 'accumulation') {
+    b.style.background = 'rgba(52,211,153,.12)'; b.style.color = '#34D399';
+  } else {
+    b.style.background = 'rgba(96,165,250,.12)'; b.style.color = '#60A5FA';
+  }
+  const conf = m.confidence != null ? ` 置信 ${Math.round(m.confidence * 100)}%` : '';
+  document.getElementById('regime-desc').textContent =
+    (m.description || '') + conf;
+}
+
+function renderKpis(g, s, lg) {
+  const hist = (lg.history || []).slice().reverse();
+  const today = hist.find(h => h.date === d_today());
+
+  // 今日推荐
+  const todayRecs = today ? today.n_recs : 0;
+  document.getElementById('k-count').textContent = todayRecs || '—';
+  document.getElementById('k-count').className = 'value flat';
+  document.getElementById('k-count-sub').textContent =
+    today && today.macro_regime ? `宏观 ${REGIME_LABEL[today.macro_regime] || today.macro_regime}` : '';
+
+  // 累计推荐 (0day 起)
+  const total = (lg.history || []).reduce((n, h) => n + (h.n_recs || 0), 0);
+  document.getElementById('k-total').textContent = total || '—';
+  document.getElementById('k-total').className = 'value flat';
+
+  // 宏观状态 (今日)
+  const m = today && today.macro_regime;
+  const rEl = document.getElementById('k-regime');
+  rEl.textContent = REGIME_LABEL[m] || m || '—';
+  rEl.className = 'value ' + (m === 'risk_off' || m === 'distribution' ? 'down' :
+                              (m === 'risk_on' || m === 'accumulation' ? 'up' : 'flat'));
+  document.getElementById('k-regime-sub').textContent =
+    today && today.trade_date ? `基于 ${today.trade_date} 收盘` : '';
+
+  // 覆盖行业 (推荐标的行业去重数)
+  const inds = new Set();
+  (lg.history || []).forEach(h => (h.stocks || []).forEach(s => {
+    if (s.industry) inds.add(s.industry);
+  }));
+  document.getElementById('k-ind').textContent = inds.size || '—';
+  document.getElementById('k-ind').className = 'value flat';
+}
+
+function d_today() {
+  const now = new Date();
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
+  return `${now.getFullYear()}-${mm}-${dd}`;
+}
+
+const SIG_LABEL = {
+  fear_greed: '恐惧贪婪', yield_spread_10y2y_bp: '美债10Y-2Y',
+  vix: 'VIX', copper_gold_trend_20d: '铜金比20日',
+  dxy_trend_20d: '美元指数20日', cftc_copper_mm_change: 'CFTC铜持仓'
+};
+function renderSignals(sigs) {
+  const box = document.getElementById('signals');
+  const entries = Object.entries(sigs).filter(([k]) => SIG_LABEL[k]);
+  if (!entries.length) { box.innerHTML = '<div class="empty" style="grid-column:1/-1">暂无信号</div>'; return; }
+  box.innerHTML = entries.map(([k, v]) => {
+    const up = typeof v === 'number' && v > 0;
+    const txt = typeof v === 'number' ? (up ? '+' : '') + Number(v).toFixed(1) : v;
+    return `<div class="signal"><div class="s-label">${SIG_LABEL[k]}</div>
+      <div class="s-val ${typeof v === 'number' ? (up ? 'up' : 'down') : ''}">${txt}</div></div>`;
+  }).join('');
+}
+
+function renderTimeline(hist) {
+  const box = document.getElementById('timeline');
+  const items = hist.slice().reverse();   // 最新在前
+  if (!items.length) {
+    box.innerHTML = '<div class="empty" style="margin-left:-20px">暂无推荐记录 — 今日为首个交易日</div>';
+    return;
+  }
+  const today = d_today();
+  box.innerHTML = items.map(h => {
+    const isToday = h.date === today;
+    const macro = REGIME_LABEL[h.macro_regime] || '';
+    const stocks = (h.stocks || []);
+    // 当日最高分标红 (同分取第一只)
+    let bestIdx = -1, bestScore = -Infinity;
+    stocks.forEach((s, i) => {
+      if (s.score != null && s.score > bestScore) { bestScore = s.score; bestIdx = i; }
+    });
+    const rows = stocks.map((s, i) => {
+      const isBest = i === bestIdx;
+      const code = (s.symbol || '').replace(/\.(SS|SZ|BJ|SH)$/i, '');  // 复制纯代码
+      return `<div class="tl-stock">
+        <span class="s-name" data-code="${code}" ${isBest ? 'style="color:var(--danger);font-weight:700"' : ''} title="点击复制代码">${s.name || s.symbol}</span>
+        <span class="s-code">${s.symbol || ''}</span>
+        ${s.industry ? `<span class="s-ind">${s.industry}</span>` : ''}
+        <span class="s-price">${s.price != null ? '¥' + Number(s.price).toFixed(2) : ''}</span>
+        <span class="s-score" ${isBest ? 'style="color:var(--danger);font-weight:700"' : ''}>${s.score != null ? '分 ' + s.score : ''}</span>
+      </div>`;
+    }).join('');
+    return `<div class="tl-item ${isToday ? 'today' : ''}">
+      <div class="tl-card">
+        <div class="tl-head">
+          <span class="tl-date">${h.date}${macro ? `<span class="tl-macro">宏观 ${macro}</span>` : ''}</span>
+          <span class="tl-badge">${h.n_recs} 只${isToday ? ' · 今日' : ''}</span>
+        </div>
+        <div class="tl-stocks">${rows || '<div class="tl-empty">无推荐</div>'}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // 点击名称 -> 复制代码 (事件委托, 兼容动态渲染)
+  box.querySelectorAll('.s-name[data-code]').forEach(el => {
+    el.addEventListener('click', () => copyCode(el, el.dataset.code));
+  });
+}
+
+async function copyCode(el, code) {
+  if (!code) return;
+  let ok = false;
+  try {
+    // 现代 API (https/localhost)
+    await navigator.clipboard.writeText(code);
+    ok = true;
+  } catch (e) {
+    // 降级: 隐藏 textarea + execCommand (file:// 等场景)
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = code;
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (e2) { ok = false; }
+  }
+  if (!ok) return;
+  // 视觉反馈: 短暂绿色高亮
+  const orig = el.textContent;
+  el.classList.add('copied');
+  el.textContent = code + ' ✓';
+  setTimeout(() => { el.classList.remove('copied'); el.textContent = orig; }, 1200);
+}
+
+const IND_COLORS = ['#34D399','#60A5FA','#FBBF24','#F87171','#C084FC','#2DD4BF','#FB923C','#F472B6','#A3E635','#38BDF8'];
+function renderIndustry(dist) {
+  const box = document.getElementById('industry');
+  const entries = Object.entries(dist).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  if (!entries.length) { box.innerHTML = '<div class="empty">暂无数据</div>'; return; }
+  const total = entries.reduce((s, e) => s + e[1], 0) || 1;
+  box.innerHTML = entries.map(([ind, n], i) => `
+    <div class="ind-bar">
+      <span class="ind-name">${ind}</span>
+      <div class="ind-track"><div class="ind-fill" style="width:${(n / total * 100).toFixed(0)}%;background:${IND_COLORS[i % IND_COLORS.length]}"></div></div>
+      <span class="ind-pct">${n}只</span>
+    </div>`).join('');
+}
+
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
