@@ -223,6 +223,10 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <div class="sec-title">每日推荐</div>
 <div class="timeline" id="timeline"></div>
 
+<!-- 行业分布 -->
+<div class="sec-title">行业分布</div>
+<div id="industry"></div>
+
 <!-- 荐股回溯 -->
 <div class="sec-title">历史荐股回溯 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)">T+1/T+5/T+20 表现</span></div>
 <div id="backtest"></div>
@@ -258,6 +262,7 @@ function render(d) {
   renderKpis(d.gate || {}, d.summary || {}, d.legacy || {});
   renderSignals((d.macro || {}).signals || {});
   renderTimeline((d.legacy || {}).history || []);
+  renderIndustry(d.industry_dist || {});
   renderBacktest(d.backtest || {});
 }
 
@@ -470,6 +475,49 @@ async function copyCode(el, code) {
 }
 
 const IND_COLORS = ['#34D399','#60A5FA','#FBBF24','#F87171','#C084FC','#2DD4BF','#FB923C','#F472B6','#A3E635','#38BDF8'];
+
+// 独立行业分布模块 (饼图)
+function renderIndustry(dist) {
+  const box = document.getElementById('industry');
+  const entries = Object.entries(dist).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  if (!entries.length) { box.innerHTML = '<div class="empty">暂无数据</div>'; return; }
+  const total = entries.reduce((s, e) => s + e[1], 0) || 1;
+
+  box.innerHTML = `<div class="pie-wrap">
+    <div class="pie-box"><canvas id="pie-canvas" width="300" height="300"></canvas>
+      <div class="pie-center"><b>${total}</b><span>推荐标的</span></div></div>
+    <div class="pie-legend">${entries.map(([ind, n], i) => `
+      <div class="pie-li">
+        <span class="pie-dot" style="background:${IND_COLORS[i % IND_COLORS.length]}"></span>
+        <span class="pl-name">${ind}</span>
+        <span class="pl-val">${n}只 · ${(n / total * 100).toFixed(0)}%</span>
+      </div>`).join('')}
+    </div></div>`;
+
+  const cvs = document.getElementById('pie-canvas');
+  const dpr = window.devicePixelRatio || 1;
+  cvs.width = 300 * dpr; cvs.height = 300 * dpr;
+  cvs.style.width = '150px'; cvs.style.height = '150px';
+  const ctx = cvs.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const cx = 150, cy = 150, r = 130;
+  let start = -Math.PI / 2;
+  ctx.clearRect(0, 0, 300, 300);
+  entries.forEach(([ind, n], i) => {
+    const ang = n / total * Math.PI * 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, start, start + ang);
+    ctx.closePath();
+    ctx.fillStyle = IND_COLORS[i % IND_COLORS.length];
+    ctx.fill();
+    start += ang;
+  });
+  ctx.beginPath();
+  ctx.arc(cx, cy, 68, 0, Math.PI * 2);
+  ctx.fillStyle = '#111827';
+  ctx.fill();
+}
 
 function fmtRet(v) {
   if (v == null || isNaN(v)) return '—';
