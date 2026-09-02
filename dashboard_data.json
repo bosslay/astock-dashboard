@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-01T17:12:49",
+ "generated_at": "2026-09-02T10:58:19",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
@@ -10,34 +10,124 @@
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 3,
-  "covered_industries": 3,
+  "total_recommendations": 6,
+  "covered_industries": 4,
   "latest_macro": "risk_on",
-  "latest_trade_date": "2026-08-31"
+  "latest_trade_date": "2026-09-01"
  },
  "nav_curve": [],
  "holdings": [],
  "industry_dist": {
-  "电子器件": 1,
-  "软件开发": 1,
-  "生物制药": 1
+  "电子器件": 2,
+  "工业金属": 1,
+  "生物制药": 2,
+  "通信设备": 1
  },
  "macro": {
   "regime": "risk_on",
-  "confidence": 0.333,
+  "confidence": 0.5,
   "signals": {
-   "fear_greed": 47.4,
-   "fear_greed_rating": "neutral",
-   "copper_gold_trend_20d": -7.402190535794794,
-   "yield_spread_10y2y_bp": 102.59997844696045,
-   "vix": 15.65999984741211,
-   "dxy_trend_20d": -0.3053361768339258,
+   "fear_greed": 44.5714285714286,
+   "fear_greed_rating": "fear",
+   "copper_gold_trend_20d": -7.204917898625385,
+   "yield_spread_10y2y_bp": 102.39999294281006,
+   "vix": 16.34000015258789,
+   "dxy_trend_20d": 0.06519692087469942,
    "cftc_copper_mm_net": 76271.0,
    "cftc_copper_mm_change": -2377.0,
    "cftc_copper_as_of": "2026-08-25"
   },
   "source": "macro_detector+global_signals",
   "description": "强趋势向上，科技/周期领涨，宽广度好，风险偏好高 — 适合激进配置"
+ },
+ "backtest": {
+  "as_of": "2026-09-02",
+  "total_picks": 6,
+  "avg_t1": -2.82,
+  "avg_t5": null,
+  "avg_t20": null,
+  "win_rate_t1": 0.0,
+  "win_rate_t5": null,
+  "picks": [
+   {
+    "date": "2026-09-02",
+    "symbol": "002129.SZ",
+    "name": "TCL中环",
+    "industry": "电子器件",
+    "price": 9.82,
+    "score": 53.8,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "003040.SZ",
+    "name": "楚天龙",
+    "industry": "通信设备",
+    "price": 18.5,
+    "score": 52.2,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "002412.SZ",
+    "name": "汉森制药",
+    "industry": "生物制药",
+    "price": 13.13,
+    "score": 51.0,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "000725.SZ",
+    "name": "京东方Ａ",
+    "industry": "电子器件",
+    "price": 5.92,
+    "score": 49.1,
+    "t1": -1.86,
+    "t5": null,
+    "t20": null,
+    "excess_t1": -2.03,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "601212.SS",
+    "name": "白银有色",
+    "industry": "工业金属",
+    "price": 7.63,
+    "score": 50.8,
+    "t1": -5.04,
+    "t5": null,
+    "t20": null,
+    "excess_t1": -5.21,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "300142.SZ",
+    "name": "沃森生物",
+    "industry": "生物制药",
+    "price": 14.28,
+    "score": 47.3,
+    "t1": -1.54,
+    "t5": null,
+    "t20": null,
+    "excess_t1": -1.71,
+    "excess_t5": null
+   }
+  ]
  },
  "legacy": {
   "history": [
@@ -48,33 +138,70 @@
     "macro_regime": "risk_on",
     "industries": [
      "电子器件",
-     "软件开发",
+     "工业金属",
      "生物制药"
     ],
     "stocks": [
      {
-      "symbol": "603118.SS",
-      "name": "共进股份",
+      "symbol": "000725.SZ",
+      "name": "京东方Ａ",
       "industry": "电子器件",
-      "price": 17.73,
-      "score": 54.2,
+      "price": 5.92,
+      "score": 49.1,
+      "shares": 300
+     },
+     {
+      "symbol": "601212.SS",
+      "name": "白银有色",
+      "industry": "工业金属",
+      "price": 7.63,
+      "score": 50.8,
+      "shares": 200
+     },
+     {
+      "symbol": "300142.SZ",
+      "name": "沃森生物",
+      "industry": "生物制药",
+      "price": 14.28,
+      "score": 47.3,
+      "shares": 100
+     }
+    ]
+   },
+   {
+    "date": "2026-09-02",
+    "n_recs": 3,
+    "trade_date": "2026-09-01",
+    "macro_regime": "risk_on",
+    "industries": [
+     "电子器件",
+     "通信设备",
+     "生物制药"
+    ],
+    "stocks": [
+     {
+      "symbol": "002129.SZ",
+      "name": "TCL中环",
+      "industry": "电子器件",
+      "price": 9.82,
+      "score": 53.8,
+      "shares": 200
+     },
+     {
+      "symbol": "003040.SZ",
+      "name": "楚天龙",
+      "industry": "通信设备",
+      "price": 18.5,
+      "score": 52.2,
       "shares": 100
      },
      {
-      "symbol": "601360.SS",
-      "name": "三六零",
-      "industry": "软件开发",
-      "price": 9.3,
-      "score": 49.1,
-      "shares": 200
-     },
-     {
-      "symbol": "600664.SS",
-      "name": "哈药股份",
+      "symbol": "002412.SZ",
+      "name": "汉森制药",
       "industry": "生物制药",
-      "price": 9.0,
-      "score": 50.0,
-      "shares": 200
+      "price": 13.13,
+      "score": 51.0,
+      "shares": 100
      }
     ]
    }
@@ -82,8 +209,8 @@
   "performance_rows": [
    {
     "date": "2026-09-01",
-    "symbol": "603118.SS",
-    "name": "共进股份",
+    "symbol": "000725.SZ",
+    "name": "京东方Ａ",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
@@ -94,8 +221,8 @@
    },
    {
     "date": "2026-09-01",
-    "symbol": "601360.SS",
-    "name": "三六零",
+    "symbol": "601212.SS",
+    "name": "白银有色",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
@@ -106,8 +233,44 @@
    },
    {
     "date": "2026-09-01",
-    "symbol": "600664.SS",
-    "name": "哈药股份",
+    "symbol": "300142.SZ",
+    "name": "沃森生物",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "002129.SZ",
+    "name": "TCL中环",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "003040.SZ",
+    "name": "楚天龙",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "002412.SZ",
+    "name": "汉森制药",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,

@@ -139,6 +139,36 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
   .ind-pct { font-size: 11px; color: var(--muted-fg); width: 44px; text-align: right;
              font-variant-numeric: tabular-nums; }
 
+  /* 行业饼图 */
+  .pie-wrap { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .pie-box { position: relative; width: 150px; height: 150px; flex-shrink: 0; }
+  .pie-box canvas { width: 150px; height: 150px; }
+  .pie-center { position: absolute; inset: 0; display: flex; flex-direction: column;
+                align-items: center; justify-content: center; pointer-events: none; }
+  .pie-center b { font-size: 20px; font-weight: 700; }
+  .pie-center span { font-size: 10px; color: var(--muted-fg); }
+  .pie-legend { flex: 1; min-width: 160px; display: flex; flex-direction: column; gap: 4px; }
+  .pie-li { display: flex; align-items: center; gap: 6px; font-size: 11px; }
+  .pie-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+  .pie-li .pl-name { color: var(--muted-fg); }
+  .pie-li .pl-val { margin-left: auto; font-variant-numeric: tabular-nums; }
+
+  /* 回溯看板 */
+  .bt-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+  .bt-kpi { background: var(--muted); border-radius: 10px; padding: 8px 10px; text-align: center; }
+  .bt-kpi .bk-label { font-size: 10px; color: var(--muted-fg); }
+  .bt-kpi .bk-val { font-size: 16px; font-weight: 700; margin-top: 2px;
+                    font-variant-numeric: tabular-nums; }
+  .bt-kpi .bk-sub { font-size: 9px; color: var(--muted-fg); margin-top: 1px; }
+  .bt-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .bt-table th { text-align: left; color: var(--muted-fg); font-weight: 500;
+                 padding: 5px 6px; border-bottom: 1px solid var(--border); font-size: 10px; }
+  .bt-table td { padding: 5px 6px; border-bottom: 1px solid rgba(51,65,85,.4);
+                 font-variant-numeric: tabular-nums; }
+  .bt-table tr:last-child td { border-bottom: none; }
+  .bt-table .bt-name { font-weight: 500; }
+  .bt-table .bt-muted { color: var(--muted-fg); font-size: 10px; }
+
   /* 净值图 */
   canvas { width: 100%; height: 170px; display: block; touch-action: pan-y; }
   .legend { display: flex; gap: 14px; font-size: 11px; color: var(--muted-fg);
@@ -197,6 +227,10 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <div class="sec-title">行业分布</div>
 <div id="industry"></div>
 
+<!-- 荐股回溯 -->
+<div class="sec-title">历史荐股回溯 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)">T+1/T+5/T+20 表现</span></div>
+<div id="backtest"></div>
+
 </div>
 
 <script>
@@ -229,6 +263,7 @@ function render(d) {
   renderSignals((d.macro || {}).signals || {});
   renderTimeline((d.legacy || {}).history || []);
   renderIndustry(d.industry_dist || {});
+  renderBacktest(d.backtest || {});
 }
 
 const REGIME_LABEL = {
@@ -384,15 +419,93 @@ async function copyCode(el, code) {
 const IND_COLORS = ['#34D399','#60A5FA','#FBBF24','#F87171','#C084FC','#2DD4BF','#FB923C','#F472B6','#A3E635','#38BDF8'];
 function renderIndustry(dist) {
   const box = document.getElementById('industry');
-  const entries = Object.entries(dist).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  const entries = Object.entries(dist).sort((a, b) => b[1] - a[1]).slice(0, 8);
   if (!entries.length) { box.innerHTML = '<div class="empty">暂无数据</div>'; return; }
   const total = entries.reduce((s, e) => s + e[1], 0) || 1;
-  box.innerHTML = entries.map(([ind, n], i) => `
-    <div class="ind-bar">
-      <span class="ind-name">${ind}</span>
-      <div class="ind-track"><div class="ind-fill" style="width:${(n / total * 100).toFixed(0)}%;background:${IND_COLORS[i % IND_COLORS.length]}"></div></div>
-      <span class="ind-pct">${n}只</span>
-    </div>`).join('');
+
+  // 饼图容器
+  box.innerHTML = `<div class="pie-wrap">
+    <div class="pie-box"><canvas id="pie-canvas" width="300" height="300"></canvas>
+      <div class="pie-center"><b>${total}</b><span>推荐标的</span></div></div>
+    <div class="pie-legend">${entries.map(([ind, n], i) => `
+      <div class="pie-li">
+        <span class="pie-dot" style="background:${IND_COLORS[i % IND_COLORS.length]}"></span>
+        <span class="pl-name">${ind}</span>
+        <span class="pl-val">${n}只 · ${(n / total * 100).toFixed(0)}%</span>
+      </div>`).join('')}
+    </div></div>`;
+
+  // 绘制饼图
+  const cvs = document.getElementById('pie-canvas');
+  const dpr = window.devicePixelRatio || 1;
+  cvs.width = 300 * dpr; cvs.height = 300 * dpr;
+  cvs.style.width = '150px'; cvs.style.height = '150px';
+  const ctx = cvs.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const cx = 150, cy = 150, r = 130;
+  let start = -Math.PI / 2;
+  ctx.clearRect(0, 0, 300, 300);
+  entries.forEach(([ind, n], i) => {
+    const ang = n / total * Math.PI * 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, start, start + ang);
+    ctx.closePath();
+    ctx.fillStyle = IND_COLORS[i % IND_COLORS.length];
+    ctx.fill();
+    start += ang;
+  });
+  // 中心孔 (环形效果)
+  ctx.beginPath();
+  ctx.arc(cx, cy, 68, 0, Math.PI * 2);
+  ctx.fillStyle = '#111827';
+  ctx.fill();
+}
+
+function fmtRet(v) {
+  if (v == null || isNaN(v)) return '—';
+  return (v > 0 ? '+' : '') + Number(v).toFixed(2) + '%';
+}
+function retCls(v) { return v == null ? 'bt-muted' : (v > 0 ? 'up' : (v < 0 ? 'down' : 'bt-muted')); }
+
+function renderBacktest(bt) {
+  const box = document.getElementById('backtest');
+  const picks = (bt.picks || []).slice(0, 12);
+  if (!bt.total_picks) {
+    box.innerHTML = '<div class="empty">暂无回溯数据 — 推荐后将自动跟踪</div>';
+    return;
+  }
+  const kpi = (label, val, sub) => `
+    <div class="bt-kpi"><div class="bk-label">${label}</div>
+      <div class="bk-val ${retCls(val)}">${fmtRet(val)}</div>
+      <div class="bk-sub">${sub}</div></div>`;
+
+  // 胜率格式
+  const wr = (v) => v == null ? '—' : Math.round(v * 100) + '%';
+  const rows = picks.map(p => `
+    <tr>
+      <td class="bt-muted">${p.date}</td>
+      <td class="bt-name">${p.name || p.symbol}</td>
+      <td class="bt-muted">${p.industry || ''}</td>
+      <td class="${retCls(p.t1)}">${fmtRet(p.t1)}</td>
+      <td class="${retCls(p.t5)}">${fmtRet(p.t5)}</td>
+      <td class="${retCls(p.t20)}">${fmtRet(p.t20)}</td>
+    </tr>`).join('');
+
+  box.innerHTML = `
+    <div class="bt-kpis">
+      ${kpi('平均 T+1', bt.avg_t1, '胜率 ' + wr(bt.win_rate_t1))}
+      ${kpi('平均 T+5', bt.avg_t5, '胜率 ' + wr(bt.win_rate_t5))}
+      <div class="bt-kpi"><div class="bk-label">累计推荐</div>
+        <div class="bk-val flat">${bt.total_picks}</div>
+        <div class="bk-sub">截至 ${bt.as_of || ''}</div></div>
+    </div>
+    <div style="overflow-x:auto">
+    <table class="bt-table">
+      <tr><th>日期</th><th>标的</th><th>行业</th><th>T+1</th><th>T+5</th><th>T+20</th></tr>
+      ${rows}
+    </table></div>
+    ${picks.length < bt.total_picks ? `<div class="bt-muted" style="text-align:center;padding:6px 0">共 ${bt.total_picks} 条, 显示最近 ${picks.length} 条</div>` : ''}`;
 }
 
 load();
