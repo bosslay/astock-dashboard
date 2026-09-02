@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-02T10:58:19",
+ "generated_at": "2026-09-02T10:59:43",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
@@ -29,10 +29,10 @@
   "signals": {
    "fear_greed": 44.5714285714286,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -7.204917898625385,
+   "copper_gold_trend_20d": -7.158049757813312,
    "yield_spread_10y2y_bp": 102.39999294281006,
    "vix": 16.34000015258789,
-   "dxy_trend_20d": 0.06519692087469942,
+   "dxy_trend_20d": 0.060184127920970276,
    "cftc_copper_mm_net": 76271.0,
    "cftc_copper_mm_change": -2377.0,
    "cftc_copper_as_of": "2026-08-25"
