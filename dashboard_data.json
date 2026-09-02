@@ -1,1066 +1,288 @@
 {
- "generated_at": "2026-09-02T09:12:50+08:00",
- "mode": "portfolio_bh",
+ "generated_at": "2026-09-02T12:31:46",
+ "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 12.651,
+  "pool_index": 12.625,
   "ma30": 11.009,
-  "as_of": "2026-09-02 09:12"
+  "as_of": "2026-08-28",
+  "snapshot_missing": false
  },
  "summary": {
-  "n_holdings": 40,
-  "median_change_pct": 11.7,
-  "winners": 26,
-  "backtest_ref": {
-   "bh_pct": 128.8,
-   "bh_mdd_pct": 22.1,
-   "gated_ma30_pct": 84.7,
-   "gated_mdd_pct": 13.7,
-   "sse_pct": 38.9
-  }
+  "total_recommendations": 6,
+  "covered_industries": 3,
+  "latest_macro": "risk_on",
+  "latest_trade_date": "2026-09-01"
  },
- "nav_curve": [
-  {
-   "date": "2026-02-02",
-   "pool": 100.0,
-   "sse": 100.0
-  },
-  {
-   "date": "2026-02-03",
-   "pool": 102.48,
-   "sse": 101.29
-  },
-  {
-   "date": "2026-02-04",
-   "pool": 101.55,
-   "sse": 102.15
-  },
-  {
-   "date": "2026-02-05",
-   "pool": 99.11,
-   "sse": 101.5
-  },
-  {
-   "date": "2026-02-06",
-   "pool": 98.52,
-   "sse": 101.24
-  },
-  {
-   "date": "2026-02-09",
-   "pool": 101.98,
-   "sse": 102.67
-  },
-  {
-   "date": "2026-02-10",
-   "pool": 101.35,
-   "sse": 102.8
-  },
-  {
-   "date": "2026-02-11",
-   "pool": 101.62,
-   "sse": 102.89
-  },
-  {
-   "date": "2026-02-12",
-   "pool": 102.37,
-   "sse": 102.95
-  },
-  {
-   "date": "2026-02-13",
-   "pool": 101.25,
-   "sse": 101.65
-  },
-  {
-   "date": "2026-02-24",
-   "pool": 103.83,
-   "sse": 102.53
-  },
-  {
-   "date": "2026-02-25",
-   "pool": 105.31,
-   "sse": 103.27
-  },
-  {
-   "date": "2026-02-26",
-   "pool": 106.04,
-   "sse": 103.26
-  },
-  {
-   "date": "2026-02-27",
-   "pool": 108.16,
-   "sse": 103.66
-  },
-  {
-   "date": "2026-03-02",
-   "pool": 107.37,
-   "sse": 104.15
-  },
-  {
-   "date": "2026-03-03",
-   "pool": 102.71,
-   "sse": 102.66
-  },
-  {
-   "date": "2026-03-04",
-   "pool": 101.87,
-   "sse": 101.66
-  },
-  {
-   "date": "2026-03-05",
-   "pool": 102.26,
-   "sse": 102.31
-  },
-  {
-   "date": "2026-03-06",
-   "pool": 103.53,
-   "sse": 102.7
-  },
-  {
-   "date": "2026-03-09",
-   "pool": 104.53,
-   "sse": 102.01
-  },
-  {
-   "date": "2026-03-10",
-   "pool": 106.04,
-   "sse": 102.67
-  },
-  {
-   "date": "2026-03-11",
-   "pool": 106.01,
-   "sse": 102.93
-  },
-  {
-   "date": "2026-03-12",
-   "pool": 105.45,
-   "sse": 102.82
-  },
-  {
-   "date": "2026-03-13",
-   "pool": 103.11,
-   "sse": 101.98
-  },
-  {
-   "date": "2026-03-16",
-   "pool": 103.64,
-   "sse": 101.72
-  },
-  {
-   "date": "2026-03-17",
-   "pool": 101.45,
-   "sse": 100.85
-  },
-  {
-   "date": "2026-03-18",
-   "pool": 102.34,
-   "sse": 101.18
-  },
-  {
-   "date": "2026-03-19",
-   "pool": 99.94,
-   "sse": 99.77
-  },
-  {
-   "date": "2026-03-20",
-   "pool": 97.0,
-   "sse": 98.54
-  },
-  {
-   "date": "2026-03-23",
-   "pool": 91.83,
-   "sse": 94.96
-  },
-  {
-   "date": "2026-03-24",
-   "pool": 94.58,
-   "sse": 96.65
-  },
-  {
-   "date": "2026-03-25",
-   "pool": 97.15,
-   "sse": 97.91
-  },
-  {
-   "date": "2026-03-26",
-   "pool": 95.15,
-   "sse": 96.85
-  },
-  {
-   "date": "2026-03-27",
-   "pool": 96.29,
-   "sse": 97.46
-  },
-  {
-   "date": "2026-03-30",
-   "pool": 96.73,
-   "sse": 97.7
-  },
-  {
-   "date": "2026-03-31",
-   "pool": 95.24,
-   "sse": 96.91
-  },
-  {
-   "date": "2026-04-01",
-   "pool": 96.73,
-   "sse": 98.33
-  },
-  {
-   "date": "2026-04-02",
-   "pool": 94.63,
-   "sse": 97.6
-  },
-  {
-   "date": "2026-04-03",
-   "pool": 92.93,
-   "sse": 96.62
-  },
-  {
-   "date": "2026-04-07",
-   "pool": 94.64,
-   "sse": 96.87
-  },
-  {
-   "date": "2026-04-08",
-   "pool": 100.09,
-   "sse": 99.48
-  },
-  {
-   "date": "2026-04-09",
-   "pool": 98.83,
-   "sse": 98.77
-  },
-  {
-   "date": "2026-04-10",
-   "pool": 98.47,
-   "sse": 99.26
-  },
-  {
-   "date": "2026-04-13",
-   "pool": 99.07,
-   "sse": 99.32
-  },
-  {
-   "date": "2026-04-14",
-   "pool": 100.65,
-   "sse": 100.27
-  },
-  {
-   "date": "2026-04-15",
-   "pool": 99.66,
-   "sse": 100.29
-  },
-  {
-   "date": "2026-04-16",
-   "pool": 100.81,
-   "sse": 100.99
-  },
-  {
-   "date": "2026-04-17",
-   "pool": 101.1,
-   "sse": 100.89
-  },
-  {
-   "date": "2026-04-20",
-   "pool": 102.84,
-   "sse": 101.65
-  },
-  {
-   "date": "2026-04-21",
-   "pool": 101.55,
-   "sse": 101.73
-  },
-  {
-   "date": "2026-04-22",
-   "pool": 103.53,
-   "sse": 102.25
-  },
-  {
-   "date": "2026-04-23",
-   "pool": 101.64,
-   "sse": 101.93
-  },
-  {
-   "date": "2026-04-24",
-   "pool": 100.27,
-   "sse": 101.6
-  },
-  {
-   "date": "2026-04-27",
-   "pool": 99.49,
-   "sse": 101.76
-  },
-  {
-   "date": "2026-04-28",
-   "pool": 98.48,
-   "sse": 101.57
-  },
-  {
-   "date": "2026-04-29",
-   "pool": 100.18,
-   "sse": 102.29
-  },
-  {
-   "date": "2026-04-30",
-   "pool": 99.2,
-   "sse": 102.4
-  },
-  {
-   "date": "2026-05-06",
-   "pool": 103.28,
-   "sse": 103.6
-  },
-  {
-   "date": "2026-05-07",
-   "pool": 105.43,
-   "sse": 104.09
-  },
-  {
-   "date": "2026-05-08",
-   "pool": 105.4,
-   "sse": 104.09
-  },
-  {
-   "date": "2026-05-11",
-   "pool": 107.52,
-   "sse": 105.21
-  },
-  {
-   "date": "2026-05-12",
-   "pool": 107.63,
-   "sse": 104.95
-  },
-  {
-   "date": "2026-05-13",
-   "pool": 110.07,
-   "sse": 105.65
-  },
-  {
-   "date": "2026-05-14",
-   "pool": 106.81,
-   "sse": 104.04
-  },
-  {
-   "date": "2026-05-15",
-   "pool": 103.77,
-   "sse": 102.98
-  },
-  {
-   "date": "2026-05-18",
-   "pool": 103.28,
-   "sse": 102.88
-  },
-  {
-   "date": "2026-05-19",
-   "pool": 104.25,
-   "sse": 103.83
-  },
-  {
-   "date": "2026-05-20",
-   "pool": 102.52,
-   "sse": 103.65
-  },
-  {
-   "date": "2026-05-21",
-   "pool": 98.78,
-   "sse": 101.53
-  },
-  {
-   "date": "2026-05-22",
-   "pool": 101.69,
-   "sse": 102.42
-  },
-  {
-   "date": "2026-05-25",
-   "pool": 102.96,
-   "sse": 103.41
-  },
-  {
-   "date": "2026-05-26",
-   "pool": 103.33,
-   "sse": 103.23
-  },
-  {
-   "date": "2026-05-27",
-   "pool": 101.29,
-   "sse": 101.94
-  },
-  {
-   "date": "2026-05-28",
-   "pool": 102.68,
-   "sse": 102.06
-  },
-  {
-   "date": "2026-05-29",
-   "pool": 101.66,
-   "sse": 101.32
-  },
-  {
-   "date": "2026-06-01",
-   "pool": 101.6,
-   "sse": 101.05
-  },
-  {
-   "date": "2026-06-02",
-   "pool": 102.6,
-   "sse": 101.48
-  },
-  {
-   "date": "2026-06-03",
-   "pool": 103.23,
-   "sse": 101.7
-  },
-  {
-   "date": "2026-06-04",
-   "pool": 102.01,
-   "sse": 101.05
-  },
-  {
-   "date": "2026-06-05",
-   "pool": 100.71,
-   "sse": 100.3
-  },
-  {
-   "date": "2026-06-08",
-   "pool": 96.39,
-   "sse": 98.6
-  },
-  {
-   "date": "2026-06-09",
-   "pool": 99.01,
-   "sse": 99.86
-  },
-  {
-   "date": "2026-06-10",
-   "pool": 98.37,
-   "sse": 99.44
-  },
-  {
-   "date": "2026-06-11",
-   "pool": 97.83,
-   "sse": 99.28
-  },
-  {
-   "date": "2026-06-12",
-   "pool": 99.65,
-   "sse": 100.39
-  },
-  {
-   "date": "2026-06-15",
-   "pool": 103.22,
-   "sse": 102.01
-  },
-  {
-   "date": "2026-06-16",
-   "pool": 105.27,
-   "sse": 101.9
-  },
-  {
-   "date": "2026-06-17",
-   "pool": 106.85,
-   "sse": 102.3
-  },
-  {
-   "date": "2026-06-18",
-   "pool": 107.78,
-   "sse": 101.86
-  },
-  {
-   "date": "2026-06-22",
-   "pool": 112.37,
-   "sse": 103.67
-  },
-  {
-   "date": "2026-06-23",
-   "pool": 108.95,
-   "sse": 102.25
-  },
-  {
-   "date": "2026-06-24",
-   "pool": 109.26,
-   "sse": 102.37
-  },
-  {
-   "date": "2026-06-25",
-   "pool": 110.06,
-   "sse": 102.6
-  },
-  {
-   "date": "2026-06-26",
-   "pool": 106.81,
-   "sse": 100.29
-  },
-  {
-   "date": "2026-06-29",
-   "pool": 106.4,
-   "sse": 101.45
-  },
-  {
-   "date": "2026-06-30",
-   "pool": 107.8,
-   "sse": 101.96
-  },
-  {
-   "date": "2026-07-01",
-   "pool": 109.65,
-   "sse": 102.41
-  },
-  {
-   "date": "2026-07-02",
-   "pool": 107.21,
-   "sse": 100.33
-  },
-  {
-   "date": "2026-07-03",
-   "pool": 105.89,
-   "sse": 100.69
-  },
-  {
-   "date": "2026-07-06",
-   "pool": 103.4,
-   "sse": 100.63
-  },
-  {
-   "date": "2026-07-07",
-   "pool": 101.0,
-   "sse": 99.36
-  },
-  {
-   "date": "2026-07-08",
-   "pool": 99.03,
-   "sse": 98.88
-  },
-  {
-   "date": "2026-07-09",
-   "pool": 101.16,
-   "sse": 100.52
-  },
-  {
-   "date": "2026-07-10",
-   "pool": 101.12,
-   "sse": 99.51
-  },
-  {
-   "date": "2026-07-13",
-   "pool": 96.55,
-   "sse": 97.46
-  },
-  {
-   "date": "2026-07-14",
-   "pool": 98.2,
-   "sse": 98.79
-  },
-  {
-   "date": "2026-07-15",
-   "pool": 96.42,
-   "sse": 98.5
-  },
-  {
-   "date": "2026-07-16",
-   "pool": 94.39,
-   "sse": 96.68
-  },
-  {
-   "date": "2026-07-17",
-   "pool": 89.96,
-   "sse": 93.73
-  },
-  {
-   "date": "2026-07-20",
-   "pool": 87.97,
-   "sse": 94.53
-  },
-  {
-   "date": "2026-07-21",
-   "pool": 91.12,
-   "sse": 96.23
-  },
-  {
-   "date": "2026-07-22",
-   "pool": 91.47,
-   "sse": 96.3
-  },
-  {
-   "date": "2026-07-23",
-   "pool": 92.6,
-   "sse": 96.54
-  },
-  {
-   "date": "2026-07-24",
-   "pool": 88.71,
-   "sse": 94.98
-  },
-  {
-   "date": "2026-07-27",
-   "pool": 91.4,
-   "sse": 96.08
-  },
-  {
-   "date": "2026-07-28",
-   "pool": 89.64,
-   "sse": 94.96
-  },
-  {
-   "date": "2026-07-29",
-   "pool": 89.04,
-   "sse": 95.34
-  },
-  {
-   "date": "2026-07-30",
-   "pool": 86.56,
-   "sse": 94.74
-  },
-  {
-   "date": "2026-07-31",
-   "pool": 90.06,
-   "sse": 95.43
-  },
-  {
-   "date": "2026-08-03",
-   "pool": 89.68,
-   "sse": 94.87
-  },
-  {
-   "date": "2026-08-04",
-   "pool": 92.82,
-   "sse": 95.18
-  },
-  {
-   "date": "2026-08-05",
-   "pool": 96.29,
-   "sse": 96.58
-  },
-  {
-   "date": "2026-08-06",
-   "pool": 97.71,
-   "sse": 97.13
-  },
-  {
-   "date": "2026-08-07",
-   "pool": 100.79,
-   "sse": 98.11
-  },
-  {
-   "date": "2026-08-10",
-   "pool": 101.36,
-   "sse": 98.78
-  },
-  {
-   "date": "2026-08-11",
-   "pool": 101.04,
-   "sse": 97.97
-  },
-  {
-   "date": "2026-08-12",
-   "pool": 102.85,
-   "sse": 98.28
-  },
-  {
-   "date": "2026-08-13",
-   "pool": 102.14,
-   "sse": 97.79
-  },
-  {
-   "date": "2026-08-14",
-   "pool": 103.09,
-   "sse": 97.79
-  },
-  {
-   "date": "2026-08-17",
-   "pool": 106.82,
-   "sse": 99.18
-  },
-  {
-   "date": "2026-08-18",
-   "pool": 106.49,
-   "sse": 99.37
-  },
-  {
-   "date": "2026-08-19",
-   "pool": 101.57,
-   "sse": 96.98
-  },
-  {
-   "date": "2026-08-20",
-   "pool": 102.92,
-   "sse": 97.21
-  },
-  {
-   "date": "2026-08-21",
-   "pool": 104.95,
-   "sse": 97.25
-  },
-  {
-   "date": "2026-08-24",
-   "pool": 104.52,
-   "sse": 96.67
-  },
-  {
-   "date": "2026-08-25",
-   "pool": 105.53,
-   "sse": 96.85
-  },
-  {
-   "date": "2026-08-26",
-   "pool": 108.33,
-   "sse": 97.43
-  },
-  {
-   "date": "2026-08-27",
-   "pool": 112.44,
-   "sse": 98.53
-  },
-  {
-   "date": "2026-08-28",
-   "pool": 112.87,
-   "sse": 98.42
-  }
- ],
- "holdings": [
-  {
-   "symbol": "600664.SS",
-   "name": "哈药股份",
-   "industry": "化学制药",
-   "entry_price": 3.52,
-   "last_close": 9.49,
-   "change_pct": 169.6
-  },
-  {
-   "symbol": "600172.SS",
-   "name": "黄河旋风",
-   "industry": "通用设备",
-   "entry_price": 6.33,
-   "last_close": 14.64,
-   "change_pct": 131.3
-  },
-  {
-   "symbol": "600722.SS",
-   "name": "金牛化工",
-   "industry": "化学原料",
-   "entry_price": 7.9,
-   "last_close": 18.06,
-   "change_pct": 128.6
-  },
-  {
-   "symbol": "600397.SS",
-   "name": "江钨装备",
-   "industry": "?",
-   "entry_price": 9.8,
-   "last_close": 18.69,
-   "change_pct": 90.7
-  },
-  {
-   "symbol": "600186.SS",
-   "name": "莲花控股",
-   "industry": "调味发酵品Ⅱ",
-   "entry_price": 6.26,
-   "last_close": 11.63,
-   "change_pct": 85.8
-  },
-  {
-   "symbol": "600127.SS",
-   "name": "金健米业",
-   "industry": "农产品加工",
-   "entry_price": 7.14,
-   "last_close": 13.24,
-   "change_pct": 85.4
-  },
-  {
-   "symbol": "603002.SS",
-   "name": "宏昌电子",
-   "industry": "?",
-   "entry_price": 9.2,
-   "last_close": 16.75,
-   "change_pct": 82.2
-  },
-  {
-   "symbol": "600613.SS",
-   "name": "神奇制药",
-   "industry": "化学制药",
-   "entry_price": 6.22,
-   "last_close": 11.16,
-   "change_pct": 79.4
-  },
-  {
-   "symbol": "002412.SZ",
-   "name": "汉森制药",
-   "industry": "?",
-   "entry_price": 6.46,
-   "last_close": 11.16,
-   "change_pct": 72.8
-  },
-  {
-   "symbol": "600667.SS",
-   "name": "太极实业",
-   "industry": "?",
-   "entry_price": 10.74,
-   "last_close": 18.52,
-   "change_pct": 72.4
-  },
-  {
-   "symbol": "600110.SS",
-   "name": "诺德股份",
-   "industry": "电池",
-   "entry_price": 6.95,
-   "last_close": 11.91,
-   "change_pct": 71.4
-  },
-  {
-   "symbol": "002015.SZ",
-   "name": "协鑫能科",
-   "industry": "电力",
-   "entry_price": 10.39,
-   "last_close": 17.42,
-   "change_pct": 67.6
-  },
-  {
-   "symbol": "603118.SS",
-   "name": "共进股份",
-   "industry": "通信设备",
-   "entry_price": 11.87,
-   "last_close": 17.91,
-   "change_pct": 50.9
-  },
-  {
-   "symbol": "600869.SS",
-   "name": "远东股份",
-   "industry": "电网设备",
-   "entry_price": 12.3,
-   "last_close": 17.73,
-   "change_pct": 44.1
-  },
-  {
-   "symbol": "600721.SS",
-   "name": "百花医药",
-   "industry": "医疗服务",
-   "entry_price": 9.16,
-   "last_close": 13.19,
-   "change_pct": 44.0
-  },
-  {
-   "symbol": "000725.SZ",
-   "name": "京东方Ａ",
-   "industry": "光学光电子",
-   "entry_price": 4.26,
-   "last_close": 5.91,
-   "change_pct": 38.6
-  },
-  {
-   "symbol": "002437.SZ",
-   "name": "誉衡药业",
-   "industry": "化学制药",
-   "entry_price": 3.4,
-   "last_close": 4.35,
-   "change_pct": 27.9
-  },
-  {
-   "symbol": "002418.SZ",
-   "name": "康盛股份",
-   "industry": "?",
-   "entry_price": 4.76,
-   "last_close": 5.68,
-   "change_pct": 19.3
-  },
-  {
-   "symbol": "601398.SS",
-   "name": "工商银行",
-   "industry": "?",
-   "entry_price": 7.09,
-   "last_close": 8.15,
-   "change_pct": 14.9
-  },
-  {
-   "symbol": "002185.SZ",
-   "name": "华天科技",
-   "industry": "半导体",
-   "entry_price": 14.58,
-   "last_close": 16.52,
-   "change_pct": 13.3
-  },
-  {
-   "symbol": "300142.SZ",
-   "name": "沃森生物",
-   "industry": "生物制品",
-   "entry_price": 12.38,
-   "last_close": 13.62,
-   "change_pct": 10.0
-  },
-  {
-   "symbol": "600103.SS",
-   "name": "青山纸业",
-   "industry": "?",
-   "entry_price": 3.81,
-   "last_close": 4.19,
-   "change_pct": 9.9
-  },
-  {
-   "symbol": "003040.SZ",
-   "name": "楚天龙",
-   "industry": "?",
-   "entry_price": 17.94,
-   "last_close": 19.58,
-   "change_pct": 9.1
-  },
-  {
-   "symbol": "600601.SS",
-   "name": "方正科技",
-   "industry": "元件",
-   "entry_price": 11.33,
-   "last_close": 12.27,
-   "change_pct": 8.3
-  },
-  {
-   "symbol": "002129.SZ",
-   "name": "TCL中环",
-   "industry": "?",
-   "entry_price": 9.38,
-   "last_close": 9.57,
-   "change_pct": 2.0
-  },
-  {
-   "symbol": "601166.SS",
-   "name": "兴业银行",
-   "industry": "?",
-   "entry_price": 17.65,
-   "last_close": 17.95,
-   "change_pct": 1.7
-  },
-  {
-   "symbol": "300189.SZ",
-   "name": "神农种业",
-   "industry": "种植业",
-   "entry_price": 7.75,
-   "last_close": 7.55,
-   "change_pct": -2.6
-  },
-  {
-   "symbol": "300017.SZ",
-   "name": "网宿科技",
-   "industry": "IT服务Ⅱ",
-   "entry_price": 16.97,
-   "last_close": 16.39,
-   "change_pct": -3.4
-  },
-  {
-   "symbol": "000630.SZ",
-   "name": "铜陵有色",
-   "industry": "工业金属",
-   "entry_price": 7.39,
-   "last_close": 6.67,
-   "change_pct": -9.7
-  },
-  {
-   "symbol": "600095.SS",
-   "name": "湘财股份",
-   "industry": "?",
-   "entry_price": 11.0,
-   "last_close": 9.83,
-   "change_pct": -10.6
-  },
-  {
-   "symbol": "603993.SS",
-   "name": "洛阳钼业",
-   "industry": "工业金属",
-   "entry_price": 21.61,
-   "last_close": 19.06,
-   "change_pct": -11.8
-  },
-  {
-   "symbol": "300059.SZ",
-   "name": "东方财富",
-   "industry": "证券Ⅱ",
-   "entry_price": 22.51,
-   "last_close": 19.4,
-   "change_pct": -13.8
-  },
-  {
-   "symbol": "000878.SZ",
-   "name": "云南铜业",
-   "industry": "?",
-   "entry_price": 23.64,
-   "last_close": 17.68,
-   "change_pct": -25.2
-  },
-  {
-   "symbol": "601360.SS",
-   "name": "三六零",
-   "industry": "?",
-   "entry_price": 12.5,
-   "last_close": 9.27,
-   "change_pct": -25.8
-  },
-  {
-   "symbol": "000592.SZ",
-   "name": "平潭发展",
-   "industry": "?",
-   "entry_price": 10.3,
-   "last_close": 6.97,
-   "change_pct": -32.3
-  },
-  {
-   "symbol": "300170.SZ",
-   "name": "汉得信息",
-   "industry": "?",
-   "entry_price": 26.73,
-   "last_close": 17.23,
-   "change_pct": -35.6
-  },
-  {
-   "symbol": "002716.SZ",
-   "name": "湖南白银",
-   "industry": "贵金属",
-   "entry_price": 17.14,
-   "last_close": 10.85,
-   "change_pct": -36.7
-  },
-  {
-   "symbol": "300058.SZ",
-   "name": "蓝色光标",
-   "industry": "广告营销",
-   "entry_price": 22.59,
-   "last_close": 14.03,
-   "change_pct": -37.9
-  },
-  {
-   "symbol": "601212.SS",
-   "name": "白银有色",
-   "industry": "工业金属",
-   "entry_price": 12.3,
-   "last_close": 6.74,
-   "change_pct": -45.2
-  },
-  {
-   "symbol": "002131.SZ",
-   "name": "利欧股份",
-   "industry": "?",
-   "entry_price": 9.38,
-   "last_close": 5.1,
-   "change_pct": -45.6
-  }
- ],
+ "nav_curve": [],
+ "holdings": [],
  "industry_dist": {
-  "?": 16,
-  "工业金属": 3,
-  "光学光电子": 1,
-  "电力": 1,
-  "半导体": 1,
-  "化学制药": 3,
-  "贵金属": 1,
-  "IT服务Ⅱ": 1,
-  "广告营销": 1,
-  "证券Ⅱ": 1,
-  "生物制品": 1,
-  "种植业": 1,
-  "电池": 1,
-  "农产品加工": 1,
-  "通用设备": 1,
-  "调味发酵品Ⅱ": 1,
-  "元件": 1,
-  "医疗服务": 1,
-  "化学原料": 1,
-  "电网设备": 1,
-  "通信设备": 1
+  "电子器件": 2,
+  "工业金属": 2,
+  "生物制药": 2
  },
- "legacy": {}
+ "macro": {
+  "regime": "risk_on",
+  "confidence": 0.5,
+  "signals": {
+   "fear_greed": 44.2285714285714,
+   "fear_greed_rating": "fear",
+   "copper_gold_trend_20d": -5.135886573292425,
+   "yield_spread_10y2y_bp": 102.39999294281006,
+   "vix": 16.34000015258789,
+   "dxy_trend_20d": 0.11234778711595172,
+   "cftc_copper_mm_net": 76271.0,
+   "cftc_copper_mm_change": -2377.0,
+   "cftc_copper_as_of": "2026-08-25"
+  },
+  "source": "macro_detector+global_signals",
+  "description": "强趋势向上，科技/周期领涨，宽广度好，风险偏好高 — 适合激进配置"
+ },
+ "backtest": {
+  "as_of": "2026-09-02",
+  "total_picks": 6,
+  "avg_t1": -2.82,
+  "avg_t5": null,
+  "avg_t20": null,
+  "win_rate_t1": 0.0,
+  "win_rate_t5": null,
+  "picks": [
+   {
+    "date": "2026-09-02",
+    "symbol": "603118.SS",
+    "name": "共进股份",
+    "industry": "电子器件",
+    "price": 17.73,
+    "score": 54.2,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "603993.SS",
+    "name": "洛阳钼业",
+    "industry": "工业金属",
+    "price": 19.51,
+    "score": 47.5,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "600664.SS",
+    "name": "哈药股份",
+    "industry": "生物制药",
+    "price": 9.0,
+    "score": 50.0,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "000725.SZ",
+    "name": "京东方Ａ",
+    "industry": "电子器件",
+    "price": 5.92,
+    "score": 49.1,
+    "t1": -1.86,
+    "t5": null,
+    "t20": null,
+    "excess_t1": -2.03,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "601212.SS",
+    "name": "白银有色",
+    "industry": "工业金属",
+    "price": 7.63,
+    "score": 50.8,
+    "t1": -5.04,
+    "t5": null,
+    "t20": null,
+    "excess_t1": -5.21,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "300142.SZ",
+    "name": "沃森生物",
+    "industry": "生物制药",
+    "price": 14.28,
+    "score": 47.3,
+    "t1": -1.54,
+    "t5": null,
+    "t20": null,
+    "excess_t1": -1.71,
+    "excess_t5": null
+   }
+  ]
+ },
+ "legacy": {
+  "history": [
+   {
+    "date": "2026-09-01",
+    "n_recs": 3,
+    "trade_date": "2026-08-31",
+    "macro_regime": "risk_on",
+    "industries": [
+     "电子器件",
+     "工业金属",
+     "生物制药"
+    ],
+    "stocks": [
+     {
+      "symbol": "000725.SZ",
+      "name": "京东方Ａ",
+      "industry": "电子器件",
+      "price": 5.92,
+      "score": 49.1,
+      "shares": 300
+     },
+     {
+      "symbol": "601212.SS",
+      "name": "白银有色",
+      "industry": "工业金属",
+      "price": 7.63,
+      "score": 50.8,
+      "shares": 200
+     },
+     {
+      "symbol": "300142.SZ",
+      "name": "沃森生物",
+      "industry": "生物制药",
+      "price": 14.28,
+      "score": 47.3,
+      "shares": 100
+     }
+    ]
+   },
+   {
+    "date": "2026-09-02",
+    "n_recs": 3,
+    "trade_date": "2026-09-01",
+    "macro_regime": "risk_on",
+    "industries": [
+     "电子器件",
+     "工业金属",
+     "生物制药"
+    ],
+    "stocks": [
+     {
+      "symbol": "603118.SS",
+      "name": "共进股份",
+      "industry": "电子器件",
+      "price": 17.73,
+      "score": 54.2,
+      "shares": 100
+     },
+     {
+      "symbol": "603993.SS",
+      "name": "洛阳钼业",
+      "industry": "工业金属",
+      "price": 19.51,
+      "score": 47.5,
+      "shares": 100
+     },
+     {
+      "symbol": "600664.SS",
+      "name": "哈药股份",
+      "industry": "生物制药",
+      "price": 9.0,
+      "score": 50.0,
+      "shares": 200
+     }
+    ]
+   }
+  ],
+  "performance_rows": [
+   {
+    "date": "2026-09-01",
+    "symbol": "000725.SZ",
+    "name": "京东方Ａ",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "601212.SS",
+    "name": "白银有色",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-01",
+    "symbol": "300142.SZ",
+    "name": "沃森生物",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "603118.SS",
+    "name": "共进股份",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "603993.SS",
+    "name": "洛阳钼业",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "600664.SS",
+    "name": "哈药股份",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   }
+  ],
+  "weekly": {},
+  "ic": {
+   "samples": 0,
+   "factors": {}
+  }
+ }
 }
