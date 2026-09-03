@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>A-Stock Oracle · 选股看板</title>
+<title>数据看板 · A股量化观察</title>
 <meta name="theme-color" content="#0F172A">
 <!-- Vercel Analytics -->
 <script>
@@ -193,7 +193,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <div class="wrap">
 
 <header>
-  <h1><span class="logo-dot"></span>A-Stock Oracle</h1>
+  <h1><span class="logo-dot"></span>数据看板</h1>
   <span class="updated" id="updated">—</span>
 </header>
 
@@ -564,6 +564,18 @@ function renderBacktest(bt) {
     </table></div>
     ${picks.length < bt.total_picks ? `<div class="bt-muted" style="text-align:center;padding:6px 0">共 ${bt.total_picks} 条, 显示最近 ${picks.length} 条</div>` : ''}`;
 }
+
+// 底部免责声明 (页面固定展示, 无需 JS)
+document.addEventListener('DOMContentLoaded', () => {
+  const wrap = document.querySelector('.wrap');
+  if (wrap && !document.getElementById('dash-footer')) {
+    const foot = document.createElement('div');
+    foot.id = 'dash-footer';
+    foot.style.cssText = 'margin:22px 0 8px;padding:14px 16px;border-top:1px solid var(--border,#26334d);font-size:11px;line-height:1.7;color:var(--muted-fg,#94a3b8);text-align:left;';
+    foot.innerHTML = '<b style="color:var(--muted-fg,#94a3b8)">免责声明</b>：本看板为个人量化研究方法的数据记录，推荐结果含随机与概率成分，不构成任何投资建议。股市有风险，入市需谨慎。';
+    wrap.appendChild(foot);
+  }
+});
 
 load();
 setInterval(load, 60000);
