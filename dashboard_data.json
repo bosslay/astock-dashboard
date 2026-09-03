@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-03T23:50:18",
+ "generated_at": "2026-09-04T04:30:59",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
@@ -30,12 +30,12 @@
   "regime": "risk_on",
   "confidence": 0.308,
   "signals": {
-   "fear_greed": 35.6,
+   "fear_greed": 35.2571428571429,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -7.033655096228331,
-   "yield_spread_10y2y_bp": 99.3999719619751,
-   "vix": 14.979999542236328,
-   "dxy_trend_20d": -0.9762908001271109,
+   "copper_gold_trend_20d": -6.3298748120734105,
+   "yield_spread_10y2y_bp": 102.19998359680176,
+   "vix": 14.319999694824219,
+   "dxy_trend_20d": -0.9862959377767488,
    "cftc_copper_mm_net": 76271.0,
    "cftc_copper_mm_change": -2377.0,
    "cftc_copper_as_of": "2026-08-25"
@@ -44,7 +44,7 @@
   "description": "强趋势向上，科技/周期领涨，宽广度好，风险偏好高 — 适合激进配置"
  },
  "backtest": {
-  "as_of": "2026-09-03",
+  "as_of": "2026-09-04",
   "total_picks": 9,
   "avg_t1": null,
   "avg_t5": null,
