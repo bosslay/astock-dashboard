@@ -1,2 +1,7 @@
-# astock-dashboard
-A-Stock Oracle static dashboard (jsDelivr CDN)
+# A股量化观察数据看板
+
+静态数据看板 (GitHub Pages 托管)。
+
+- 数据每日收盘后更新
+- 含宏观信号 / 行业分布 / 历史回溯
+- 仅供研究, 不构成投资建议
