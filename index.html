@@ -205,7 +205,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 <!-- 核心 KPI -->
 <div class="kpis">
-  <div class="kpi"><div class="label">今日推荐</div>
+  <div class="kpi"><div class="label">今日执行</div>
     <div class="value" id="k-count">—</div><div class="sub" id="k-count-sub"></div></div>
   <div class="kpi"><div class="label">累计推荐</div>
     <div class="value" id="k-total">—</div><div class="sub">0day 起</div></div>
@@ -220,7 +220,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <div class="signals" id="signals"></div>
 
 <!-- 推荐时间轴 -->
-<div class="sec-title">每日推荐</div>
+<div class="sec-title">每日推荐 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)">收盘推送 · 次日执行</span></div>
 <div class="timeline" id="timeline"></div>
 
 <!-- 行业分布 -->
@@ -228,7 +228,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <div id="industry"></div>
 
 <!-- 荐股回溯 -->
-<div class="sec-title">历史荐股回溯 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)">T+1/T+5/T+20 表现</span></div>
+<div class="sec-title">历史荐股回溯 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)">以执行日为基准 · T+1=次日收益</span></div>
 <div id="backtest"></div>
 
 </div>
@@ -288,9 +288,10 @@ function renderRegime(m) {
 
 function renderKpis(g, s, lg) {
   const hist = (lg.history || []).slice().reverse();
-  const today = hist.find(h => h.date === d_today());
+  // 语义: 推送日 D 收盘后推荐 → 执行日 exec_date = D+1 (今日推, 明日执行)
+  const today = hist.find(h => (h.exec_date || h.date) === d_today());
 
-  // 今日推荐
+  // 今日执行推荐
   const todayRecs = today ? today.n_recs : 0;
   document.getElementById('k-count').textContent = todayRecs || '—';
   document.getElementById('k-count').className = 'value flat';
@@ -302,14 +303,15 @@ function renderKpis(g, s, lg) {
   document.getElementById('k-total').textContent = total || '—';
   document.getElementById('k-total').className = 'value flat';
 
-  // 宏观状态 (今日)
-  const m = today && today.macro_regime;
+  // 宏观状态 (最近一批)
+  const latest = hist[0];
+  const m = (today && today.macro_regime) || (latest && latest.macro_regime);
   const rEl = document.getElementById('k-regime');
   rEl.textContent = REGIME_LABEL[m] || m || '—';
   rEl.className = 'value ' + (m === 'risk_off' || m === 'distribution' ? 'down' :
                               (m === 'risk_on' || m === 'accumulation' ? 'up' : 'flat'));
   document.getElementById('k-regime-sub').textContent =
-    today && today.trade_date ? `基于 ${today.trade_date} 收盘` : '';
+    latest && latest.trade_date ? `基于 ${latest.trade_date} 收盘 · ${latest.date}推送` : '';
 
   // 覆盖行业 (推荐标的行业去重数)
   const inds = new Set();
@@ -353,7 +355,9 @@ function renderTimeline(hist) {
   }
   const today = d_today();
   box.innerHTML = items.map((h, hi) => {
-    const isToday = h.date === today;
+    // 语义: exec_date = 实际执行日 (推送次日); 推送日仅作副标注
+    const execDate = h.exec_date || h.date;
+    const isToday = execDate === today;
     const macro = REGIME_LABEL[h.macro_regime] || '';
     const stocks = (h.stocks || []);
     // 当日最高分标红 (同分取第一只)
@@ -377,8 +381,8 @@ function renderTimeline(hist) {
     return `<div class="tl-item ${isToday ? 'today' : ''}">
       <div class="tl-card">
         <div class="tl-head">
-          <span class="tl-date">${h.date}${macro ? `<span class="tl-macro">宏观 ${macro}</span>` : ''}</span>
-          <span class="tl-badge">${h.n_recs} 只${isToday ? ' · 今日' : ''}</span>
+          <span class="tl-date">${execDate}${h.date !== execDate ? `<span class="tl-macro">${h.date}推送</span>` : ''}${macro ? `<span class="tl-macro">宏观 ${macro}</span>` : ''}</span>
+          <span class="tl-badge">${h.n_recs} 只${isToday ? ' · 今日执行' : ''}</span>
         </div>
         <div class="tl-stocks">${rows || '<div class="tl-empty">无推荐</div>'}</div>
         ${pie}
