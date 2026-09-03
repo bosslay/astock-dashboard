@@ -1,37 +1,41 @@
 {
- "generated_at": "2026-09-02T12:31:46",
+ "generated_at": "2026-09-03T22:54:16",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 12.625,
-  "ma30": 11.009,
-  "as_of": "2026-08-28",
+  "pool_index": 11.177,
+  "ma30": 10.472,
+  "as_of": "2026-09-03",
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 6,
-  "covered_industries": 3,
-  "latest_macro": "risk_on",
-  "latest_trade_date": "2026-09-01"
+  "total_recommendations": 9,
+  "covered_industries": 7,
+  "latest_macro": "transition",
+  "latest_trade_date": "2026-09-03"
  },
  "nav_curve": [],
  "holdings": [],
  "industry_dist": {
-  "电子器件": 2,
-  "工业金属": 2,
-  "生物制药": 2
+  "电子器件": 1,
+  "工业金属": 1,
+  "生物制药": 1,
+  "化纤行业": 1,
+  "有色金属": 2,
+  "金融行业": 2,
+  "电器行业": 1
  },
  "macro": {
   "regime": "risk_on",
-  "confidence": 0.5,
+  "confidence": 0.308,
   "signals": {
-   "fear_greed": 44.2285714285714,
+   "fear_greed": 34.3428571428571,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -5.135886573292425,
-   "yield_spread_10y2y_bp": 102.39999294281006,
-   "vix": 16.34000015258789,
-   "dxy_trend_20d": 0.11234778711595172,
+   "copper_gold_trend_20d": -6.8934328747663915,
+   "yield_spread_10y2y_bp": 100.99997520446777,
+   "vix": 14.970000267028809,
+   "dxy_trend_20d": -0.8842679551391286,
    "cftc_copper_mm_net": 76271.0,
    "cftc_copper_mm_change": -2377.0,
    "cftc_copper_as_of": "2026-08-25"
@@ -40,21 +44,47 @@
   "description": "强趋势向上，科技/周期领涨，宽广度好，风险偏好高 — 适合激进配置"
  },
  "backtest": {
-  "as_of": "2026-09-02",
-  "total_picks": 6,
-  "avg_t1": -2.82,
+  "as_of": "2026-09-03",
+  "total_picks": 9,
+  "avg_t1": -1.11,
   "avg_t5": null,
   "avg_t20": null,
-  "win_rate_t1": 0.0,
+  "win_rate_t1": 0.333,
   "win_rate_t5": null,
   "picks": [
    {
-    "date": "2026-09-02",
-    "symbol": "603118.SS",
-    "name": "共进股份",
-    "industry": "电子器件",
-    "price": 17.73,
-    "score": 54.2,
+    "date": "2026-09-03",
+    "symbol": "002670.SZ",
+    "name": "国盛证券",
+    "industry": "电器行业",
+    "price": 12.69,
+    "score": 52.9,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-03",
+    "symbol": "600497.SS",
+    "name": "驰宏锌锗",
+    "industry": "有色金属",
+    "price": 10.09,
+    "score": 47.6,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-03",
+    "symbol": "601169.SS",
+    "name": "北京银行",
+    "industry": "金融行业",
+    "price": 5.54,
+    "score": 51.3,
     "t1": null,
     "t5": null,
     "t20": null,
@@ -63,12 +93,12 @@
    },
    {
     "date": "2026-09-02",
-    "symbol": "603993.SS",
-    "name": "洛阳钼业",
-    "industry": "工业金属",
-    "price": 19.51,
-    "score": 47.5,
-    "t1": null,
+    "symbol": "002015.SZ",
+    "name": "协鑫能科",
+    "industry": "化纤行业",
+    "price": 17.05,
+    "score": 51.1,
+    "t1": 0.12,
     "t5": null,
     "t20": null,
     "excess_t1": null,
@@ -76,12 +106,25 @@
    },
    {
     "date": "2026-09-02",
-    "symbol": "600664.SS",
-    "name": "哈药股份",
-    "industry": "生物制药",
-    "price": 9.0,
-    "score": 50.0,
-    "t1": null,
+    "symbol": "600711.SS",
+    "name": "盛屯矿业",
+    "industry": "有色金属",
+    "price": 11.48,
+    "score": 49.2,
+    "t1": 1.66,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-02",
+    "symbol": "601169.SS",
+    "name": "北京银行",
+    "industry": "金融行业",
+    "price": 5.54,
+    "score": 51.3,
+    "t1": 0.0,
     "t5": null,
     "t20": null,
     "excess_t1": null,
@@ -170,37 +213,74 @@
    {
     "date": "2026-09-02",
     "n_recs": 3,
-    "trade_date": "2026-09-01",
-    "macro_regime": "risk_on",
+    "trade_date": "2026-09-02",
+    "macro_regime": "transition",
     "industries": [
-     "电子器件",
-     "工业金属",
-     "生物制药"
+     "化纤行业",
+     "有色金属",
+     "金融行业"
     ],
     "stocks": [
      {
-      "symbol": "603118.SS",
-      "name": "共进股份",
-      "industry": "电子器件",
-      "price": 17.73,
-      "score": 54.2,
+      "symbol": "002015.SZ",
+      "name": "协鑫能科",
+      "industry": "化纤行业",
+      "price": 17.05,
+      "score": 51.1,
       "shares": 100
      },
      {
-      "symbol": "603993.SS",
-      "name": "洛阳钼业",
-      "industry": "工业金属",
-      "price": 19.51,
-      "score": 47.5,
+      "symbol": "600711.SS",
+      "name": "盛屯矿业",
+      "industry": "有色金属",
+      "price": 11.48,
+      "score": 49.2,
       "shares": 100
      },
      {
-      "symbol": "600664.SS",
-      "name": "哈药股份",
-      "industry": "生物制药",
-      "price": 9.0,
-      "score": 50.0,
-      "shares": 200
+      "symbol": "601169.SS",
+      "name": "北京银行",
+      "industry": "金融行业",
+      "price": 5.54,
+      "score": 51.3,
+      "shares": 300
+     }
+    ]
+   },
+   {
+    "date": "2026-09-03",
+    "n_recs": 3,
+    "trade_date": "2026-09-03",
+    "macro_regime": "transition",
+    "industries": [
+     "电器行业",
+     "有色金属",
+     "金融行业"
+    ],
+    "stocks": [
+     {
+      "symbol": "002670.SZ",
+      "name": "国盛证券",
+      "industry": "电器行业",
+      "price": 12.69,
+      "score": 52.9,
+      "shares": 100
+     },
+     {
+      "symbol": "600497.SS",
+      "name": "驰宏锌锗",
+      "industry": "有色金属",
+      "price": 10.09,
+      "score": 47.6,
+      "shares": 100
+     },
+     {
+      "symbol": "601169.SS",
+      "name": "北京银行",
+      "industry": "金融行业",
+      "price": 5.54,
+      "score": 51.3,
+      "shares": 300
      }
     ]
    }
@@ -244,8 +324,8 @@
    },
    {
     "date": "2026-09-02",
-    "symbol": "603118.SS",
-    "name": "共进股份",
+    "symbol": "002015.SZ",
+    "name": "协鑫能科",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
@@ -256,8 +336,8 @@
    },
    {
     "date": "2026-09-02",
-    "symbol": "603993.SS",
-    "name": "洛阳钼业",
+    "symbol": "600711.SS",
+    "name": "盛屯矿业",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
@@ -268,8 +348,44 @@
    },
    {
     "date": "2026-09-02",
-    "symbol": "600664.SS",
-    "name": "哈药股份",
+    "symbol": "601169.SS",
+    "name": "北京银行",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-03",
+    "symbol": "002670.SZ",
+    "name": "国盛证券",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-03",
+    "symbol": "600497.SS",
+    "name": "驰宏锌锗",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-03",
+    "symbol": "601169.SS",
+    "name": "北京银行",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
@@ -279,7 +395,14 @@
     "status": null
    }
   ],
-  "weekly": {},
+  "weekly": {
+   "total": 9,
+   "t1": null,
+   "t5": null,
+   "t20": null,
+   "closed": 0,
+   "industries": []
+  },
   "ic": {
    "samples": 0,
    "factors": {}
