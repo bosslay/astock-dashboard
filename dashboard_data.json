@@ -1,57 +1,94 @@
 {
- "generated_at": "2026-09-04T04:30:59",
+ "generated_at": "2026-09-05T04:30:14",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 11.177,
-  "ma30": 10.472,
-  "as_of": "2026-09-03",
+  "pool_index": 11.264,
+  "ma30": 10.629,
+  "as_of": "2026-09-04",
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 9,
-  "covered_industries": 7,
+  "total_recommendations": 12,
+  "covered_industries": 8,
   "latest_macro": "transition",
-  "latest_trade_date": "2026-09-03"
+  "latest_trade_date": "2026-09-04"
  },
  "nav_curve": [],
  "holdings": [],
  "industry_dist": {
-  "电子器件": 1,
+  "电子器件": 2,
   "工业金属": 1,
   "生物制药": 1,
   "化纤行业": 1,
   "有色金属": 2,
-  "金融行业": 2,
-  "电器行业": 1
+  "金融行业": 3,
+  "电器行业": 1,
+  "其他专业服务": 1
  },
  "macro": {
   "regime": "risk_on",
-  "confidence": 0.308,
+  "confidence": 0.5,
   "signals": {
-   "fear_greed": 35.2571428571429,
+   "fear_greed": 41.8571428571429,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -6.3298748120734105,
-   "yield_spread_10y2y_bp": 102.19998359680176,
-   "vix": 14.319999694824219,
-   "dxy_trend_20d": -0.9862959377767488,
-   "cftc_copper_mm_net": 76271.0,
-   "cftc_copper_mm_change": -2377.0,
-   "cftc_copper_as_of": "2026-08-25"
+   "copper_gold_trend_20d": -1.6247100164636374,
+   "yield_spread_10y2y_bp": 102.69999504089355,
+   "vix": 14.529999732971191,
+   "dxy_trend_20d": -0.44377645536639587,
+   "cftc_copper_mm_net": 72882.0,
+   "cftc_copper_mm_change": -3389.0,
+   "cftc_copper_as_of": "2026-09-01"
   },
   "source": "macro_detector+global_signals",
   "description": "强趋势向上，科技/周期领涨，宽广度好，风险偏好高 — 适合激进配置"
  },
  "backtest": {
-  "as_of": "2026-09-04",
-  "total_picks": 9,
-  "avg_t1": null,
+  "as_of": "2026-09-05",
+  "total_picks": 12,
+  "avg_t1": 1.52,
   "avg_t5": null,
   "avg_t20": null,
-  "win_rate_t1": null,
+  "win_rate_t1": 0.667,
   "win_rate_t5": null,
   "picks": [
+   {
+    "date": "2026-09-04",
+    "symbol": "603466.SS",
+    "name": "风语筑",
+    "industry": "其他专业服务",
+    "price": 12.39,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-04",
+    "symbol": "002104.SZ",
+    "name": "恒宝股份",
+    "industry": "电子器件",
+    "price": 14.05,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-04",
+    "symbol": "601328.SS",
+    "name": "交通银行",
+    "industry": "金融行业",
+    "price": 7.42,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
    {
     "date": "2026-09-03",
     "symbol": "002670.SZ",
@@ -94,10 +131,10 @@
     "name": "协鑫能科",
     "industry": "化纤行业",
     "price": 17.05,
-    "t1": null,
+    "t1": 0.59,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 0.5,
     "excess_t5": null
    },
    {
@@ -106,10 +143,10 @@
     "name": "盛屯矿业",
     "industry": "有色金属",
     "price": 11.48,
-    "t1": null,
+    "t1": -1.29,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -1.37,
     "excess_t5": null
    },
    {
@@ -118,10 +155,10 @@
     "name": "北京银行",
     "industry": "金融行业",
     "price": 5.54,
-    "t1": null,
+    "t1": 1.08,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 1.0,
     "excess_t5": null
    },
    {
@@ -130,10 +167,10 @@
     "name": "京东方Ａ",
     "industry": "电子器件",
     "price": 5.92,
-    "t1": null,
+    "t1": -1.38,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -1.13,
     "excess_t5": null
    },
    {
@@ -142,10 +179,10 @@
     "name": "白银有色",
     "industry": "工业金属",
     "price": 7.63,
-    "t1": null,
+    "t1": 10.06,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 10.31,
     "excess_t5": null
    },
    {
@@ -154,10 +191,10 @@
     "name": "沃森生物",
     "industry": "生物制药",
     "price": 14.28,
-    "t1": null,
+    "t1": 0.08,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 0.33,
     "excess_t5": null
    }
   ]
@@ -268,6 +305,41 @@
       "shares": 300
      }
     ]
+   },
+   {
+    "date": "2026-09-04",
+    "n_recs": 3,
+    "exec_date": "2026-09-07",
+    "trade_date": "2026-09-04",
+    "macro_regime": "transition",
+    "industries": [
+     "其他专业服务",
+     "电子器件",
+     "金融行业"
+    ],
+    "stocks": [
+     {
+      "symbol": "603466.SS",
+      "name": "风语筑",
+      "industry": "其他专业服务",
+      "price": 12.39,
+      "shares": 100
+     },
+     {
+      "symbol": "002104.SZ",
+      "name": "恒宝股份",
+      "industry": "电子器件",
+      "price": 14.05,
+      "shares": 100
+     },
+     {
+      "symbol": "601328.SS",
+      "name": "交通银行",
+      "industry": "金融行业",
+      "price": 7.42,
+      "shares": 200
+     }
+    ]
    }
   ],
   "performance_rows": [
@@ -275,73 +347,73 @@
     "date": "2026-09-01",
     "symbol": "000725.SZ",
     "name": "京东方Ａ",
-    "ret_t1": null,
+    "ret_t1": -1.38,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-01",
     "symbol": "601212.SS",
     "name": "白银有色",
-    "ret_t1": null,
+    "ret_t1": 10.06,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-01",
     "symbol": "300142.SZ",
     "name": "沃森生物",
-    "ret_t1": null,
+    "ret_t1": 0.08,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-02",
     "symbol": "002015.SZ",
     "name": "协鑫能科",
-    "ret_t1": null,
+    "ret_t1": 0.59,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-02",
     "symbol": "600711.SS",
     "name": "盛屯矿业",
-    "ret_t1": null,
+    "ret_t1": -1.29,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-02",
     "symbol": "601169.SS",
     "name": "北京银行",
-    "ret_t1": null,
+    "ret_t1": 1.08,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-03",
@@ -353,7 +425,7 @@
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-03",
@@ -365,7 +437,7 @@
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-03",
@@ -377,12 +449,56 @@
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
+   },
+   {
+    "date": "2026-09-04",
+    "symbol": "603466.SS",
+    "name": "风语筑",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": "open"
+   },
+   {
+    "date": "2026-09-04",
+    "symbol": "002104.SZ",
+    "name": "恒宝股份",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": "open"
+   },
+   {
+    "date": "2026-09-04",
+    "symbol": "601328.SS",
+    "name": "交通银行",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": "open"
    }
   ],
   "weekly": {
-   "total": 9,
-   "t1": null,
+   "total": 12,
+   "t1": {
+    "n": 6,
+    "win_rate": 66.7,
+    "avg_ret": 1.52,
+    "best": 10.06,
+    "worst": -1.38,
+    "avg_excess": null,
+    "excess_win_rate": null
+   },
    "t5": null,
    "t20": null,
    "closed": 0,
