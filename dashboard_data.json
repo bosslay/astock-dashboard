@@ -1,512 +1,1832 @@
 {
- "generated_at": "2026-09-05T04:30:14",
- "mode": "recommendation",
+ "generated_at": "2026-09-05T14:45:21+08:00",
+ "mode": "portfolio_bh",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
   "pool_index": 11.264,
   "ma30": 10.629,
-  "as_of": "2026-09-04",
-  "snapshot_missing": false
+  "as_of": "2026-09-05 14:45"
  },
  "summary": {
-  "total_recommendations": 12,
-  "covered_industries": 8,
-  "latest_macro": "transition",
-  "latest_trade_date": "2026-09-04"
+  "n_holdings": 123,
+  "median_change_pct": 2.6,
+  "winners": 63,
+  "backtest_ref": {
+   "bh_pct": 128.8,
+   "bh_mdd_pct": 22.1,
+   "gated_ma30_pct": 84.7,
+   "gated_mdd_pct": 13.7,
+   "sse_pct": 38.9
+  }
  },
- "nav_curve": [],
- "holdings": [],
- "industry_dist": {
-  "电子器件": 2,
-  "工业金属": 1,
-  "生物制药": 1,
-  "化纤行业": 1,
-  "有色金属": 2,
-  "金融行业": 3,
-  "电器行业": 1,
-  "其他专业服务": 1
- },
- "macro": {
-  "regime": "risk_on",
-  "confidence": 0.5,
-  "signals": {
-   "fear_greed": 41.8571428571429,
-   "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -1.6247100164636374,
-   "yield_spread_10y2y_bp": 102.69999504089355,
-   "vix": 14.529999732971191,
-   "dxy_trend_20d": -0.44377645536639587,
-   "cftc_copper_mm_net": 72882.0,
-   "cftc_copper_mm_change": -3389.0,
-   "cftc_copper_as_of": "2026-09-01"
+ "nav_curve": [
+  {
+   "date": "2026-02-02",
+   "pool": 100.0,
+   "sse": 100.0
   },
-  "source": "macro_detector+global_signals",
-  "description": "强趋势向上，科技/周期领涨，宽广度好，风险偏好高 — 适合激进配置"
+  {
+   "date": "2026-02-03",
+   "pool": 102.45,
+   "sse": 101.29
+  },
+  {
+   "date": "2026-02-04",
+   "pool": 103.01,
+   "sse": 102.15
+  },
+  {
+   "date": "2026-02-05",
+   "pool": 101.67,
+   "sse": 101.5
+  },
+  {
+   "date": "2026-02-06",
+   "pool": 101.49,
+   "sse": 101.24
+  },
+  {
+   "date": "2026-02-09",
+   "pool": 103.83,
+   "sse": 102.67
+  },
+  {
+   "date": "2026-02-10",
+   "pool": 103.96,
+   "sse": 102.8
+  },
+  {
+   "date": "2026-02-11",
+   "pool": 104.17,
+   "sse": 102.89
+  },
+  {
+   "date": "2026-02-12",
+   "pool": 104.4,
+   "sse": 102.95
+  },
+  {
+   "date": "2026-02-13",
+   "pool": 103.31,
+   "sse": 101.65
+  },
+  {
+   "date": "2026-02-24",
+   "pool": 105.15,
+   "sse": 102.53
+  },
+  {
+   "date": "2026-02-25",
+   "pool": 106.62,
+   "sse": 103.27
+  },
+  {
+   "date": "2026-02-26",
+   "pool": 106.7,
+   "sse": 103.26
+  },
+  {
+   "date": "2026-02-27",
+   "pool": 107.66,
+   "sse": 103.66
+  },
+  {
+   "date": "2026-03-02",
+   "pool": 107.61,
+   "sse": 104.15
+  },
+  {
+   "date": "2026-03-03",
+   "pool": 104.04,
+   "sse": 102.66
+  },
+  {
+   "date": "2026-03-04",
+   "pool": 103.81,
+   "sse": 101.66
+  },
+  {
+   "date": "2026-03-05",
+   "pool": 105.35,
+   "sse": 102.31
+  },
+  {
+   "date": "2026-03-06",
+   "pool": 106.87,
+   "sse": 102.7
+  },
+  {
+   "date": "2026-03-09",
+   "pool": 106.01,
+   "sse": 102.01
+  },
+  {
+   "date": "2026-03-10",
+   "pool": 107.3,
+   "sse": 102.67
+  },
+  {
+   "date": "2026-03-11",
+   "pool": 107.88,
+   "sse": 102.93
+  },
+  {
+   "date": "2026-03-12",
+   "pool": 107.46,
+   "sse": 102.82
+  },
+  {
+   "date": "2026-03-13",
+   "pool": 105.46,
+   "sse": 101.98
+  },
+  {
+   "date": "2026-03-16",
+   "pool": 106.07,
+   "sse": 101.72
+  },
+  {
+   "date": "2026-03-17",
+   "pool": 104.63,
+   "sse": 100.85
+  },
+  {
+   "date": "2026-03-18",
+   "pool": 104.87,
+   "sse": 101.18
+  },
+  {
+   "date": "2026-03-19",
+   "pool": 102.32,
+   "sse": 99.77
+  },
+  {
+   "date": "2026-03-20",
+   "pool": 99.88,
+   "sse": 98.54
+  },
+  {
+   "date": "2026-03-23",
+   "pool": 95.45,
+   "sse": 94.96
+  },
+  {
+   "date": "2026-03-24",
+   "pool": 98.2,
+   "sse": 96.65
+  },
+  {
+   "date": "2026-03-25",
+   "pool": 100.12,
+   "sse": 97.91
+  },
+  {
+   "date": "2026-03-26",
+   "pool": 97.83,
+   "sse": 96.85
+  },
+  {
+   "date": "2026-03-27",
+   "pool": 98.9,
+   "sse": 97.46
+  },
+  {
+   "date": "2026-03-30",
+   "pool": 99.29,
+   "sse": 97.7
+  },
+  {
+   "date": "2026-03-31",
+   "pool": 98.04,
+   "sse": 96.91
+  },
+  {
+   "date": "2026-04-01",
+   "pool": 99.79,
+   "sse": 98.33
+  },
+  {
+   "date": "2026-04-02",
+   "pool": 98.38,
+   "sse": 97.6
+  },
+  {
+   "date": "2026-04-03",
+   "pool": 96.69,
+   "sse": 96.62
+  },
+  {
+   "date": "2026-04-07",
+   "pool": 98.18,
+   "sse": 96.87
+  },
+  {
+   "date": "2026-04-08",
+   "pool": 102.2,
+   "sse": 99.48
+  },
+  {
+   "date": "2026-04-09",
+   "pool": 101.64,
+   "sse": 98.77
+  },
+  {
+   "date": "2026-04-10",
+   "pool": 101.6,
+   "sse": 99.26
+  },
+  {
+   "date": "2026-04-13",
+   "pool": 102.0,
+   "sse": 99.32
+  },
+  {
+   "date": "2026-04-14",
+   "pool": 102.89,
+   "sse": 100.27
+  },
+  {
+   "date": "2026-04-15",
+   "pool": 102.54,
+   "sse": 100.29
+  },
+  {
+   "date": "2026-04-16",
+   "pool": 103.7,
+   "sse": 100.99
+  },
+  {
+   "date": "2026-04-17",
+   "pool": 103.52,
+   "sse": 100.89
+  },
+  {
+   "date": "2026-04-20",
+   "pool": 105.09,
+   "sse": 101.65
+  },
+  {
+   "date": "2026-04-21",
+   "pool": 104.49,
+   "sse": 101.73
+  },
+  {
+   "date": "2026-04-22",
+   "pool": 104.69,
+   "sse": 102.25
+  },
+  {
+   "date": "2026-04-23",
+   "pool": 103.31,
+   "sse": 101.93
+  },
+  {
+   "date": "2026-04-24",
+   "pool": 101.71,
+   "sse": 101.6
+  },
+  {
+   "date": "2026-04-27",
+   "pool": 101.74,
+   "sse": 101.76
+  },
+  {
+   "date": "2026-04-28",
+   "pool": 100.46,
+   "sse": 101.57
+  },
+  {
+   "date": "2026-04-29",
+   "pool": 102.08,
+   "sse": 102.29
+  },
+  {
+   "date": "2026-04-30",
+   "pool": 101.97,
+   "sse": 102.4
+  },
+  {
+   "date": "2026-05-06",
+   "pool": 105.1,
+   "sse": 103.6
+  },
+  {
+   "date": "2026-05-07",
+   "pool": 106.71,
+   "sse": 104.09
+  },
+  {
+   "date": "2026-05-08",
+   "pool": 107.31,
+   "sse": 104.09
+  },
+  {
+   "date": "2026-05-11",
+   "pool": 107.94,
+   "sse": 105.21
+  },
+  {
+   "date": "2026-05-12",
+   "pool": 107.69,
+   "sse": 104.95
+  },
+  {
+   "date": "2026-05-13",
+   "pool": 109.44,
+   "sse": 105.65
+  },
+  {
+   "date": "2026-05-14",
+   "pool": 106.48,
+   "sse": 104.04
+  },
+  {
+   "date": "2026-05-15",
+   "pool": 104.32,
+   "sse": 102.98
+  },
+  {
+   "date": "2026-05-18",
+   "pool": 104.09,
+   "sse": 102.88
+  },
+  {
+   "date": "2026-05-19",
+   "pool": 104.52,
+   "sse": 103.83
+  },
+  {
+   "date": "2026-05-20",
+   "pool": 103.17,
+   "sse": 103.65
+  },
+  {
+   "date": "2026-05-21",
+   "pool": 100.72,
+   "sse": 101.53
+  },
+  {
+   "date": "2026-05-22",
+   "pool": 102.74,
+   "sse": 102.42
+  },
+  {
+   "date": "2026-05-25",
+   "pool": 102.89,
+   "sse": 103.41
+  },
+  {
+   "date": "2026-05-26",
+   "pool": 102.98,
+   "sse": 103.23
+  },
+  {
+   "date": "2026-05-27",
+   "pool": 101.19,
+   "sse": 101.94
+  },
+  {
+   "date": "2026-05-28",
+   "pool": 101.73,
+   "sse": 102.06
+  },
+  {
+   "date": "2026-05-29",
+   "pool": 100.34,
+   "sse": 101.32
+  },
+  {
+   "date": "2026-06-01",
+   "pool": 100.99,
+   "sse": 101.05
+  },
+  {
+   "date": "2026-06-02",
+   "pool": 100.91,
+   "sse": 101.48
+  },
+  {
+   "date": "2026-06-03",
+   "pool": 101.17,
+   "sse": 101.7
+  },
+  {
+   "date": "2026-06-04",
+   "pool": 100.2,
+   "sse": 101.05
+  },
+  {
+   "date": "2026-06-05",
+   "pool": 99.71,
+   "sse": 100.3
+  },
+  {
+   "date": "2026-06-08",
+   "pool": 96.45,
+   "sse": 98.6
+  },
+  {
+   "date": "2026-06-09",
+   "pool": 97.58,
+   "sse": 99.86
+  },
+  {
+   "date": "2026-06-10",
+   "pool": 96.3,
+   "sse": 99.44
+  },
+  {
+   "date": "2026-06-11",
+   "pool": 95.32,
+   "sse": 99.28
+  },
+  {
+   "date": "2026-06-12",
+   "pool": 96.41,
+   "sse": 100.39
+  },
+  {
+   "date": "2026-06-15",
+   "pool": 99.07,
+   "sse": 102.01
+  },
+  {
+   "date": "2026-06-16",
+   "pool": 100.1,
+   "sse": 101.9
+  },
+  {
+   "date": "2026-06-17",
+   "pool": 100.45,
+   "sse": 102.3
+  },
+  {
+   "date": "2026-06-18",
+   "pool": 100.01,
+   "sse": 101.86
+  },
+  {
+   "date": "2026-06-22",
+   "pool": 103.27,
+   "sse": 103.67
+  },
+  {
+   "date": "2026-06-23",
+   "pool": 101.62,
+   "sse": 102.25
+  },
+  {
+   "date": "2026-06-24",
+   "pool": 102.12,
+   "sse": 102.37
+  },
+  {
+   "date": "2026-06-25",
+   "pool": 102.51,
+   "sse": 102.6
+  },
+  {
+   "date": "2026-06-26",
+   "pool": 99.7,
+   "sse": 100.29
+  },
+  {
+   "date": "2026-06-29",
+   "pool": 98.77,
+   "sse": 101.45
+  },
+  {
+   "date": "2026-06-30",
+   "pool": 99.71,
+   "sse": 101.96
+  },
+  {
+   "date": "2026-07-01",
+   "pool": 100.63,
+   "sse": 102.41
+  },
+  {
+   "date": "2026-07-02",
+   "pool": 98.85,
+   "sse": 100.33
+  },
+  {
+   "date": "2026-07-03",
+   "pool": 98.59,
+   "sse": 100.69
+  },
+  {
+   "date": "2026-07-06",
+   "pool": 97.25,
+   "sse": 100.63
+  },
+  {
+   "date": "2026-07-07",
+   "pool": 94.88,
+   "sse": 99.36
+  },
+  {
+   "date": "2026-07-08",
+   "pool": 92.45,
+   "sse": 98.88
+  },
+  {
+   "date": "2026-07-09",
+   "pool": 94.09,
+   "sse": 100.52
+  },
+  {
+   "date": "2026-07-10",
+   "pool": 94.54,
+   "sse": 99.51
+  },
+  {
+   "date": "2026-07-13",
+   "pool": 90.04,
+   "sse": 97.46
+  },
+  {
+   "date": "2026-07-14",
+   "pool": 91.06,
+   "sse": 98.79
+  },
+  {
+   "date": "2026-07-15",
+   "pool": 90.54,
+   "sse": 98.5
+  },
+  {
+   "date": "2026-07-16",
+   "pool": 88.82,
+   "sse": 96.68
+  },
+  {
+   "date": "2026-07-17",
+   "pool": 84.94,
+   "sse": 93.73
+  },
+  {
+   "date": "2026-07-20",
+   "pool": 84.02,
+   "sse": 94.53
+  },
+  {
+   "date": "2026-07-21",
+   "pool": 86.15,
+   "sse": 96.23
+  },
+  {
+   "date": "2026-07-22",
+   "pool": 86.59,
+   "sse": 96.3
+  },
+  {
+   "date": "2026-07-23",
+   "pool": 88.45,
+   "sse": 96.54
+  },
+  {
+   "date": "2026-07-24",
+   "pool": 85.82,
+   "sse": 94.98
+  },
+  {
+   "date": "2026-07-27",
+   "pool": 88.02,
+   "sse": 96.08
+  },
+  {
+   "date": "2026-07-28",
+   "pool": 86.94,
+   "sse": 94.96
+  },
+  {
+   "date": "2026-07-29",
+   "pool": 87.42,
+   "sse": 95.34
+  },
+  {
+   "date": "2026-07-30",
+   "pool": 85.5,
+   "sse": 94.74
+  },
+  {
+   "date": "2026-07-31",
+   "pool": 87.42,
+   "sse": 95.43
+  },
+  {
+   "date": "2026-08-03",
+   "pool": 88.33,
+   "sse": 94.87
+  },
+  {
+   "date": "2026-08-04",
+   "pool": 90.43,
+   "sse": 95.18
+  },
+  {
+   "date": "2026-08-05",
+   "pool": 93.17,
+   "sse": 96.58
+  },
+  {
+   "date": "2026-08-06",
+   "pool": 93.59,
+   "sse": 97.13
+  },
+  {
+   "date": "2026-08-07",
+   "pool": 94.83,
+   "sse": 98.11
+  },
+  {
+   "date": "2026-08-10",
+   "pool": 96.06,
+   "sse": 98.78
+  },
+  {
+   "date": "2026-08-11",
+   "pool": 95.15,
+   "sse": 97.97
+  },
+  {
+   "date": "2026-08-12",
+   "pool": 96.51,
+   "sse": 98.28
+  },
+  {
+   "date": "2026-08-13",
+   "pool": 95.72,
+   "sse": 97.79
+  },
+  {
+   "date": "2026-08-14",
+   "pool": 95.58,
+   "sse": 97.79
+  },
+  {
+   "date": "2026-08-17",
+   "pool": 97.67,
+   "sse": 99.18
+  },
+  {
+   "date": "2026-08-18",
+   "pool": 97.28,
+   "sse": 99.37
+  },
+  {
+   "date": "2026-08-19",
+   "pool": 93.17,
+   "sse": 96.98
+  },
+  {
+   "date": "2026-08-20",
+   "pool": 93.33,
+   "sse": 97.21
+  },
+  {
+   "date": "2026-08-21",
+   "pool": 94.39,
+   "sse": 97.25
+  },
+  {
+   "date": "2026-08-24",
+   "pool": 93.69,
+   "sse": 96.67
+  },
+  {
+   "date": "2026-08-25",
+   "pool": 94.4,
+   "sse": 96.85
+  },
+  {
+   "date": "2026-08-26",
+   "pool": 95.59,
+   "sse": 97.43
+  },
+  {
+   "date": "2026-08-27",
+   "pool": 97.58,
+   "sse": 98.53
+  },
+  {
+   "date": "2026-08-28",
+   "pool": 98.25,
+   "sse": 98.42
+  },
+  {
+   "date": "2026-08-31",
+   "pool": 98.93,
+   "sse": 99.27
+  },
+  {
+   "date": "2026-09-01",
+   "pool": 100.17,
+   "sse": 99.11
+  },
+  {
+   "date": "2026-09-02",
+   "pool": 99.51,
+   "sse": 98.15
+  },
+  {
+   "date": "2026-09-03",
+   "pool": 100.35,
+   "sse": 98.17
+  },
+  {
+   "date": "2026-09-04",
+   "pool": 99.94,
+   "sse": 97.87
+  }
+ ],
+ "holdings": [
+  {
+   "symbol": "600396.SS",
+   "name": "华电辽能",
+   "industry": "电力",
+   "entry_price": 3.07,
+   "last_close": 13.64,
+   "change_pct": 344.3
+  },
+  {
+   "symbol": "600172.SS",
+   "name": "黄河旋风",
+   "industry": "通用设备",
+   "entry_price": 6.33,
+   "last_close": 15.79,
+   "change_pct": 149.4
+  },
+  {
+   "symbol": "600664.SS",
+   "name": "哈药股份",
+   "industry": "化学制药",
+   "entry_price": 3.52,
+   "last_close": 7.78,
+   "change_pct": 121.0
+  },
+  {
+   "symbol": "600722.SS",
+   "name": "金牛化工",
+   "industry": "化学原料",
+   "entry_price": 7.9,
+   "last_close": 17.2,
+   "change_pct": 117.7
+  },
+  {
+   "symbol": "600186.SS",
+   "name": "莲花控股",
+   "industry": "调味发酵品Ⅱ",
+   "entry_price": 6.26,
+   "last_close": 11.88,
+   "change_pct": 89.8
+  },
+  {
+   "symbol": "601872.SS",
+   "name": "招商轮船",
+   "industry": "航运港口",
+   "entry_price": 11.05,
+   "last_close": 19.2,
+   "change_pct": 73.8
+  },
+  {
+   "symbol": "600127.SS",
+   "name": "金健米业",
+   "industry": "农产品加工",
+   "entry_price": 7.14,
+   "last_close": 12.3,
+   "change_pct": 72.3
+  },
+  {
+   "symbol": "600397.SS",
+   "name": "江钨装备",
+   "industry": "?",
+   "entry_price": 9.8,
+   "last_close": 16.78,
+   "change_pct": 71.2
+  },
+  {
+   "symbol": "600227.SS",
+   "name": "赤天化",
+   "industry": "?",
+   "entry_price": 2.55,
+   "last_close": 4.29,
+   "change_pct": 68.2
+  },
+  {
+   "symbol": "002015.SZ",
+   "name": "协鑫能科",
+   "industry": "电力",
+   "entry_price": 10.39,
+   "last_close": 17.17,
+   "change_pct": 65.2
+  },
+  {
+   "symbol": "603002.SS",
+   "name": "宏昌电子",
+   "industry": "?",
+   "entry_price": 9.2,
+   "last_close": 15.11,
+   "change_pct": 64.3
+  },
+  {
+   "symbol": "002141.SZ",
+   "name": "贤丰控股",
+   "industry": "?",
+   "entry_price": 3.91,
+   "last_close": 6.38,
+   "change_pct": 63.2
+  },
+  {
+   "symbol": "001258.SZ",
+   "name": "立新能源",
+   "industry": "?",
+   "entry_price": 7.62,
+   "last_close": 12.29,
+   "change_pct": 61.3
+  },
+  {
+   "symbol": "600667.SS",
+   "name": "太极实业",
+   "industry": "?",
+   "entry_price": 10.74,
+   "last_close": 17.22,
+   "change_pct": 60.3
+  },
+  {
+   "symbol": "600110.SS",
+   "name": "诺德股份",
+   "industry": "电池",
+   "entry_price": 6.95,
+   "last_close": 11.03,
+   "change_pct": 58.7
+  },
+  {
+   "symbol": "000703.SZ",
+   "name": "恒逸石化",
+   "industry": "炼化及贸易",
+   "entry_price": 11.86,
+   "last_close": 17.93,
+   "change_pct": 51.2
+  },
+  {
+   "symbol": "002245.SZ",
+   "name": "蔚蓝锂芯",
+   "industry": "?",
+   "entry_price": 11.31,
+   "last_close": 16.86,
+   "change_pct": 49.1
+  },
+  {
+   "symbol": "603162.SS",
+   "name": "海通发展",
+   "industry": "?",
+   "entry_price": 9.98,
+   "last_close": 14.64,
+   "change_pct": 46.7
+  },
+  {
+   "symbol": "002328.SZ",
+   "name": "新朋股份",
+   "industry": "?",
+   "entry_price": 6.8,
+   "last_close": 9.96,
+   "change_pct": 46.4
+  },
+  {
+   "symbol": "002081.SZ",
+   "name": "金 螳 螂",
+   "industry": "?",
+   "entry_price": 3.59,
+   "last_close": 5.18,
+   "change_pct": 44.3
+  },
+  {
+   "symbol": "603466.SS",
+   "name": "风语筑",
+   "industry": "?",
+   "entry_price": 9.01,
+   "last_close": 12.39,
+   "change_pct": 37.5
+  },
+  {
+   "symbol": "601700.SS",
+   "name": "风范股份",
+   "industry": "?",
+   "entry_price": 5.59,
+   "last_close": 7.68,
+   "change_pct": 37.4
+  },
+  {
+   "symbol": "603118.SS",
+   "name": "共进股份",
+   "industry": "通信设备",
+   "entry_price": 11.87,
+   "last_close": 16.26,
+   "change_pct": 37.0
+  },
+  {
+   "symbol": "000070.SZ",
+   "name": "特发信息",
+   "industry": "?",
+   "entry_price": 11.5,
+   "last_close": 15.52,
+   "change_pct": 35.0
+  },
+  {
+   "symbol": "603890.SS",
+   "name": "春秋电子",
+   "industry": "?",
+   "entry_price": 14.69,
+   "last_close": 19.61,
+   "change_pct": 33.5
+  },
+  {
+   "symbol": "000725.SZ",
+   "name": "京东方Ａ",
+   "industry": "光学光电子",
+   "entry_price": 4.26,
+   "last_close": 5.61,
+   "change_pct": 31.6
+  },
+  {
+   "symbol": "000533.SZ",
+   "name": "顺钠股份",
+   "industry": "?",
+   "entry_price": 9.22,
+   "last_close": 12.05,
+   "change_pct": 30.7
+  },
+  {
+   "symbol": "600479.SS",
+   "name": "千金药业",
+   "industry": "?",
+   "entry_price": 10.17,
+   "last_close": 13.15,
+   "change_pct": 29.3
+  },
+  {
+   "symbol": "000017.SZ",
+   "name": "深中华A",
+   "industry": "?",
+   "entry_price": 7.37,
+   "last_close": 9.52,
+   "change_pct": 29.2
+  },
+  {
+   "symbol": "601086.SS",
+   "name": "国芳集团",
+   "industry": "?",
+   "entry_price": 9.91,
+   "last_close": 12.65,
+   "change_pct": 27.6
+  },
+  {
+   "symbol": "601975.SS",
+   "name": "招商南油",
+   "industry": "?",
+   "entry_price": 3.57,
+   "last_close": 4.48,
+   "change_pct": 25.4
+  },
+  {
+   "symbol": "601988.SS",
+   "name": "中国银行",
+   "industry": "?",
+   "entry_price": 5.25,
+   "last_close": 6.57,
+   "change_pct": 25.1
+  },
+  {
+   "symbol": "600256.SS",
+   "name": "广汇能源",
+   "industry": "?",
+   "entry_price": 5.42,
+   "last_close": 6.71,
+   "change_pct": 23.9
+  },
+  {
+   "symbol": "600919.SS",
+   "name": "江苏银行",
+   "industry": "?",
+   "entry_price": 9.92,
+   "last_close": 12.28,
+   "change_pct": 23.8
+  },
+  {
+   "symbol": "002579.SZ",
+   "name": "中京电子",
+   "industry": "?",
+   "entry_price": 11.58,
+   "last_close": 14.1,
+   "change_pct": 21.8
+  },
+  {
+   "symbol": "600909.SS",
+   "name": "华安证券",
+   "industry": "?",
+   "entry_price": 6.99,
+   "last_close": 8.25,
+   "change_pct": 18.0
+  },
+  {
+   "symbol": "002437.SZ",
+   "name": "誉衡药业",
+   "industry": "化学制药",
+   "entry_price": 3.4,
+   "last_close": 3.94,
+   "change_pct": 15.9
+  },
+  {
+   "symbol": "600601.SS",
+   "name": "方正科技",
+   "industry": "元件",
+   "entry_price": 11.33,
+   "last_close": 13.09,
+   "change_pct": 15.5
+  },
+  {
+   "symbol": "601919.SS",
+   "name": "中远海控",
+   "industry": "航运港口",
+   "entry_price": 13.95,
+   "last_close": 16.06,
+   "change_pct": 15.1
+  },
+  {
+   "symbol": "601398.SS",
+   "name": "工商银行",
+   "industry": "?",
+   "entry_price": 7.09,
+   "last_close": 8.13,
+   "change_pct": 14.7
+  },
+  {
+   "symbol": "601328.SS",
+   "name": "交通银行",
+   "industry": "?",
+   "entry_price": 6.5,
+   "last_close": 7.42,
+   "change_pct": 14.1
+  },
+  {
+   "symbol": "000815.SZ",
+   "name": "美利云",
+   "industry": "?",
+   "entry_price": 14.2,
+   "last_close": 16.18,
+   "change_pct": 13.9
+  },
+  {
+   "symbol": "000001.SZ",
+   "name": "平安银行",
+   "industry": "?",
+   "entry_price": 10.46,
+   "last_close": 11.89,
+   "change_pct": 13.7
+  },
+  {
+   "symbol": "000783.SZ",
+   "name": "长江证券",
+   "industry": "?",
+   "entry_price": 8.16,
+   "last_close": 9.26,
+   "change_pct": 13.5
+  },
+  {
+   "symbol": "002354.SZ",
+   "name": "天娱数科",
+   "industry": "?",
+   "entry_price": 7.46,
+   "last_close": 8.45,
+   "change_pct": 13.3
+  },
+  {
+   "symbol": "600497.SS",
+   "name": "驰宏锌锗",
+   "industry": "?",
+   "entry_price": 8.77,
+   "last_close": 9.84,
+   "change_pct": 12.2
+  },
+  {
+   "symbol": "002708.SZ",
+   "name": "光洋股份",
+   "industry": "?",
+   "entry_price": 13.64,
+   "last_close": 15.27,
+   "change_pct": 12.0
+  },
+  {
+   "symbol": "600999.SS",
+   "name": "招商证券",
+   "industry": "?",
+   "entry_price": 16.62,
+   "last_close": 18.54,
+   "change_pct": 11.5
+  },
+  {
+   "symbol": "601169.SS",
+   "name": "北京银行",
+   "industry": "?",
+   "entry_price": 5.03,
+   "last_close": 5.6,
+   "change_pct": 11.3
+  },
+  {
+   "symbol": "002418.SZ",
+   "name": "康盛股份",
+   "industry": "?",
+   "entry_price": 4.76,
+   "last_close": 5.21,
+   "change_pct": 9.5
+  },
+  {
+   "symbol": "600629.SS",
+   "name": "华建集团",
+   "industry": "?",
+   "entry_price": 16.79,
+   "last_close": 18.37,
+   "change_pct": 9.4
+  },
+  {
+   "symbol": "601658.SS",
+   "name": "邮储银行",
+   "industry": "?",
+   "entry_price": 4.97,
+   "last_close": 5.42,
+   "change_pct": 8.9
+  },
+  {
+   "symbol": "601985.SS",
+   "name": "中国核电",
+   "industry": "?",
+   "entry_price": 8.46,
+   "last_close": 9.08,
+   "change_pct": 7.3
+  },
+  {
+   "symbol": "601857.SS",
+   "name": "中国石油",
+   "industry": "?",
+   "entry_price": 10.45,
+   "last_close": 11.17,
+   "change_pct": 6.9
+  },
+  {
+   "symbol": "002185.SZ",
+   "name": "华天科技",
+   "industry": "半导体",
+   "entry_price": 14.58,
+   "last_close": 15.57,
+   "change_pct": 6.8
+  },
+  {
+   "symbol": "000510.SZ",
+   "name": "新金路",
+   "industry": "?",
+   "entry_price": 14.99,
+   "last_close": 16.0,
+   "change_pct": 6.7
+  },
+  {
+   "symbol": "601288.SS",
+   "name": "农业银行",
+   "industry": "?",
+   "entry_price": 6.6,
+   "last_close": 6.96,
+   "change_pct": 5.5
+  },
+  {
+   "symbol": "002059.SZ",
+   "name": "云南旅游",
+   "industry": "?",
+   "entry_price": 5.38,
+   "last_close": 5.67,
+   "change_pct": 5.4
+  },
+  {
+   "symbol": "601118.SS",
+   "name": "海南橡胶",
+   "industry": "?",
+   "entry_price": 6.7,
+   "last_close": 7.03,
+   "change_pct": 4.9
+  },
+  {
+   "symbol": "601166.SS",
+   "name": "兴业银行",
+   "industry": "?",
+   "entry_price": 17.65,
+   "last_close": 18.22,
+   "change_pct": 3.2
+  },
+  {
+   "symbol": "000712.SZ",
+   "name": "锦龙股份",
+   "industry": "?",
+   "entry_price": 11.99,
+   "last_close": 12.35,
+   "change_pct": 3.0
+  },
+  {
+   "symbol": "000100.SZ",
+   "name": "TCL科技",
+   "industry": "?",
+   "entry_price": 4.68,
+   "last_close": 4.8,
+   "change_pct": 2.6
+  },
+  {
+   "symbol": "002157.SZ",
+   "name": "正邦科技",
+   "industry": "?",
+   "entry_price": 3.2,
+   "last_close": 3.22,
+   "change_pct": 0.6
+  },
+  {
+   "symbol": "600246.SS",
+   "name": "万通发展",
+   "industry": "?",
+   "entry_price": 12.38,
+   "last_close": 11.94,
+   "change_pct": -3.6
+  },
+  {
+   "symbol": "002300.SZ",
+   "name": "太阳电缆",
+   "industry": "?",
+   "entry_price": 8.45,
+   "last_close": 8.03,
+   "change_pct": -5.0
+  },
+  {
+   "symbol": "000560.SZ",
+   "name": "我爱我家",
+   "industry": "?",
+   "entry_price": 3.32,
+   "last_close": 3.15,
+   "change_pct": -5.1
+  },
+  {
+   "symbol": "600103.SS",
+   "name": "青山纸业",
+   "industry": "?",
+   "entry_price": 3.81,
+   "last_close": 3.55,
+   "change_pct": -6.8
+  },
+  {
+   "symbol": "600095.SS",
+   "name": "湘财股份",
+   "industry": "?",
+   "entry_price": 11.0,
+   "last_close": 10.17,
+   "change_pct": -7.5
+  },
+  {
+   "symbol": "601162.SS",
+   "name": "天风证券",
+   "industry": "?",
+   "entry_price": 4.15,
+   "last_close": 3.83,
+   "change_pct": -7.7
+  },
+  {
+   "symbol": "601668.SS",
+   "name": "中国建筑",
+   "industry": "?",
+   "entry_price": 4.78,
+   "last_close": 4.4,
+   "change_pct": -7.9
+  },
+  {
+   "symbol": "601211.SS",
+   "name": "国泰海通",
+   "industry": "证券Ⅱ",
+   "entry_price": 19.45,
+   "last_close": 17.87,
+   "change_pct": -8.1
+  },
+  {
+   "symbol": "600737.SS",
+   "name": "中粮糖业",
+   "industry": "?",
+   "entry_price": 17.01,
+   "last_close": 15.61,
+   "change_pct": -8.2
+  },
+  {
+   "symbol": "002721.SZ",
+   "name": "金一文化",
+   "industry": "?",
+   "entry_price": 3.46,
+   "last_close": 3.15,
+   "change_pct": -9.0
+  },
+  {
+   "symbol": "002361.SZ",
+   "name": "神剑股份",
+   "industry": "?",
+   "entry_price": 11.8,
+   "last_close": 10.6,
+   "change_pct": -10.2
+  },
+  {
+   "symbol": "000066.SZ",
+   "name": "中国长城",
+   "industry": "?",
+   "entry_price": 15.9,
+   "last_close": 14.23,
+   "change_pct": -10.5
+  },
+  {
+   "symbol": "002654.SZ",
+   "name": "万润科技",
+   "industry": "?",
+   "entry_price": 15.48,
+   "last_close": 13.79,
+   "change_pct": -10.9
+  },
+  {
+   "symbol": "603626.SS",
+   "name": "科森科技",
+   "industry": "?",
+   "entry_price": 20.24,
+   "last_close": 17.93,
+   "change_pct": -11.4
+  },
+  {
+   "symbol": "000876.SZ",
+   "name": "新 希 望",
+   "industry": "?",
+   "entry_price": 8.72,
+   "last_close": 7.7,
+   "change_pct": -11.7
+  },
+  {
+   "symbol": "600611.SS",
+   "name": "大众交通",
+   "industry": "?",
+   "entry_price": 5.68,
+   "last_close": 5.01,
+   "change_pct": -11.8
+  },
+  {
+   "symbol": "600313.SS",
+   "name": "农发种业",
+   "industry": "?",
+   "entry_price": 8.39,
+   "last_close": 7.31,
+   "change_pct": -12.9
+  },
+  {
+   "symbol": "601688.SS",
+   "name": "华泰证券",
+   "industry": "?",
+   "entry_price": 22.48,
+   "last_close": 19.56,
+   "change_pct": -13.0
+  },
+  {
+   "symbol": "000630.SZ",
+   "name": "铜陵有色",
+   "industry": "工业金属",
+   "entry_price": 7.39,
+   "last_close": 6.39,
+   "change_pct": -13.5
+  },
+  {
+   "symbol": "002600.SZ",
+   "name": "领益智造",
+   "industry": "?",
+   "entry_price": 14.64,
+   "last_close": 12.63,
+   "change_pct": -13.7
+  },
+  {
+   "symbol": "603993.SS",
+   "name": "洛阳钼业",
+   "industry": "工业金属",
+   "entry_price": 21.61,
+   "last_close": 18.48,
+   "change_pct": -14.5
+  },
+  {
+   "symbol": "002703.SZ",
+   "name": "浙江世宝",
+   "industry": "?",
+   "entry_price": 20.13,
+   "last_close": 17.11,
+   "change_pct": -15.0
+  },
+  {
+   "symbol": "000519.SZ",
+   "name": "中兵红箭",
+   "industry": "?",
+   "entry_price": 18.64,
+   "last_close": 15.8,
+   "change_pct": -15.2
+  },
+  {
+   "symbol": "603778.SS",
+   "name": "国晟科技",
+   "industry": "?",
+   "entry_price": 12.91,
+   "last_close": 10.79,
+   "change_pct": -16.4
+  },
+  {
+   "symbol": "601179.SS",
+   "name": "中国西电",
+   "industry": "?",
+   "entry_price": 15.15,
+   "last_close": 12.6,
+   "change_pct": -16.8
+  },
+  {
+   "symbol": "000617.SZ",
+   "name": "中油资本",
+   "industry": "多元金融",
+   "entry_price": 8.85,
+   "last_close": 7.34,
+   "change_pct": -17.1
+  },
+  {
+   "symbol": "600703.SS",
+   "name": "三安光电",
+   "industry": "光学光电子",
+   "entry_price": 16.02,
+   "last_close": 13.23,
+   "change_pct": -17.4
+  },
+  {
+   "symbol": "000737.SZ",
+   "name": "北方铜业",
+   "industry": "?",
+   "entry_price": 17.4,
+   "last_close": 14.35,
+   "change_pct": -17.5
+  },
+  {
+   "symbol": "600967.SS",
+   "name": "内蒙一机",
+   "industry": "?",
+   "entry_price": 16.7,
+   "last_close": 13.66,
+   "change_pct": -18.2
+  },
+  {
+   "symbol": "001696.SZ",
+   "name": "宗申动力",
+   "industry": "?",
+   "entry_price": 20.2,
+   "last_close": 16.44,
+   "change_pct": -18.6
+  },
+  {
+   "symbol": "002602.SZ",
+   "name": "世纪华通",
+   "industry": "?",
+   "entry_price": 19.53,
+   "last_close": 15.73,
+   "change_pct": -19.5
+  },
+  {
+   "symbol": "002181.SZ",
+   "name": "粤 传 媒",
+   "industry": "?",
+   "entry_price": 11.84,
+   "last_close": 9.5,
+   "change_pct": -19.7
+  },
+  {
+   "symbol": "002104.SZ",
+   "name": "恒宝股份",
+   "industry": "?",
+   "entry_price": 17.71,
+   "last_close": 14.05,
+   "change_pct": -20.7
+  },
+  {
+   "symbol": "600048.SS",
+   "name": "保利发展",
+   "industry": "?",
+   "entry_price": 6.67,
+   "last_close": 5.25,
+   "change_pct": -21.2
+  },
+  {
+   "symbol": "002670.SZ",
+   "name": "国盛证券",
+   "industry": "?",
+   "entry_price": 16.2,
+   "last_close": 12.73,
+   "change_pct": -21.4
+  },
+  {
+   "symbol": "600711.SS",
+   "name": "盛屯矿业",
+   "industry": "?",
+   "entry_price": 14.81,
+   "last_close": 11.52,
+   "change_pct": -22.2
+  },
+  {
+   "symbol": "000425.SZ",
+   "name": "徐工机械",
+   "industry": "?",
+   "entry_price": 10.53,
+   "last_close": 8.14,
+   "change_pct": -22.7
+  },
+  {
+   "symbol": "600693.SS",
+   "name": "东百集团",
+   "industry": "?",
+   "entry_price": 14.19,
+   "last_close": 10.93,
+   "change_pct": -23.0
+  },
+  {
+   "symbol": "601600.SS",
+   "name": "中国铝业",
+   "industry": "?",
+   "entry_price": 12.86,
+   "last_close": 9.67,
+   "change_pct": -24.8
+  },
+  {
+   "symbol": "002017.SZ",
+   "name": "东信和平",
+   "industry": "通信设备",
+   "entry_price": 22.86,
+   "last_close": 17.06,
+   "change_pct": -25.4
+  },
+  {
+   "symbol": "000892.SZ",
+   "name": "欢瑞世纪",
+   "industry": "?",
+   "entry_price": 7.57,
+   "last_close": 5.59,
+   "change_pct": -26.2
+  },
+  {
+   "symbol": "002555.SZ",
+   "name": "三七互娱",
+   "industry": "?",
+   "entry_price": 25.41,
+   "last_close": 18.67,
+   "change_pct": -26.5
+  },
+  {
+   "symbol": "002639.SZ",
+   "name": "雪人集团",
+   "industry": "?",
+   "entry_price": 19.53,
+   "last_close": 14.32,
+   "change_pct": -26.7
+  },
+  {
+   "symbol": "000592.SZ",
+   "name": "平潭发展",
+   "industry": "?",
+   "entry_price": 10.3,
+   "last_close": 7.49,
+   "change_pct": -27.3
+  },
+  {
+   "symbol": "601360.SS",
+   "name": "三六零",
+   "industry": "?",
+   "entry_price": 12.5,
+   "last_close": 8.98,
+   "change_pct": -28.2
+  },
+  {
+   "symbol": "002031.SZ",
+   "name": "巨轮智能",
+   "industry": "?",
+   "entry_price": 7.6,
+   "last_close": 5.36,
+   "change_pct": -29.5
+  },
+  {
+   "symbol": "002517.SZ",
+   "name": "恺英网络",
+   "industry": "?",
+   "entry_price": 24.7,
+   "last_close": 17.41,
+   "change_pct": -29.5
+  },
+  {
+   "symbol": "600410.SS",
+   "name": "华胜天成",
+   "industry": "?",
+   "entry_price": 20.74,
+   "last_close": 14.52,
+   "change_pct": -30.0
+  },
+  {
+   "symbol": "001979.SZ",
+   "name": "招商蛇口",
+   "industry": "?",
+   "entry_price": 10.13,
+   "last_close": 6.97,
+   "change_pct": -31.2
+  },
+  {
+   "symbol": "002202.SZ",
+   "name": "金风科技",
+   "industry": "风电设备",
+   "entry_price": 25.9,
+   "last_close": 17.49,
+   "change_pct": -32.5
+  },
+  {
+   "symbol": "600089.SS",
+   "name": "特变电工",
+   "industry": "?",
+   "entry_price": 28.07,
+   "last_close": 18.88,
+   "change_pct": -32.7
+  },
+  {
+   "symbol": "600588.SS",
+   "name": "用友网络",
+   "industry": "?",
+   "entry_price": 15.21,
+   "last_close": 10.19,
+   "change_pct": -33.0
+  },
+  {
+   "symbol": "000564.SZ",
+   "name": "供销大集",
+   "industry": "?",
+   "entry_price": 2.39,
+   "last_close": 1.6,
+   "change_pct": -33.1
+  },
+  {
+   "symbol": "002716.SZ",
+   "name": "湖南白银",
+   "industry": "贵金属",
+   "entry_price": 17.14,
+   "last_close": 11.22,
+   "change_pct": -34.5
+  },
+  {
+   "symbol": "002969.SZ",
+   "name": "嘉美包装",
+   "industry": "?",
+   "entry_price": 20.85,
+   "last_close": 13.13,
+   "change_pct": -37.0
+  },
+  {
+   "symbol": "002165.SZ",
+   "name": "红 宝 丽",
+   "industry": "?",
+   "entry_price": 12.74,
+   "last_close": 7.77,
+   "change_pct": -39.0
+  },
+  {
+   "symbol": "601212.SS",
+   "name": "白银有色",
+   "industry": "工业金属",
+   "entry_price": 12.3,
+   "last_close": 7.3,
+   "change_pct": -40.7
+  },
+  {
+   "symbol": "001330.SZ",
+   "name": "博纳影业",
+   "industry": "?",
+   "entry_price": 9.75,
+   "last_close": 5.77,
+   "change_pct": -40.8
+  },
+  {
+   "symbol": "000547.SZ",
+   "name": "航天发展",
+   "industry": "?",
+   "entry_price": 28.1,
+   "last_close": 14.61,
+   "change_pct": -48.0
+  },
+  {
+   "symbol": "002131.SZ",
+   "name": "利欧股份",
+   "industry": "?",
+   "entry_price": 9.38,
+   "last_close": 4.81,
+   "change_pct": -48.7
+  }
+ ],
+ "industry_dist": {
+  "?": 98,
+  "多元金融": 1,
+  "工业金属": 3,
+  "炼化及贸易": 1,
+  "光学光电子": 2,
+  "电力": 2,
+  "通信设备": 2,
+  "半导体": 1,
+  "风电设备": 1,
+  "化学制药": 2,
+  "贵金属": 1,
+  "电池": 1,
+  "农产品加工": 1,
+  "通用设备": 1,
+  "调味发酵品Ⅱ": 1,
+  "元件": 1,
+  "化学原料": 1,
+  "证券Ⅱ": 1,
+  "航运港口": 2
  },
- "backtest": {
-  "as_of": "2026-09-05",
-  "total_picks": 12,
-  "avg_t1": 1.52,
-  "avg_t5": null,
-  "avg_t20": null,
-  "win_rate_t1": 0.667,
-  "win_rate_t5": null,
-  "picks": [
+ "global_news": {
+  "source": "sina_7x24_global",
+  "fetched_at": "2026-09-05 14:45",
+  "items": [
    {
-    "date": "2026-09-04",
-    "symbol": "603466.SS",
-    "name": "风语筑",
-    "industry": "其他专业服务",
-    "price": 12.39,
-    "t1": null,
-    "t5": null,
-    "t20": null,
-    "excess_t1": null,
-    "excess_t5": null
+    "time": "14:41",
+    "text": "据伊朗媒体，哈尔克岛附近传出爆炸声，起因尚不明确。",
+    "tags": [
+     "焦点",
+     "国际"
+    ]
    },
    {
-    "date": "2026-09-04",
-    "symbol": "002104.SZ",
-    "name": "恒宝股份",
-    "industry": "电子器件",
-    "price": 14.05,
-    "t1": null,
-    "t5": null,
-    "t20": null,
-    "excess_t1": null,
-    "excess_t5": null
+    "time": "14:40",
+    "text": "世界黄金协会2026年央行黄金储备调查显示，过去12个月，19%的央行提高了国内黄金储备比例，或把储备地点做了多元化配置，一年前该数字只有7%。",
+    "tags": [
+     "市场"
+    ]
    },
    {
-    "date": "2026-09-04",
-    "symbol": "601328.SS",
-    "name": "交通银行",
-    "industry": "金融行业",
-    "price": 7.42,
-    "t1": null,
-    "t5": null,
-    "t20": null,
-    "excess_t1": null,
-    "excess_t5": null
+    "time": "14:25",
+    "text": "【长安汽车天枢领航推出全损置换等三项托底补偿政策】目前，长安汽车发布全栈自研智能驾驶辅助解决方案“天枢领航”，宣布为用户提供全场景守护、全流程服务、全用户可享以及事故损失、保费上涨、全损置换三项托底补偿。据了解，长安汽车智能技术产品研发累计",
+    "tags": [
+     "市场"
+    ]
    },
    {
-    "date": "2026-09-03",
-    "symbol": "002670.SZ",
-    "name": "国盛证券",
-    "industry": "电器行业",
-    "price": 12.69,
-    "t1": null,
-    "t5": null,
-    "t20": null,
-    "excess_t1": null,
-    "excess_t5": null
+    "time": "14:13",
+    "text": "俄罗斯国防部发布消息表示，俄军在基辅州布罗瓦里市击中了电子侦察中心。",
+    "tags": [
+     "国际"
+    ]
    },
    {
-    "date": "2026-09-03",
-    "symbol": "600497.SS",
-    "name": "驰宏锌锗",
-    "industry": "有色金属",
-    "price": 10.09,
-    "t1": null,
-    "t5": null,
-    "t20": null,
-    "excess_t1": null,
-    "excess_t5": null
+    "time": "14:10",
+    "text": "【德黑兰证券交易所指数上涨12万点】德黑兰证券交易所指数上涨12万点，市场上95%的股票处于绿色区间，其中16.5%的股票处于买入价位。（注：绿色为上涨，红色为下跌）",
+    "tags": [
+     "市场"
+    ]
    },
    {
-    "date": "2026-09-03",
-    "symbol": "601169.SS",
-    "name": "北京银行",
-    "industry": "金融行业",
-    "price": 5.54,
-    "t1": null,
-    "t5": null,
-    "t20": null,
-    "excess_t1": null,
-    "excess_t5": null
+    "time": "14:10",
+    "text": "俄罗斯副外长就威特科夫、库什纳可能访问莫斯科一事发表评论称，美国应当顾及当前的实地局势：目前战场形势正朝着不利于基辅的方向发展。",
+    "tags": [
+     "国际"
+    ]
    },
    {
-    "date": "2026-09-02",
-    "symbol": "002015.SZ",
-    "name": "协鑫能科",
-    "industry": "化纤行业",
-    "price": 17.05,
-    "t1": 0.59,
-    "t5": null,
-    "t20": null,
-    "excess_t1": 0.5,
-    "excess_t5": null
+    "time": "14:08",
+    "text": "【俄军对乌多地实施集群打击】当地时间9月5日，俄罗斯国防部通报，当日凌晨，俄联邦武装力量使用陆基高精度武器和远程攻击型无人机，对乌克兰第聂伯罗彼得罗夫斯克州保障军工企业所需的冶金厂、尼古拉耶夫市及尼古拉耶夫州和敖德萨州的物流中心和变电站实施",
+    "tags": [
+     "国际"
+    ]
    },
    {
-    "date": "2026-09-02",
-    "symbol": "600711.SS",
-    "name": "盛屯矿业",
-    "industry": "有色金属",
-    "price": 11.48,
-    "t1": -1.29,
-    "t5": null,
-    "t20": null,
-    "excess_t1": -1.37,
-    "excess_t5": null
+    "time": "14:03",
+    "text": "土耳其将对高速公路及伊斯坦布尔各大桥梁实施私有化。",
+    "tags": [
+     "其他",
+     "国际"
+    ]
    },
    {
-    "date": "2026-09-02",
-    "symbol": "601169.SS",
-    "name": "北京银行",
-    "industry": "金融行业",
-    "price": 5.54,
-    "t1": 1.08,
-    "t5": null,
-    "t20": null,
-    "excess_t1": 1.0,
-    "excess_t5": null
+    "time": "14:01",
+    "text": "【哥伦比亚一军营遇袭致2死5伤】哥伦比亚总统德拉埃斯普列亚4日晚证实，哥伦比亚北部北桑坦德省奥卡尼亚市一处军营当天遭到反政府武装袭击，已造成2名军人死亡、5名军人受伤。（新华社）",
+    "tags": [
+     "其他",
+     "国际"
+    ]
    },
    {
-    "date": "2026-09-01",
-    "symbol": "000725.SZ",
-    "name": "京东方Ａ",
-    "industry": "电子器件",
-    "price": 5.92,
-    "t1": -1.38,
-    "t5": null,
-    "t20": null,
-    "excess_t1": -1.13,
-    "excess_t5": null
-   },
-   {
-    "date": "2026-09-01",
-    "symbol": "601212.SS",
-    "name": "白银有色",
-    "industry": "工业金属",
-    "price": 7.63,
-    "t1": 10.06,
-    "t5": null,
-    "t20": null,
-    "excess_t1": 10.31,
-    "excess_t5": null
-   },
-   {
-    "date": "2026-09-01",
-    "symbol": "300142.SZ",
-    "name": "沃森生物",
-    "industry": "生物制药",
-    "price": 14.28,
-    "t1": 0.08,
-    "t5": null,
-    "t20": null,
-    "excess_t1": 0.33,
-    "excess_t5": null
+    "time": "13:59",
+    "text": "【俄副外长呼吁美国在俄乌调解中考虑战场现实】当地时间9月5日，俄罗斯副外长里亚布科夫在评论美国总统特使威特科夫和特朗普女婿库什纳可能访俄一事时表示，美国政府在乌克兰调解问题上应考虑到战场上的实际情况，而当地局势正朝着不利于基辅的方向发展。（",
+    "tags": [
+     "国际"
+    ]
    }
   ]
  },
- "legacy": {
-  "history": [
-   {
-    "date": "2026-09-01",
-    "n_recs": 3,
-    "exec_date": "2026-09-02",
-    "trade_date": "2026-08-31",
-    "macro_regime": "risk_on",
-    "industries": [
-     "电子器件",
-     "工业金属",
-     "生物制药"
-    ],
-    "stocks": [
-     {
-      "symbol": "000725.SZ",
-      "name": "京东方Ａ",
-      "industry": "电子器件",
-      "price": 5.92,
-      "shares": 300
-     },
-     {
-      "symbol": "601212.SS",
-      "name": "白银有色",
-      "industry": "工业金属",
-      "price": 7.63,
-      "shares": 200
-     },
-     {
-      "symbol": "300142.SZ",
-      "name": "沃森生物",
-      "industry": "生物制药",
-      "price": 14.28,
-      "shares": 100
-     }
-    ]
-   },
-   {
-    "date": "2026-09-02",
-    "n_recs": 3,
-    "exec_date": "2026-09-03",
-    "trade_date": "2026-09-02",
-    "macro_regime": "transition",
-    "industries": [
-     "化纤行业",
-     "有色金属",
-     "金融行业"
-    ],
-    "stocks": [
-     {
-      "symbol": "002015.SZ",
-      "name": "协鑫能科",
-      "industry": "化纤行业",
-      "price": 17.05,
-      "shares": 100
-     },
-     {
-      "symbol": "600711.SS",
-      "name": "盛屯矿业",
-      "industry": "有色金属",
-      "price": 11.48,
-      "shares": 100
-     },
-     {
-      "symbol": "601169.SS",
-      "name": "北京银行",
-      "industry": "金融行业",
-      "price": 5.54,
-      "shares": 300
-     }
-    ]
-   },
-   {
-    "date": "2026-09-03",
-    "n_recs": 3,
-    "exec_date": "2026-09-04",
-    "trade_date": "2026-09-03",
-    "macro_regime": "transition",
-    "industries": [
-     "电器行业",
-     "有色金属",
-     "金融行业"
-    ],
-    "stocks": [
-     {
-      "symbol": "002670.SZ",
-      "name": "国盛证券",
-      "industry": "电器行业",
-      "price": 12.69,
-      "shares": 100
-     },
-     {
-      "symbol": "600497.SS",
-      "name": "驰宏锌锗",
-      "industry": "有色金属",
-      "price": 10.09,
-      "shares": 100
-     },
-     {
-      "symbol": "601169.SS",
-      "name": "北京银行",
-      "industry": "金融行业",
-      "price": 5.54,
-      "shares": 300
-     }
-    ]
-   },
-   {
-    "date": "2026-09-04",
-    "n_recs": 3,
-    "exec_date": "2026-09-07",
-    "trade_date": "2026-09-04",
-    "macro_regime": "transition",
-    "industries": [
-     "其他专业服务",
-     "电子器件",
-     "金融行业"
-    ],
-    "stocks": [
-     {
-      "symbol": "603466.SS",
-      "name": "风语筑",
-      "industry": "其他专业服务",
-      "price": 12.39,
-      "shares": 100
-     },
-     {
-      "symbol": "002104.SZ",
-      "name": "恒宝股份",
-      "industry": "电子器件",
-      "price": 14.05,
-      "shares": 100
-     },
-     {
-      "symbol": "601328.SS",
-      "name": "交通银行",
-      "industry": "金融行业",
-      "price": 7.42,
-      "shares": 200
-     }
-    ]
-   }
-  ],
-  "performance_rows": [
-   {
-    "date": "2026-09-01",
-    "symbol": "000725.SZ",
-    "name": "京东方Ａ",
-    "ret_t1": -1.38,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-01",
-    "symbol": "601212.SS",
-    "name": "白银有色",
-    "ret_t1": 10.06,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-01",
-    "symbol": "300142.SZ",
-    "name": "沃森生物",
-    "ret_t1": 0.08,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-02",
-    "symbol": "002015.SZ",
-    "name": "协鑫能科",
-    "ret_t1": 0.59,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-02",
-    "symbol": "600711.SS",
-    "name": "盛屯矿业",
-    "ret_t1": -1.29,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-02",
-    "symbol": "601169.SS",
-    "name": "北京银行",
-    "ret_t1": 1.08,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-03",
-    "symbol": "002670.SZ",
-    "name": "国盛证券",
-    "ret_t1": null,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-03",
-    "symbol": "600497.SS",
-    "name": "驰宏锌锗",
-    "ret_t1": null,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-03",
-    "symbol": "601169.SS",
-    "name": "北京银行",
-    "ret_t1": null,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-04",
-    "symbol": "603466.SS",
-    "name": "风语筑",
-    "ret_t1": null,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-04",
-    "symbol": "002104.SZ",
-    "name": "恒宝股份",
-    "ret_t1": null,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   },
-   {
-    "date": "2026-09-04",
-    "symbol": "601328.SS",
-    "name": "交通银行",
-    "ret_t1": null,
-    "ret_t5": null,
-    "ret_t20": null,
-    "excess_t1": null,
-    "excess_t5": null,
-    "excess_t20": null,
-    "status": "open"
-   }
-  ],
-  "weekly": {
-   "total": 12,
-   "t1": {
-    "n": 6,
-    "win_rate": 66.7,
-    "avg_ret": 1.52,
-    "best": 10.06,
-    "worst": -1.38,
-    "avg_excess": null,
-    "excess_win_rate": null
-   },
-   "t5": null,
-   "t20": null,
-   "closed": 0,
-   "industries": []
-  },
-  "ic": {
-   "samples": 0,
-   "factors": {}
-  }
- }
+ "legacy": {}
 }

@@ -219,6 +219,10 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <div class="sec-title">全球宏观信号</div>
 <div class="signals" id="signals"></div>
 
+<!-- 全球财经快讯 (公开新闻源: 新浪 7x24) -->
+<div class="sec-title">全球财经快讯 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)" id="gn-ts"></span></div>
+<div id="global-news"></div>
+
 <!-- 推荐时间轴 -->
 <div class="sec-title">每日推荐 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)">收盘推送 · 次日执行</span></div>
 <div class="timeline" id="timeline"></div>
@@ -261,6 +265,7 @@ function render(d) {
   renderRegime(d.macro || {});
   renderKpis(d.gate || {}, d.summary || {}, d.legacy || {});
   renderSignals((d.macro || {}).signals || {});
+  renderGlobalNews(d.global_news || {});
   renderTimeline((d.legacy || {}).history || []);
   renderIndustry(d.industry_dist || {});
   renderBacktest(d.backtest || {});
@@ -343,6 +348,23 @@ function renderSignals(sigs) {
     const txt = typeof v === 'number' ? (up ? '+' : '') + Number(v).toFixed(1) : v;
     return `<div class="signal"><div class="s-label">${SIG_LABEL[k]}</div>
       <div class="s-val ${typeof v === 'number' ? (up ? 'up' : 'down') : ''}">${txt}</div></div>`;
+  }).join('');
+}
+
+function renderGlobalNews(gn) {
+  const box = document.getElementById('global-news');
+  const ts = document.getElementById('gn-ts');
+  if (ts && gn.fetched_at) ts.textContent = `· ${(gn.fetched_at || '').slice(5, 16)} 更新`;
+  const items = (gn.items || []).slice(0, 10);
+  if (!items.length) {
+    box.innerHTML = '<div class="empty">快讯暂不可用</div>';
+    return;
+  }
+  box.innerHTML = items.map(it => {
+    const tags = (it.tags || []).slice(0, 2).map(t =>
+      `<span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">${t}</span>`).join('');
+    return `<div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">${it.time || ''}</span>${tags}${it.text}</div>`;
   }).join('');
 }
 
