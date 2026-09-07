@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-09-07T04:30:40",
+ "generated_at": "2026-09-08T04:31:16",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 11.264,
-  "ma30": 10.629,
-  "as_of": "2026-09-04",
+  "pool_index": 11.514,
+  "ma30": 10.713,
+  "as_of": "2026-09-07",
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 18,
-  "covered_industries": 9,
-  "latest_macro": "transition",
-  "latest_trade_date": "2026-09-04"
+  "total_recommendations": 21,
+  "covered_industries": 10,
+  "latest_macro": "accumulation",
+  "latest_trade_date": "2026-09-07"
  },
  "nav_curve": [],
  "holdings": [],
@@ -23,21 +23,22 @@
   "生物制药": 1,
   "化纤行业": 1,
   "有色金属": 2,
-  "金融行业": 7,
+  "金融行业": 9,
   "其他专业服务": 1,
   "房地产": 1,
-  "电子信息": 1
+  "电子信息": 1,
+  "电子元件": 1
  },
  "macro": {
   "regime": "risk_on",
-  "confidence": 0.5,
+  "confidence": 0.364,
   "signals": {
    "fear_greed": 41.8571428571429,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -1.3829429190903797,
+   "copper_gold_trend_20d": -1.264231231351165,
    "yield_spread_10y2y_bp": 102.69999504089355,
-   "vix": 14.529999732971191,
-   "dxy_trend_20d": -0.4417618662173384,
+   "vix": 15.300000190734863,
+   "dxy_trend_20d": -0.6352019553754196,
    "cftc_copper_mm_net": 72882.0,
    "cftc_copper_mm_change": -3389.0,
    "cftc_copper_as_of": "2026-09-01"
@@ -47,92 +48,199 @@
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-09-07 04:30",
+  "fetched_at": "2026-09-08 04:31",
   "items": [
    {
     "time": "04:29",
-    "text": "伊朗最高国家安全委员会秘书雷扎伊：美国对伊朗及其民众的政策就是要实现完全控制，只想得到一批盲目服从命令的附庸，这就是美国一贯的诉求。",
+    "text": "美国国家运输安全委员会：现场到处都是燃油，还需要排空飞机内的燃油，残骸清理作业仍在进行。",
     "tags": [
-     "焦点",
+     "国际"
+    ]
+   },
+   {
+    "time": "04:29",
+    "text": "美国国家运输安全委员会：已取回飞行数据记录器以及驾驶舱语音记录器。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:27",
+    "text": "美国国家运输安全委员会：已着手收集调查数据，我们已掌握部分数据，但在完成核实之前不会对外公布相关信息。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:26",
+    "text": "美国国家运输安全委员会：飞机滑出铺装路面（跑道）1300英尺。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:26",
+    "text": "美国国家运输安全委员会：亚马逊涉事货机着陆时冲出跑道；该架航班从波多黎各飞来，是该机当日执行的第三趟飞行。飞机撞上一辆载有7人的厢式货车，随后又撞上一辆正在道路上行驶的丰田汽车。",
+    "tags": [
+     "公司",
      "国际"
     ]
    },
    {
     "time": "04:20",
-    "text": "【泽连斯基称与美特使等人的会晤“非常具有实质性”】据乌克兰国家通讯社6日晚报道，乌克兰总统泽连斯基在与美国总统特朗普的特使威特科夫和女婿库什纳会晤后向媒体表示，乌方与美方和欧洲国家代表当天讨论了对乌越冬援助、安全保障等俄乌冲突涉及的议题，会",
+    "text": "美国国家运输安全委员会召开新闻发布会，通报亚马逊Prime Air一架波音767货机在迈阿密国际机场冲出跑道事件的最新情况。",
+    "tags": [
+     "公司",
+     "国际"
+    ]
+   },
+   {
+    "time": "04:20",
+    "text": "美国商务部：印度加入保障6G网络安全的相关合作，商务部长卢特尼克与印度对应官员磋商6G发展前景。",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "04:16",
-    "text": "美国特使库什纳：以色列政府在加沙问题上的行事“有些不理智”。",
+    "time": "04:18",
+    "text": "乌克兰总检察长克拉夫琴科辞职。",
     "tags": [
      "国际"
     ]
    },
    {
     "time": "04:11",
-    "text": "【美一货机冲出跑道撞车起火】当地时间9月6日下午2点左右，美国亚马逊公司一架货运飞机在迈阿密国际机场冲出跑道，引发大规模紧急响应，机场暂停运营。美国联邦航空局称，这架波音767-300型货机从波多黎各的圣胡安起飞，在迈阿密国际机场着陆后冲出",
-    "tags": [
-     "公司",
-     "国际"
-    ]
-   },
-   {
-    "time": "03:50",
-    "text": "【联合国贸发会议报告：最不发达国家数字化可交付服务发展滞后】联合国贸易和发展会议近日发布最新《全球贸易更新》报告指出，服务贸易正在重塑全球贸易格局，但最不发达国家在数字贸易中日益边缘化。报告显示，过去十年，数字化可交付服务年均增长7.1%，",
+    "text": "【芬兰完成芬俄边境围栏系统建设 未来或扩建】芬兰7日宣布，已完成芬兰与俄罗斯边境围栏系统的建设，未来可能进一步扩大围栏修建范围。芬兰边防军当日发布公报说，这一围栏系统旨在防止和延缓未经许可的越境活动。已建成围栏总长约200公里，分布在芬俄1",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "03:30",
-    "text": "美国交通部长达菲：应急处置人员正在迈阿密国际机场勘查现场。",
+    "time": "04:05",
+    "text": "【伊朗锡里克婚礼遭袭现场发现美武器残骸】当地时间9月1日晚，美军对伊朗南部多个城市发动大规模空袭，其中锡里克市一处婚礼现场遭袭，造成数十人伤亡。近日，总台记者来到锡里克，探访了当晚遭袭的婚礼现场。在袭击发生后，当地居民搜集到一些爆炸物和导弹",
     "tags": [
      "国际"
-    ]
-   },
-   {
-    "time": "03:28",
-    "text": "【美联邦航空管理局：隶属亚马逊的波音767货机在迈阿密滑出跑道】一架属于亚马逊的飞机周日在迈阿密国际机场滑出跑道。美国联邦航空管理局发布声明称：“该航班于当地时间下午2时左右在迈阿密国际机场降落之后滑出跑道。这架波音767‑300型货机从波",
-    "tags": [
-     "公司",
-     "国际"
-    ]
-   },
-   {
-    "time": "03:27",
-    "text": "美国交通部长达菲：迈阿密国际机场或将出现大规模延误，部分航班可能取消。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "03:22",
-    "text": "美国联邦航空管理局：（冲出跑道的）是一架波音767-300货机，该机从波多黎各圣胡安的路易斯·穆尼奥斯·马林国际机场起飞。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "03:21",
-    "text": "悉尼早盘交易中，美元兑G10货币走势涨跌互现。",
-    "tags": [
-     "市场"
     ]
    }
   ]
  },
  "backtest": {
-  "as_of": "2026-09-07",
-  "total_picks": 30,
-  "avg_t1": 1.52,
+  "as_of": "2026-09-08",
+  "total_picks": 39,
+  "avg_t1": 0.56,
   "avg_t5": null,
   "avg_t20": null,
-  "win_rate_t1": 0.667,
+  "win_rate_t1": 0.556,
   "win_rate_t5": null,
   "picks": [
+   {
+    "date": "2026-09-07_noon",
+    "symbol": "601211.SS",
+    "name": "国泰海通",
+    "industry": "金融行业",
+    "price": 17.47,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_noon",
+    "symbol": "000823.SZ",
+    "name": "超声电子",
+    "industry": "电子器件",
+    "price": 15.94,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_noon",
+    "symbol": "601328.SS",
+    "name": "交通银行",
+    "industry": "金融行业",
+    "price": 7.33,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_morning",
+    "symbol": "600909.SS",
+    "name": "华安证券",
+    "industry": "金融行业",
+    "price": 8.25,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_morning",
+    "symbol": "002579.SZ",
+    "name": "中京电子",
+    "industry": "电子器件",
+    "price": 14.1,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_morning",
+    "symbol": "601988.SS",
+    "name": "中国银行",
+    "industry": "金融行业",
+    "price": 6.57,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_evening",
+    "symbol": "000783.SZ",
+    "name": "长江证券",
+    "industry": "金融行业",
+    "price": 9.06,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_evening",
+    "symbol": "002815.SZ",
+    "name": "崇达技术",
+    "industry": "电子元件",
+    "price": 16.01,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-07_evening",
+    "symbol": "601398.SS",
+    "name": "工商银行",
+    "industry": "金融行业",
+    "price": 7.97,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
    {
     "date": "2026-09-06_sunday",
     "symbol": "000783.SZ",
@@ -391,10 +499,10 @@
     "name": "国盛证券",
     "industry": "金融行业",
     "price": 12.69,
-    "t1": null,
+    "t1": -2.12,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -2.19,
     "excess_t5": null
    },
    {
@@ -403,10 +511,10 @@
     "name": "驰宏锌锗",
     "industry": "有色金属",
     "price": 10.09,
-    "t1": null,
+    "t1": 0.2,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 0.14,
     "excess_t5": null
    },
    {
@@ -415,10 +523,10 @@
     "name": "北京银行",
     "industry": "金融行业",
     "price": 5.54,
-    "t1": null,
+    "t1": -2.14,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -2.21,
     "excess_t5": null
    },
    {
@@ -430,7 +538,7 @@
     "t1": 0.59,
     "t5": null,
     "t20": null,
-    "excess_t1": 0.5,
+    "excess_t1": 0.89,
     "excess_t5": null
    },
    {
@@ -442,7 +550,7 @@
     "t1": -1.29,
     "t5": null,
     "t20": null,
-    "excess_t1": -1.37,
+    "excess_t1": -0.98,
     "excess_t5": null
    },
    {
@@ -454,7 +562,7 @@
     "t1": 1.08,
     "t5": null,
     "t20": null,
-    "excess_t1": 1.0,
+    "excess_t1": 1.39,
     "excess_t5": null
    },
    {
@@ -466,7 +574,7 @@
     "t1": -1.38,
     "t5": null,
     "t20": null,
-    "excess_t1": -1.13,
+    "excess_t1": -1.4,
     "excess_t5": null
    },
    {
@@ -478,7 +586,7 @@
     "t1": 10.06,
     "t5": null,
     "t20": null,
-    "excess_t1": 10.31,
+    "excess_t1": 10.04,
     "excess_t5": null
    },
    {
@@ -490,7 +598,7 @@
     "t1": 0.08,
     "t5": null,
     "t20": null,
-    "excess_t1": 0.33,
+    "excess_t1": 0.06,
     "excess_t5": null
    }
   ]
@@ -706,6 +814,41 @@
       "shares": 200
      }
     ]
+   },
+   {
+    "date": "2026-09-07",
+    "n_recs": 3,
+    "exec_date": "2026-09-08",
+    "trade_date": "2026-09-07",
+    "macro_regime": "accumulation",
+    "industries": [
+     "金融行业",
+     "电子元件",
+     "金融行业"
+    ],
+    "stocks": [
+     {
+      "symbol": "000783.SZ",
+      "name": "长江证券",
+      "industry": "金融行业",
+      "price": 9.06,
+      "shares": 200
+     },
+     {
+      "symbol": "002815.SZ",
+      "name": "崇达技术",
+      "industry": "电子元件",
+      "price": 16.01,
+      "shares": 100
+     },
+     {
+      "symbol": "601398.SS",
+      "name": "工商银行",
+      "industry": "金融行业",
+      "price": 7.97,
+      "shares": 200
+     }
+    ]
    }
   ],
   "performance_rows": [
@@ -785,7 +928,7 @@
     "date": "2026-09-03",
     "symbol": "002670.SZ",
     "name": "国盛证券",
-    "ret_t1": null,
+    "ret_t1": -2.12,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
@@ -797,7 +940,7 @@
     "date": "2026-09-03",
     "symbol": "600497.SS",
     "name": "驰宏锌锗",
-    "ret_t1": null,
+    "ret_t1": 0.2,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
@@ -809,7 +952,7 @@
     "date": "2026-09-03",
     "symbol": "601169.SS",
     "name": "北京银行",
-    "ret_t1": null,
+    "ret_t1": -2.14,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
@@ -915,6 +1058,42 @@
    },
    {
     "date": "2026-09-06",
+    "symbol": "601398.SS",
+    "name": "工商银行",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-07",
+    "symbol": "000783.SZ",
+    "name": "长江证券",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-07",
+    "symbol": "002815.SZ",
+    "name": "崇达技术",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-07",
     "symbol": "601398.SS",
     "name": "工商银行",
     "ret_t1": null,
