@@ -1,152 +1,407 @@
 {
- "generated_at": "2026-09-10T04:30:47",
+ "generated_at": "2026-09-12T04:31:07",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 11.385,
-  "ma30": 10.275,
-  "as_of": "2026-09-09",
+  "pool_index": 11.145,
+  "ma30": 10.614,
+  "as_of": "2026-09-11",
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 27,
-  "covered_industries": 12,
+  "total_recommendations": 33,
+  "covered_industries": 14,
   "latest_macro": "risk_off",
-  "latest_trade_date": "2026-09-09"
+  "latest_trade_date": "2026-09-11"
  },
  "nav_curve": [],
  "holdings": [],
  "industry_dist": {
-  "电子器件": 4,
+  "电子器件": 5,
   "铜": 3,
   "生物制药": 1,
   "化纤行业": 1,
-  "有色金属": 2,
-  "金融行业": 10,
+  "有色金属": 3,
+  "金融行业": 11,
   "其他专业服务": 1,
   "房地产": 1,
-  "电子信息": 1,
+  "电子信息": 2,
   "电子元件": 1,
   "家电行业": 1,
-  "机械行业": 1
+  "机械行业": 1,
+  "电力行业": 1,
+  "交通运输": 1
  },
  "macro": {
   "regime": "risk_on",
-  "confidence": 0.333,
+  "confidence": 0.444,
   "signals": {
-   "fear_greed": 39.0285714285714,
+   "fear_greed": 33.3428571428571,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": 2.263802928533365,
-   "yield_spread_10y2y_bp": 103.20000648498535,
-   "vix": 16.459999084472656,
-   "dxy_trend_20d": -0.9867768116238906,
-   "cftc_copper_mm_net": 72882.0,
-   "cftc_copper_mm_change": -3389.0,
-   "cftc_copper_as_of": "2026-09-01"
+   "copper_gold_trend_20d": -1.3390822815525616,
+   "yield_spread_10y2y_bp": 106.19997978210449,
+   "vix": 15.84000015258789,
+   "dxy_trend_20d": -0.839332627942524,
+   "cftc_copper_mm_net": 82154.0,
+   "cftc_copper_mm_change": 9272.0,
+   "cftc_copper_as_of": "2026-09-08"
   },
   "source": "macro_detector+global_signals",
-  "description": "强趋势向上，科技/周期领涨，宽广度好，风险偏好高 — 适合激进配置"
+  "description": "趋势向上，周期与科技领涨，市场宽广度好"
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-09-10 04:31",
+  "fetched_at": "2026-09-12 04:31",
   "items": [
    {
     "time": "04:26",
-    "text": "美国能源部长赖特：当前炼油行业面临的问题比原油本身更为严峻。",
+    "text": "康宁股价在达成股权分配协议后盘后下跌3%。",
     "tags": [
-     "国际"
+     "市场"
     ]
    },
    {
-    "time": "04:18",
-    "text": "美国国务卿鲁比奥谈及伊朗：我们认为，没有任何一方给予伊朗的东西能够改变当前局势与现状。伊朗持续向海军舰船发动袭击；一旦他们袭击我方舰船，就要付出油轮受损的代价。他们没能击中我方舰船，但已经损失了五艘油轮。昨晚他们又损失五艘，四艘受损，一艘沉",
+    "time": "04:26",
+    "text": "【国际油价11日下跌】截至当天收盘，纽约商品交易所10月交货的轻质原油期货价格下跌2.43美元，收于每桶100.05美元，跌幅为2.37%；11月交货的伦敦布伦特原油期货价格下跌3.02美元，收于每桶104.61美元，跌幅为2.81%。",
+    "tags": [
+     "市场"
+    ]
+   },
+   {
+    "time": "04:19",
+    "text": "阿斯利康股价盘后下跌2%，因三期临床试验结果令人失望。",
+    "tags": [
+     "市场"
+    ]
+   },
+   {
+    "time": "04:16",
+    "text": "美国银行存款从前一周的19.559万亿美元增至19.5666万亿美元。",
     "tags": [
      "国际"
     ]
    },
    {
     "time": "04:15",
-    "text": "美国国会预算办公室预估8月联邦预算赤字为1680亿美元。",
+    "text": "高盛、美国银行争相承销Anthropic员工所持股份的IPO巨额交易。",
+    "tags": [
+     "公司",
+     "观点",
+     "国际"
+    ]
+   },
+   {
+    "time": "04:13",
+    "text": "【“美联储传声筒”：美联储下周势将加息 但只加息一次无法解决问题】“美联储传声筒”Nick Timiraos最新撰文称，投资者已基本认定美联储下周将进行三年来首次加息，更难的问题是之后会怎样。由于美联储内部几乎没人认为单次加息25个基点足以",
+    "tags": [
+     "央行",
+     "焦点",
+     "国际"
+    ]
+   },
+   {
+    "time": "04:10",
+    "text": "沙特外交部声明称，保留采取一切必要措施维护其主权、安全、设施、公民及居民的权利。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:09",
+    "text": "沙特外交部声明称，应伊拉克总理请求，现阶段选择不采取报复行动。",
     "tags": [
      "焦点",
      "国际"
     ]
    },
    {
-    "time": "04:13",
-    "text": "摩尔多瓦政府发言人：因发布无人机警报关闭空域，乌克兰总统泽连斯基原定于周二动身前往挪威的行程推迟。俄罗斯无人机坠落在摩尔多瓦境内后，飞行限制已被解除。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "04:10",
-    "text": "摩托罗拉：董事会批准将股票回购计划规模扩大20亿美元。",
-    "tags": [
-     "其他",
-     "焦点"
-    ]
-   },
-   {
-    "time": "04:08",
-    "text": "美国国务卿鲁比奥：要在经济上“扼杀”伊朗，针对伊朗油轮的袭击行动将会持续。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "04:02",
-    "text": "META股价上涨6.6%，创7月以来最大涨幅。",
+    "time": "04:07",
+    "text": "周五（9月11日），彭博电动汽车价格回报指数跌1.21%，报3319.82点，本周累计下跌2.90%，9月8-9日大致持稳于3420点形成本周顶部，10-11日持续下挫。",
     "tags": [
      "市场"
     ]
    },
    {
-    "time": "04:00",
-    "text": "【美股收盘：三大股指集体收跌】道指跌0.77%，标普500指数跌0.48%，纳指跌0.64%。Casey’跌14.24%，VRT跌9.65%，特许通讯跌8.13%，康卡斯特跌6.61%，库珀医疗跌6.22%，Shopify跌5.45%。“七",
-    "tags": [
-     "市场",
-     "焦点"
-    ]
-   },
-   {
-    "time": "04:00",
-    "text": "乌克兰总统泽连斯基随后在奥斯陆会见斯托雷，商讨欧洲防空合作事宜，强调乌克兰总统面临持续的安全风险。",
+    "time": "04:07",
+    "text": "市场消息：美国防长赫格塞斯将于9月15日会见德国国防部长皮斯托里乌斯。",
     "tags": [
      "国际"
-    ]
-   },
-   {
-    "time": "04:00",
-    "text": "【纳斯达克中国金龙指数收跌2.08%】闪送跌12.23%，天演药业跌6.88%，HTT跌5.66%，小马智行跌5.71%，爱奇艺跌5.12%。",
-    "tags": [
-     "市场",
-     "焦点"
     ]
    }
   ]
  },
  "backtest": {
-  "as_of": "2026-09-10",
-  "total_picks": 57,
-  "avg_t1": 0.49,
-  "avg_t5": 1.43,
+  "as_of": "2026-09-12",
+  "total_picks": 78,
+  "avg_t1": 0.29,
+  "avg_t5": 0.14,
   "avg_t20": null,
-  "win_rate_t1": 0.59,
-  "win_rate_t5": 0.667,
+  "win_rate_t1": 0.561,
+  "win_rate_t5": 0.556,
   "picks": [
+   {
+    "date": "2026-09-11_noon",
+    "symbol": "603993.SS",
+    "name": "洛阳钼业",
+    "industry": "铜",
+    "price": 17.74,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_noon",
+    "symbol": "002815.SZ",
+    "name": "崇达技术",
+    "industry": "电子元件",
+    "price": 19.18,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_noon",
+    "symbol": "000712.SZ",
+    "name": "锦龙股份",
+    "industry": "金融行业",
+    "price": 10.11,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_morning",
+    "symbol": "000100.SZ",
+    "name": "TCL科技",
+    "industry": "家电行业",
+    "price": 4.69,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_morning",
+    "symbol": "000737.SZ",
+    "name": "北方铜业",
+    "industry": "化工行业",
+    "price": 16.38,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_morning",
+    "symbol": "601288.SS",
+    "name": "农业银行",
+    "industry": "金融行业",
+    "price": 6.94,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_evening",
+    "symbol": "002519.SZ",
+    "name": "银河电子",
+    "industry": "电子信息",
+    "price": 6.31,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_evening",
+    "symbol": "601688.SS",
+    "name": "华泰证券",
+    "industry": "金融行业",
+    "price": 18.93,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_evening",
+    "symbol": "601919.SS",
+    "name": "中远海控",
+    "industry": "交通运输",
+    "price": 16.19,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_close",
+    "symbol": "600744.SS",
+    "name": "华银电力",
+    "industry": "电力行业",
+    "price": 7.06,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_close",
+    "symbol": "600967.SS",
+    "name": "内蒙一机",
+    "industry": "交通运输",
+    "price": 14.98,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-11_close",
+    "symbol": "600016.SS",
+    "name": "民生银行",
+    "industry": "金融行业",
+    "price": 3.7,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_noon",
+    "symbol": "601872.SS",
+    "name": "招商轮船",
+    "industry": "交通运输",
+    "price": 19.98,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_noon",
+    "symbol": "002579.SZ",
+    "name": "中京电子",
+    "industry": "电子器件",
+    "price": 16.75,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_noon",
+    "symbol": "000878.SZ",
+    "name": "云南铜业",
+    "industry": "有色金属",
+    "price": 18.69,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_morning",
+    "symbol": "600601.SS",
+    "name": "方正科技",
+    "industry": "电子信息",
+    "price": 14.62,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_morning",
+    "symbol": "601212.SS",
+    "name": "白银有色",
+    "industry": "铜",
+    "price": 7.09,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_morning",
+    "symbol": "600219.SS",
+    "name": "南山铝业",
+    "industry": "有色金属",
+    "price": 5.07,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_evening",
+    "symbol": "601991.SS",
+    "name": "大唐发电",
+    "industry": "电力行业",
+    "price": 6.02,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_evening",
+    "symbol": "002141.SZ",
+    "name": "贤丰控股",
+    "industry": "电子器件",
+    "price": 6.41,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-10_evening",
+    "symbol": "000630.SZ",
+    "name": "铜陵有色",
+    "industry": "有色金属",
+    "price": 6.5,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
    {
     "date": "2026-09-09_noon",
     "symbol": "601118.SS",
     "name": "海南橡胶",
     "industry": "化工行业",
     "price": 7.66,
-    "t1": null,
+    "t1": -7.63,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -6.45,
     "excess_t5": null
    },
    {
@@ -155,10 +410,10 @@
     "name": "盛屯矿业",
     "industry": "有色金属",
     "price": 11.96,
-    "t1": null,
+    "t1": -5.91,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -4.74,
     "excess_t5": null
    },
    {
@@ -167,10 +422,10 @@
     "name": "中京电子",
     "industry": "电子器件",
     "price": 16.85,
-    "t1": null,
+    "t1": 2.09,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 3.27,
     "excess_t5": null
    },
    {
@@ -179,10 +434,10 @@
     "name": "崇达技术",
     "industry": "电子元件",
     "price": 17.08,
-    "t1": null,
+    "t1": 10.03,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 11.2,
     "excess_t5": null
    },
    {
@@ -191,10 +446,10 @@
     "name": "洛阳钼业",
     "industry": "铜",
     "price": 18.94,
-    "t1": null,
+    "t1": -4.52,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -3.35,
     "excess_t5": null
    },
    {
@@ -203,10 +458,10 @@
     "name": "农业银行",
     "industry": "金融行业",
     "price": 6.76,
-    "t1": null,
+    "t1": 0.43,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 1.61,
     "excess_t5": null
    },
    {
@@ -215,10 +470,10 @@
     "name": "超声电子",
     "industry": "电子器件",
     "price": 17.0,
-    "t1": null,
+    "t1": 10.0,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 11.18,
     "excess_t5": null
    },
    {
@@ -227,10 +482,10 @@
     "name": "洛阳钼业",
     "industry": "铜",
     "price": 19.09,
-    "t1": null,
+    "t1": -4.52,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -3.35,
     "excess_t5": null
    },
    {
@@ -239,10 +494,10 @@
     "name": "天山铝业",
     "industry": "机械行业",
     "price": 14.04,
-    "t1": null,
+    "t1": -3.92,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -2.75,
     "excess_t5": null
    },
    {
@@ -251,10 +506,10 @@
     "name": "TCL科技",
     "industry": "家电行业",
     "price": 4.79,
-    "t1": null,
+    "t1": -1.05,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -0.62,
     "excess_t5": null
    },
    {
@@ -263,10 +518,10 @@
     "name": "中国银行",
     "industry": "金融行业",
     "price": 6.37,
-    "t1": null,
+    "t1": 1.56,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 1.99,
     "excess_t5": null
    },
    {
@@ -275,10 +530,10 @@
     "name": "铜陵有色",
     "industry": "有色金属",
     "price": 6.59,
-    "t1": null,
+    "t1": -1.07,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -0.63,
     "excess_t5": null
    },
    {
@@ -287,10 +542,10 @@
     "name": "锦龙股份",
     "industry": "金融行业",
     "price": 12.35,
-    "t1": null,
+    "t1": 0.18,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 0.61,
     "excess_t5": null
    },
    {
@@ -299,10 +554,10 @@
     "name": "领益智造",
     "industry": "电子器件",
     "price": 12.65,
-    "t1": null,
+    "t1": 3.22,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 3.65,
     "excess_t5": null
    },
    {
@@ -311,10 +566,10 @@
     "name": "交通银行",
     "industry": "金融行业",
     "price": 7.32,
-    "t1": null,
+    "t1": 2.06,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 2.49,
     "excess_t5": null
    },
    {
@@ -323,10 +578,10 @@
     "name": "TCL科技",
     "industry": "家电行业",
     "price": 4.76,
-    "t1": null,
+    "t1": -1.05,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -0.62,
     "excess_t5": null
    },
    {
@@ -335,10 +590,10 @@
     "name": "白银有色",
     "industry": "铜",
     "price": 7.11,
-    "t1": null,
+    "t1": -3.95,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -3.52,
     "excess_t5": null
    },
    {
@@ -347,10 +602,10 @@
     "name": "中国银行",
     "industry": "金融行业",
     "price": 6.39,
-    "t1": null,
+    "t1": 1.56,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 1.99,
     "excess_t5": null
    },
    {
@@ -720,10 +975,10 @@
     "industry": "金融行业",
     "price": 12.69,
     "t1": -2.12,
-    "t5": null,
+    "t5": -7.93,
     "t20": null,
     "excess_t1": -2.19,
-    "excess_t5": null
+    "excess_t5": -6.87
    },
    {
     "date": "2026-09-03",
@@ -732,10 +987,10 @@
     "industry": "有色金属",
     "price": 10.09,
     "t1": 0.2,
-    "t5": null,
+    "t5": -0.3,
     "t20": null,
     "excess_t1": 0.14,
-    "excess_t5": null
+    "excess_t5": 0.76
    },
    {
     "date": "2026-09-03",
@@ -744,10 +999,10 @@
     "industry": "金融行业",
     "price": 5.54,
     "t1": -2.14,
-    "t5": null,
+    "t5": -0.18,
     "t20": null,
     "excess_t1": -2.21,
-    "excess_t5": null
+    "excess_t5": 0.89
    },
    {
     "date": "2026-09-02",
@@ -756,10 +1011,10 @@
     "industry": "化纤行业",
     "price": 17.05,
     "t1": 0.59,
-    "t5": null,
+    "t5": 0.64,
     "t20": null,
     "excess_t1": 0.89,
-    "excess_t5": null
+    "excess_t5": 0.84
    },
    {
     "date": "2026-09-02",
@@ -768,10 +1023,10 @@
     "industry": "有色金属",
     "price": 11.48,
     "t1": -1.29,
-    "t5": null,
+    "t5": 2.91,
     "t20": null,
     "excess_t1": -0.98,
-    "excess_t5": null
+    "excess_t5": 3.11
    },
    {
     "date": "2026-09-02",
@@ -780,10 +1035,10 @@
     "industry": "金融行业",
     "price": 5.54,
     "t1": 1.08,
-    "t5": null,
+    "t5": 1.81,
     "t20": null,
     "excess_t1": 1.39,
-    "excess_t5": null
+    "excess_t5": 2.0
    },
    {
     "date": "2026-09-01",
@@ -1139,6 +1394,76 @@
       "shares": 100
      }
     ]
+   },
+   {
+    "date": "2026-09-10",
+    "n_recs": 3,
+    "exec_date": "2026-09-11",
+    "trade_date": "2026-09-10",
+    "macro_regime": "risk_on",
+    "industries": [
+     "电力行业",
+     "电子器件",
+     "有色金属"
+    ],
+    "stocks": [
+     {
+      "symbol": "601991.SS",
+      "name": "大唐发电",
+      "industry": "电力行业",
+      "price": 6.02,
+      "shares": 300
+     },
+     {
+      "symbol": "002141.SZ",
+      "name": "贤丰控股",
+      "industry": "电子器件",
+      "price": 6.41,
+      "shares": 200
+     },
+     {
+      "symbol": "000630.SZ",
+      "name": "铜陵有色",
+      "industry": "有色金属",
+      "price": 6.5,
+      "shares": 300
+     }
+    ]
+   },
+   {
+    "date": "2026-09-11",
+    "n_recs": 3,
+    "exec_date": "2026-09-14",
+    "trade_date": "2026-09-11",
+    "macro_regime": "risk_off",
+    "industries": [
+     "电子信息",
+     "金融行业",
+     "交通运输"
+    ],
+    "stocks": [
+     {
+      "symbol": "002519.SZ",
+      "name": "银河电子",
+      "industry": "电子信息",
+      "price": 6.31,
+      "shares": 200
+     },
+     {
+      "symbol": "601688.SS",
+      "name": "华泰证券",
+      "industry": "金融行业",
+      "price": 18.93,
+      "shares": 100
+     },
+     {
+      "symbol": "601919.SS",
+      "name": "中远海控",
+      "industry": "交通运输",
+      "price": 16.19,
+      "shares": 100
+     }
+    ]
    }
   ],
   "performance_rows": [
@@ -1183,7 +1508,7 @@
     "symbol": "002015.SZ",
     "name": "协鑫能科",
     "ret_t1": 0.59,
-    "ret_t5": null,
+    "ret_t5": 0.64,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1195,7 +1520,7 @@
     "symbol": "600711.SS",
     "name": "盛屯矿业",
     "ret_t1": -1.29,
-    "ret_t5": null,
+    "ret_t5": 2.91,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1207,7 +1532,7 @@
     "symbol": "601169.SS",
     "name": "北京银行",
     "ret_t1": 1.08,
-    "ret_t5": null,
+    "ret_t5": 1.81,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1219,7 +1544,7 @@
     "symbol": "002670.SZ",
     "name": "国盛证券",
     "ret_t1": -2.12,
-    "ret_t5": null,
+    "ret_t5": -7.93,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1231,7 +1556,7 @@
     "symbol": "600497.SS",
     "name": "驰宏锌锗",
     "ret_t1": 0.2,
-    "ret_t5": null,
+    "ret_t5": -0.3,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1243,7 +1568,7 @@
     "symbol": "601169.SS",
     "name": "北京银行",
     "ret_t1": -2.14,
-    "ret_t5": null,
+    "ret_t5": -0.18,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1398,54 +1723,78 @@
     "date": "2026-09-08",
     "symbol": "000100.SZ",
     "name": "TCL科技",
-    "ret_t1": null,
+    "ret_t1": -1.05,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-08",
     "symbol": "601212.SS",
     "name": "白银有色",
-    "ret_t1": null,
+    "ret_t1": -3.95,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-08",
     "symbol": "601988.SS",
     "name": "中国银行",
-    "ret_t1": null,
+    "ret_t1": 1.56,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-09",
     "symbol": "000823.SZ",
     "name": "超声电子",
-    "ret_t1": null,
+    "ret_t1": 10.0,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-09",
     "symbol": "603993.SS",
     "name": "洛阳钼业",
+    "ret_t1": -4.52,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": "open"
+   },
+   {
+    "date": "2026-09-09",
+    "symbol": "002532.SZ",
+    "name": "天山铝业",
+    "ret_t1": -3.92,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": "open"
+   },
+   {
+    "date": "2026-09-10",
+    "symbol": "601991.SS",
+    "name": "大唐发电",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
@@ -1455,9 +1804,57 @@
     "status": null
    },
    {
-    "date": "2026-09-09",
-    "symbol": "002532.SZ",
-    "name": "天山铝业",
+    "date": "2026-09-10",
+    "symbol": "002141.SZ",
+    "name": "贤丰控股",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-10",
+    "symbol": "000630.SZ",
+    "name": "铜陵有色",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-11",
+    "symbol": "002519.SZ",
+    "name": "银河电子",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-11",
+    "symbol": "601688.SS",
+    "name": "华泰证券",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-11",
+    "symbol": "601919.SS",
+    "name": "中远海控",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
