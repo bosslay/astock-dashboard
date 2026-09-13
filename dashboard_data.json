@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-12T04:31:07",
+ "generated_at": "2026-09-14T04:30:42",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
@@ -10,16 +10,16 @@
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 33,
-  "covered_industries": 14,
-  "latest_macro": "risk_off",
+  "total_recommendations": 39,
+  "covered_industries": 19,
+  "latest_macro": "risk_on",
   "latest_trade_date": "2026-09-11"
  },
  "nav_curve": [],
  "holdings": [],
  "industry_dist": {
   "电子器件": 5,
-  "铜": 3,
+  "铜": 4,
   "生物制药": 1,
   "化纤行业": 1,
   "有色金属": 3,
@@ -31,18 +31,23 @@
   "家电行业": 1,
   "机械行业": 1,
   "电力行业": 1,
-  "交通运输": 1
+  "交通运输": 1,
+  "农产品加工": 1,
+  "玻纤": 1,
+  "游戏娱乐": 1,
+  "航运": 1,
+  "股份制与城商行": 1
  },
  "macro": {
   "regime": "risk_on",
-  "confidence": 0.444,
+  "confidence": 0.556,
   "signals": {
    "fear_greed": 33.3428571428571,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -1.3390822815525616,
+   "copper_gold_trend_20d": -1.6955420184490588,
    "yield_spread_10y2y_bp": 106.19997978210449,
    "vix": 15.84000015258789,
-   "dxy_trend_20d": -0.839332627942524,
+   "dxy_trend_20d": -0.840332478575534,
    "cftc_copper_mm_net": 82154.0,
    "cftc_copper_mm_change": 9272.0,
    "cftc_copper_as_of": "2026-09-08"
@@ -52,79 +57,80 @@
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-09-12 04:31",
+  "fetched_at": "2026-09-14 04:31",
   "items": [
    {
-    "time": "04:26",
-    "text": "康宁股价在达成股权分配协议后盘后下跌3%。",
-    "tags": [
-     "市场"
-    ]
-   },
-   {
-    "time": "04:26",
-    "text": "【国际油价11日下跌】截至当天收盘，纽约商品交易所10月交货的轻质原油期货价格下跌2.43美元，收于每桶100.05美元，跌幅为2.37%；11月交货的伦敦布伦特原油期货价格下跌3.02美元，收于每桶104.61美元，跌幅为2.81%。",
-    "tags": [
-     "市场"
-    ]
-   },
-   {
-    "time": "04:19",
-    "text": "阿斯利康股价盘后下跌2%，因三期临床试验结果令人失望。",
-    "tags": [
-     "市场"
-    ]
-   },
-   {
-    "time": "04:16",
-    "text": "美国银行存款从前一周的19.559万亿美元增至19.5666万亿美元。",
+    "time": "04:28",
+    "text": "【无视英国反对 特朗普再挺“爱尔兰统一”】据外媒报道，美国总统特朗普13日再次表示，他支持北爱尔兰脱离英国，“与爱尔兰统一”。此前一天，特朗普发表类似言论，已引发英国政界强烈反对。特朗普当天在爱尔兰对媒体说：“有北爱尔兰，也有爱尔兰。在我看",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "04:15",
-    "text": "高盛、美国银行争相承销Anthropic员工所持股份的IPO巨额交易。",
+    "time": "04:12",
+    "text": "【伊朗官员：伊美冲突后伊朗外资实际陷入停滞】伊朗工业部副部长、伊朗小型工业与工业园区组织负责人塔赫穆雷斯·拉胡蒂称，自伊朗与以色列、美国爆发冲突后，伊朗的外国投资实际上已经停滞，本伊朗历年内暂无新增外国投资记录。拉胡蒂称，受现有制裁与限制影",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "03:43",
+    "text": "沙特：外交部长接到了阿联酋外长的电话，双方就遏制地区局势升级的努力进行了讨论。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "03:41",
+    "text": "【阿曼外交部：原定于14日举行的地区会议延期】当地时间13日晚，阿曼外交部宣布，原定于14日在阿曼南部港口城市塞拉莱举行的地区会议将推迟。日期另行确定。声明称，此举旨在为建设性对话创造适宜条件，推动达成有助于维护地区安全与稳定的可持续共识，",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "03:39",
+    "text": "伊朗外交部官员：阿曼会议的推迟是应地区部分国家的要求，并由德黑兰和马斯喀特共同作出的决定。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "03:23",
+    "text": "【Anthropic、OpenAI、谷歌曾商讨制定人工智能标准】知情人士透露，早在Anthropic首席执行官达里奥·阿莫代伊周六呼吁AI企业就技术测试与审计开展协作之前，Anthropic、OpenAI与谷歌就已经在商讨合作组建AI行业标",
     "tags": [
      "公司",
-     "观点",
+     "焦点",
      "国际"
     ]
    },
    {
-    "time": "04:13",
-    "text": "【“美联储传声筒”：美联储下周势将加息 但只加息一次无法解决问题】“美联储传声筒”Nick Timiraos最新撰文称，投资者已基本认定美联储下周将进行三年来首次加息，更难的问题是之后会怎样。由于美联储内部几乎没人认为单次加息25个基点足以",
+    "time": "03:19",
+    "text": "Anthropic、OpenAI、谷歌商讨制定人工智能标准。",
     "tags": [
+     "公司",
+     "焦点"
+    ]
+   },
+   {
+    "time": "03:11",
+    "text": "【上市公司密集回购增持】近期，全球金融市场迎来“超级央行周”。美联储将于北京时间9月17日凌晨公布最新利率决议，市场普遍预期加息25个基点，日本央行、英国央行等也将陆续公布决议，长端美债收益率处于历史高位，外围情绪扰动加大。一批A股上市公司",
+    "tags": [
+     "公司",
      "央行",
-     "焦点",
      "国际"
     ]
    },
    {
-    "time": "04:10",
-    "text": "沙特外交部声明称，保留采取一切必要措施维护其主权、安全、设施、公民及居民的权利。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "04:09",
-    "text": "沙特外交部声明称，应伊拉克总理请求，现阶段选择不采取报复行动。",
+    "time": "03:10",
+    "text": "伊朗与海湾阿拉伯国家合作委员会成员国的霍尔木兹相关会议推迟举行。",
     "tags": [
      "焦点",
      "国际"
     ]
    },
    {
-    "time": "04:07",
-    "text": "周五（9月11日），彭博电动汽车价格回报指数跌1.21%，报3319.82点，本周累计下跌2.90%，9月8-9日大致持稳于3420点形成本周顶部，10-11日持续下挫。",
-    "tags": [
-     "市场"
-    ]
-   },
-   {
-    "time": "04:07",
-    "text": "市场消息：美国防长赫格塞斯将于9月15日会见德国国防部长皮斯托里乌斯。",
+    "time": "03:09",
+    "text": "【加拿大正磋商为欧盟对乌克兰贷款提供支持】加拿大正磋商为欧盟对乌克兰贷款提供支持。双方希望在10月底于蒙特利尔举行的欧盟峰会前，商定加拿大将为欧盟主导的900亿欧元乌克兰贷款出资的金额。加拿大总理马克·卡尼希望通过参与这项乌克兰支持贷款，向",
     "tags": [
      "国际"
     ]
@@ -132,14 +138,122 @@
   ]
  },
  "backtest": {
-  "as_of": "2026-09-12",
-  "total_picks": 78,
-  "avg_t1": 0.29,
+  "as_of": "2026-09-14",
+  "total_picks": 82,
+  "avg_t1": 0.34,
   "avg_t5": 0.14,
   "avg_t20": null,
-  "win_rate_t1": 0.561,
+  "win_rate_t1": 0.577,
   "win_rate_t5": 0.556,
   "picks": [
+   {
+    "date": "2026-09-13_sunday",
+    "symbol": "003040.SZ",
+    "name": "楚天龙",
+    "industry": "通信终端设备",
+    "price": 17.46,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-13_sunday",
+    "symbol": "000523.SZ",
+    "name": "红棉股份",
+    "industry": "调味品",
+    "price": 4.01,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-13_sunday",
+    "symbol": "600999.SS",
+    "name": "招商证券",
+    "industry": "金融行业",
+    "price": 17.49,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-13_evening",
+    "symbol": "600255.SS",
+    "name": "鑫科材料",
+    "industry": "铜",
+    "price": 3.88,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-13_evening",
+    "symbol": "603162.SS",
+    "name": "海通发展",
+    "industry": "航运",
+    "price": 14.16,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-13_evening",
+    "symbol": "601166.SS",
+    "name": "兴业银行",
+    "industry": "股份制与城商行",
+    "price": 18.13,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-12_evening",
+    "symbol": "000930.SZ",
+    "name": "中粮科技",
+    "industry": "农产品加工",
+    "price": 5.88,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-12_evening",
+    "symbol": "002201.SZ",
+    "name": "九鼎新材",
+    "industry": "玻纤",
+    "price": 11.09,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-12_evening",
+    "symbol": "002174.SZ",
+    "name": "游族网络",
+    "industry": "游戏娱乐",
+    "price": 13.62,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
    {
     "date": "2026-09-11_noon",
     "symbol": "603993.SS",
@@ -442,18 +556,6 @@
    },
    {
     "date": "2026-09-09_morning",
-    "symbol": "603993.SS",
-    "name": "洛阳钼业",
-    "industry": "铜",
-    "price": 18.94,
-    "t1": -4.52,
-    "t5": null,
-    "t20": null,
-    "excess_t1": -3.35,
-    "excess_t5": null
-   },
-   {
-    "date": "2026-09-09_morning",
     "symbol": "601288.SS",
     "name": "农业银行",
     "industry": "金融行业",
@@ -498,30 +600,6 @@
     "t5": null,
     "t20": null,
     "excess_t1": -2.75,
-    "excess_t5": null
-   },
-   {
-    "date": "2026-09-08_noon",
-    "symbol": "000100.SZ",
-    "name": "TCL科技",
-    "industry": "家电行业",
-    "price": 4.79,
-    "t1": -1.05,
-    "t5": null,
-    "t20": null,
-    "excess_t1": -0.62,
-    "excess_t5": null
-   },
-   {
-    "date": "2026-09-08_noon",
-    "symbol": "601988.SS",
-    "name": "中国银行",
-    "industry": "金融行业",
-    "price": 6.37,
-    "t1": 1.56,
-    "t5": null,
-    "t20": null,
-    "excess_t1": 1.99,
     "excess_t5": null
    },
    {
@@ -826,18 +904,6 @@
    },
    {
     "date": "2026-09-04_sunday",
-    "symbol": "603466.SS",
-    "name": "风语筑",
-    "industry": "",
-    "price": 12.09,
-    "t1": 3.53,
-    "t5": null,
-    "t20": null,
-    "excess_t1": 3.33,
-    "excess_t5": null
-   },
-   {
-    "date": "2026-09-04_sunday",
     "symbol": "600667.SS",
     "name": "太极实业",
     "industry": "电子器件",
@@ -846,18 +912,6 @@
     "t5": null,
     "t20": null,
     "excess_t1": 3.31,
-    "excess_t5": null
-   },
-   {
-    "date": "2026-09-04_sunday",
-    "symbol": "601988.SS",
-    "name": "中国银行",
-    "industry": "金融行业",
-    "price": 6.54,
-    "t1": -0.78,
-    "t5": null,
-    "t20": null,
-    "excess_t1": -0.98,
     "excess_t5": null
    },
    {
@@ -1464,6 +1518,76 @@
       "shares": 100
      }
     ]
+   },
+   {
+    "date": "2026-09-12",
+    "n_recs": 3,
+    "exec_date": "2026-09-14",
+    "trade_date": "2026-09-11",
+    "macro_regime": "risk_on",
+    "industries": [
+     "农产品加工",
+     "玻纤",
+     "游戏娱乐"
+    ],
+    "stocks": [
+     {
+      "symbol": "000930.SZ",
+      "name": "中粮科技",
+      "industry": "农产品加工",
+      "price": 5.88,
+      "shares": 300
+     },
+     {
+      "symbol": "002201.SZ",
+      "name": "九鼎新材",
+      "industry": "玻纤",
+      "price": 11.09,
+      "shares": 100
+     },
+     {
+      "symbol": "002174.SZ",
+      "name": "游族网络",
+      "industry": "游戏娱乐",
+      "price": 13.62,
+      "shares": 100
+     }
+    ]
+   },
+   {
+    "date": "2026-09-13",
+    "n_recs": 3,
+    "exec_date": "2026-09-14",
+    "trade_date": "2026-09-11",
+    "macro_regime": "risk_on",
+    "industries": [
+     "铜",
+     "航运",
+     "股份制与城商行"
+    ],
+    "stocks": [
+     {
+      "symbol": "600255.SS",
+      "name": "鑫科材料",
+      "industry": "铜",
+      "price": 3.88,
+      "shares": 300
+     },
+     {
+      "symbol": "603162.SS",
+      "name": "海通发展",
+      "industry": "航运",
+      "price": 14.16,
+      "shares": 100
+     },
+     {
+      "symbol": "601166.SS",
+      "name": "兴业银行",
+      "industry": "股份制与城商行",
+      "price": 18.13,
+      "shares": 100
+     }
+    ]
    }
   ],
   "performance_rows": [
@@ -1862,23 +1986,134 @@
     "excess_t5": null,
     "excess_t20": null,
     "status": null
+   },
+   {
+    "date": "2026-09-12",
+    "symbol": "000930.SZ",
+    "name": "中粮科技",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-12",
+    "symbol": "002201.SZ",
+    "name": "九鼎新材",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-12",
+    "symbol": "002174.SZ",
+    "name": "游族网络",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-13",
+    "symbol": "600255.SS",
+    "name": "鑫科材料",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-13",
+    "symbol": "603162.SS",
+    "name": "海通发展",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-13",
+    "symbol": "601166.SS",
+    "name": "兴业银行",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
    }
   ],
   "weekly": {
-   "total": 12,
+   "total": 78,
    "t1": {
-    "n": 6,
-    "win_rate": 66.7,
-    "avg_ret": 1.52,
+    "n": 57,
+    "win_rate": 52.6,
+    "avg_ret": 0.38,
     "best": 10.06,
-    "worst": -1.38,
+    "worst": -7.63,
     "avg_excess": null,
     "excess_win_rate": null
    },
-   "t5": null,
+   "t5": {
+    "n": 9,
+    "win_rate": 55.6,
+    "avg_ret": 0.14,
+    "best": 6.46,
+    "worst": -7.93,
+    "avg_excess": null,
+    "excess_win_rate": null
+   },
    "t20": null,
    "closed": 0,
-   "industries": []
+   "industries": [
+    {
+     "industry": "铜",
+     "avg_t5": 6.46,
+     "n": 1
+    },
+    {
+     "industry": "生物制药",
+     "avg_t5": 1.97,
+     "n": 1
+    },
+    {
+     "industry": "有色金属",
+     "avg_t5": 1.31,
+     "n": 2
+    },
+    {
+     "industry": "化纤行业",
+     "avg_t5": 0.64,
+     "n": 1
+    },
+    {
+     "industry": "金融行业",
+     "avg_t5": -2.1,
+     "n": 3
+    },
+    {
+     "industry": "电子器件",
+     "avg_t5": -4.15,
+     "n": 1
+    }
+   ]
   },
   "ic": {
    "samples": 0,
