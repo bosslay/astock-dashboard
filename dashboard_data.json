@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-09-14T04:30:42",
+ "generated_at": "2026-09-15T04:56:13",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 11.145,
-  "ma30": 10.614,
-  "as_of": "2026-09-11",
+  "pool_index": 11.534,
+  "ma30": 10.886,
+  "as_of": "2026-09-14",
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 39,
-  "covered_industries": 19,
+  "total_recommendations": 42,
+  "covered_industries": 21,
   "latest_macro": "risk_on",
-  "latest_trade_date": "2026-09-11"
+  "latest_trade_date": "2026-09-14"
  },
  "nav_curve": [],
  "holdings": [],
@@ -27,7 +27,7 @@
   "其他专业服务": 1,
   "房地产": 1,
   "电子信息": 2,
-  "电子元件": 1,
+  "电子元件": 2,
   "家电行业": 1,
   "机械行业": 1,
   "电力行业": 1,
@@ -36,18 +36,20 @@
   "玻纤": 1,
   "游戏娱乐": 1,
   "航运": 1,
-  "股份制与城商行": 1
+  "股份制与城商行": 1,
+  "石油加工": 1,
+  "国有银行": 1
  },
  "macro": {
   "regime": "risk_on",
-  "confidence": 0.556,
+  "confidence": 0.429,
   "signals": {
-   "fear_greed": 33.3428571428571,
+   "fear_greed": 31.0571428571429,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": -1.6955420184490588,
-   "yield_spread_10y2y_bp": 106.19997978210449,
-   "vix": 15.84000015258789,
-   "dxy_trend_20d": -0.840332478575534,
+   "copper_gold_trend_20d": -2.075856497639772,
+   "yield_spread_10y2y_bp": 102.60000228881836,
+   "vix": 17.100000381469727,
+   "dxy_trend_20d": -0.18561007524066087,
    "cftc_copper_mm_net": 82154.0,
    "cftc_copper_mm_change": 9272.0,
    "cftc_copper_as_of": "2026-09-08"
@@ -57,80 +59,75 @@
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-09-14 04:31",
+  "fetched_at": "2026-09-15 04:56",
   "items": [
    {
-    "time": "04:28",
-    "text": "【无视英国反对 特朗普再挺“爱尔兰统一”】据外媒报道，美国总统特朗普13日再次表示，他支持北爱尔兰脱离英国，“与爱尔兰统一”。此前一天，特朗普发表类似言论，已引发英国政界强烈反对。特朗普当天在爱尔兰对媒体说：“有北爱尔兰，也有爱尔兰。在我看",
+    "time": "04:50",
+    "text": "市场消息：特朗普于周一致电黄仁勋，希望与黄仁勋讨论人工智能相关事宜。",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "04:12",
-    "text": "【伊朗官员：伊美冲突后伊朗外资实际陷入停滞】伊朗工业部副部长、伊朗小型工业与工业园区组织负责人塔赫穆雷斯·拉胡蒂称，自伊朗与以色列、美国爆发冲突后，伊朗的外国投资实际上已经停滞，本伊朗历年内暂无新增外国投资记录。拉胡蒂称，受现有制裁与限制影",
+    "time": "04:50",
+    "text": "【特朗普称愿与伊朗谈判 提出美方要收“护航补偿”】美国总统特朗普14日在社交媒体发布多条帖文为其对伊朗政策辩护。特朗普称对与伊朗谈判持“开放”态度，并称美方在霍尔木兹海峡帮助石油运输，各国应对美进行“护航补偿”。特朗普称，伊朗“迫切”希望达",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "03:43",
-    "text": "沙特：外交部长接到了阿联酋外长的电话，双方就遏制地区局势升级的努力进行了讨论。",
+    "time": "04:48",
+    "text": "美国交通部长达菲：自动化技术将进入卡车驾驶行业。预计无人机配送业务将进一步增多。人工智能将让道路上的车辆数量减少。特朗普政府正在推进AI创新。",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "03:41",
-    "text": "【阿曼外交部：原定于14日举行的地区会议延期】当地时间13日晚，阿曼外交部宣布，原定于14日在阿曼南部港口城市塞拉莱举行的地区会议将推迟。日期另行确定。声明称，此举旨在为建设性对话创造适宜条件，推动达成有助于维护地区安全与稳定的可持续共识，",
+    "time": "04:46",
+    "text": "美国环境保护署废除发电厂碳污染标准，发电厂不再被强制要求安装碳捕获技术。",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "03:39",
-    "text": "伊朗外交部官员：阿曼会议的推迟是应地区部分国家的要求，并由德黑兰和马斯喀特共同作出的决定。",
+    "time": "04:45",
+    "text": "美国交通部长达菲：计划在本届政府任期结束前更换雷达设备。",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "03:23",
-    "text": "【Anthropic、OpenAI、谷歌曾商讨制定人工智能标准】知情人士透露，早在Anthropic首席执行官达里奥·阿莫代伊周六呼吁AI企业就技术测试与审计开展协作之前，Anthropic、OpenAI与谷歌就已经在商讨合作组建AI行业标",
+    "time": "04:38",
+    "text": "特朗普： 我是骗局揭穿者，眼下我正在戳破又一个骗局 —— 人工智能将会接管、吞噬并毁灭世界，机器人会开进我们的城市，把人类全部清除！ 这甚至比通俄门骗局或全球变暖骗局还要荒谬。",
     "tags": [
-     "公司",
-     "焦点",
      "国际"
     ]
    },
    {
-    "time": "03:19",
-    "text": "Anthropic、OpenAI、谷歌商讨制定人工智能标准。",
+    "time": "04:35",
+    "text": "市场消息：加拿大总理卡尼敦促欧盟敲定贸易协定。",
     "tags": [
-     "公司",
+     "国际"
+    ]
+   },
+   {
+    "time": "04:34",
+    "text": "市场消息：特朗普支持率从其总统任期最低点回升至 35%。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:24",
+    "text": "以太坊升破2600美元，日内涨5.46%。",
+    "tags": [
+     "市场",
      "焦点"
     ]
    },
    {
-    "time": "03:11",
-    "text": "【上市公司密集回购增持】近期，全球金融市场迎来“超级央行周”。美联储将于北京时间9月17日凌晨公布最新利率决议，市场普遍预期加息25个基点，日本央行、英国央行等也将陆续公布决议，长端美债收益率处于历史高位，外围情绪扰动加大。一批A股上市公司",
-    "tags": [
-     "公司",
-     "央行",
-     "国际"
-    ]
-   },
-   {
-    "time": "03:10",
-    "text": "伊朗与海湾阿拉伯国家合作委员会成员国的霍尔木兹相关会议推迟举行。",
-    "tags": [
-     "焦点",
-     "国际"
-    ]
-   },
-   {
-    "time": "03:09",
-    "text": "【加拿大正磋商为欧盟对乌克兰贷款提供支持】加拿大正磋商为欧盟对乌克兰贷款提供支持。双方希望在10月底于蒙特利尔举行的欧盟峰会前，商定加拿大将为欧盟主导的900亿欧元乌克兰贷款出资的金额。加拿大总理马克·卡尼希望通过参与这项乌克兰支持贷款，向",
+    "time": "04:21",
+    "text": "【伊朗革命卫队：一艘油轮试图穿越海峡时触雷爆炸】据伊朗法尔斯通讯社14日报道，伊朗伊斯兰革命卫队方面表示，一艘名为“阿尔加亚”的油轮试图通过霍尔木兹海峡南部“禁航区域”时，触碰水雷后爆炸起火。革命卫队称，事发后，相关方面尝试控制火势，但未能",
     "tags": [
      "国际"
     ]
@@ -138,14 +135,122 @@
   ]
  },
  "backtest": {
-  "as_of": "2026-09-14",
-  "total_picks": 82,
-  "avg_t1": 0.34,
-  "avg_t5": 0.14,
+  "as_of": "2026-09-15",
+  "total_picks": 91,
+  "avg_t1": 0.48,
+  "avg_t5": -0.32,
   "avg_t20": null,
-  "win_rate_t1": 0.577,
-  "win_rate_t5": 0.556,
+  "win_rate_t1": 0.525,
+  "win_rate_t5": 0.526,
   "picks": [
+   {
+    "date": "2026-09-14_noon",
+    "symbol": "603386.SS",
+    "name": "骏亚科技",
+    "industry": "电子元件",
+    "price": 16.95,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_noon",
+    "symbol": "000980.SZ",
+    "name": "众泰汽车",
+    "industry": "乘用车",
+    "price": 2.33,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_noon",
+    "symbol": "601169.SS",
+    "name": "北京银行",
+    "industry": "股份制与城商行",
+    "price": 5.65,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_morning",
+    "symbol": "002011.SZ",
+    "name": "盾安环境",
+    "industry": "制冷空调设备",
+    "price": 13.29,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_morning",
+    "symbol": "000759.SZ",
+    "name": "中百集团",
+    "industry": "超市",
+    "price": 8.13,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_morning",
+    "symbol": "601086.SS",
+    "name": "国芳集团",
+    "industry": "百货",
+    "price": 16.35,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_evening",
+    "symbol": "603328.SS",
+    "name": "依顿电子",
+    "industry": "电子元件",
+    "price": 13.5,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_evening",
+    "symbol": "002493.SZ",
+    "name": "荣盛石化",
+    "industry": "石油加工",
+    "price": 13.2,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-14_evening",
+    "symbol": "601939.SS",
+    "name": "建设银行",
+    "industry": "国有银行",
+    "price": 11.11,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
    {
     "date": "2026-09-13_sunday",
     "symbol": "003040.SZ",
@@ -404,10 +509,10 @@
     "name": "招商轮船",
     "industry": "交通运输",
     "price": 19.98,
-    "t1": null,
+    "t1": 0.0,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 0.07,
     "excess_t5": null
    },
    {
@@ -416,10 +521,10 @@
     "name": "中京电子",
     "industry": "电子器件",
     "price": 16.75,
-    "t1": null,
+    "t1": 10.01,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 10.08,
     "excess_t5": null
    },
    {
@@ -428,10 +533,10 @@
     "name": "云南铜业",
     "industry": "有色金属",
     "price": 18.69,
-    "t1": null,
+    "t1": -2.04,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -1.97,
     "excess_t5": null
    },
    {
@@ -440,10 +545,10 @@
     "name": "方正科技",
     "industry": "电子信息",
     "price": 14.62,
-    "t1": null,
+    "t1": -0.07,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 0.0,
     "excess_t5": null
    },
    {
@@ -452,10 +557,10 @@
     "name": "白银有色",
     "industry": "铜",
     "price": 7.09,
-    "t1": null,
+    "t1": -3.11,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -3.03,
     "excess_t5": null
    },
    {
@@ -464,10 +569,10 @@
     "name": "南山铝业",
     "industry": "有色金属",
     "price": 5.07,
-    "t1": null,
+    "t1": -0.21,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -0.14,
     "excess_t5": null
    },
    {
@@ -476,10 +581,10 @@
     "name": "大唐发电",
     "industry": "电力行业",
     "price": 6.02,
-    "t1": null,
+    "t1": -1.73,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -1.66,
     "excess_t5": null
    },
    {
@@ -488,10 +593,10 @@
     "name": "贤丰控股",
     "industry": "电子器件",
     "price": 6.41,
-    "t1": null,
+    "t1": 9.94,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 10.01,
     "excess_t5": null
    },
    {
@@ -500,10 +605,10 @@
     "name": "铜陵有色",
     "industry": "有色金属",
     "price": 6.5,
-    "t1": null,
+    "t1": -1.3,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -1.23,
     "excess_t5": null
    },
    {
@@ -909,10 +1014,10 @@
     "industry": "电子器件",
     "price": 17.98,
     "t1": 3.51,
-    "t5": null,
+    "t5": 4.29,
     "t20": null,
     "excess_t1": 3.31,
-    "excess_t5": null
+    "excess_t5": 5.49
    },
    {
     "date": "2026-09-04_noon",
@@ -921,10 +1026,10 @@
     "industry": "金融行业",
     "price": 19.5,
     "t1": -0.52,
-    "t5": null,
+    "t5": -2.94,
     "t20": null,
     "excess_t1": -0.72,
-    "excess_t5": null
+    "excess_t5": -1.74
    },
    {
     "date": "2026-09-04_noon",
@@ -933,10 +1038,10 @@
     "industry": "发电设备",
     "price": 8.39,
     "t1": 1.0,
-    "t5": null,
+    "t5": -0.88,
     "t20": null,
     "excess_t1": 0.8,
-    "excess_t5": null
+    "excess_t5": 0.33
    },
    {
     "date": "2026-09-04_noon",
@@ -945,10 +1050,10 @@
     "industry": "金融行业",
     "price": 6.54,
     "t1": -0.78,
-    "t5": null,
+    "t5": 3.11,
     "t20": null,
     "excess_t1": -0.98,
-    "excess_t5": null
+    "excess_t5": 4.31
    },
    {
     "date": "2026-09-04_morning",
@@ -957,10 +1062,10 @@
     "industry": "金融行业",
     "price": 12.69,
     "t1": -0.72,
-    "t5": null,
+    "t5": -7.62,
     "t20": null,
     "excess_t1": -0.92,
-    "excess_t5": null
+    "excess_t5": -6.42
    },
    {
     "date": "2026-09-04_morning",
@@ -969,10 +1074,10 @@
     "industry": "工业金属",
     "price": 18.61,
     "t1": 3.12,
-    "t5": null,
+    "t5": -2.11,
     "t20": null,
     "excess_t1": 2.92,
-    "excess_t5": null
+    "excess_t5": -0.9
    },
    {
     "date": "2026-09-04_morning",
@@ -981,10 +1086,10 @@
     "industry": "金融行业",
     "price": 11.85,
     "t1": 0.84,
-    "t5": null,
+    "t5": 2.68,
     "t20": null,
     "excess_t1": 0.64,
-    "excess_t5": null
+    "excess_t5": 3.89
    },
    {
     "date": "2026-09-04_evening",
@@ -993,10 +1098,10 @@
     "industry": "其他专业服务",
     "price": 12.39,
     "t1": 3.53,
-    "t5": null,
+    "t5": 6.32,
     "t20": null,
     "excess_t1": 3.33,
-    "excess_t5": null
+    "excess_t5": 7.52
    },
    {
     "date": "2026-09-04_evening",
@@ -1005,10 +1110,10 @@
     "industry": "电子器件",
     "price": 14.05,
     "t1": -1.85,
-    "t5": null,
+    "t5": -14.26,
     "t20": null,
     "excess_t1": -2.05,
-    "excess_t5": null
+    "excess_t5": -13.06
    },
    {
     "date": "2026-09-04_evening",
@@ -1017,10 +1122,10 @@
     "industry": "金融行业",
     "price": 7.42,
     "t1": -0.55,
-    "t5": null,
+    "t5": 4.1,
     "t20": null,
     "excess_t1": -0.75,
-    "excess_t5": null
+    "excess_t5": 5.3
    },
    {
     "date": "2026-09-03",
@@ -1588,6 +1693,41 @@
       "shares": 100
      }
     ]
+   },
+   {
+    "date": "2026-09-14",
+    "n_recs": 3,
+    "exec_date": "2026-09-15",
+    "trade_date": "2026-09-14",
+    "macro_regime": "risk_on",
+    "industries": [
+     "电子元件",
+     "石油加工",
+     "国有银行"
+    ],
+    "stocks": [
+     {
+      "symbol": "603328.SS",
+      "name": "依顿电子",
+      "industry": "电子元件",
+      "price": 13.5,
+      "shares": 100
+     },
+     {
+      "symbol": "002493.SZ",
+      "name": "荣盛石化",
+      "industry": "石油加工",
+      "price": 13.2,
+      "shares": 100
+     },
+     {
+      "symbol": "601939.SS",
+      "name": "建设银行",
+      "industry": "国有银行",
+      "price": 11.11,
+      "shares": 100
+     }
+    ]
    }
   ],
   "performance_rows": [
@@ -1704,7 +1844,7 @@
     "symbol": "603466.SS",
     "name": "风语筑",
     "ret_t1": 3.53,
-    "ret_t5": null,
+    "ret_t5": 6.32,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1716,7 +1856,7 @@
     "symbol": "002104.SZ",
     "name": "恒宝股份",
     "ret_t1": -1.85,
-    "ret_t5": null,
+    "ret_t5": -14.26,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1728,7 +1868,7 @@
     "symbol": "601328.SS",
     "name": "交通银行",
     "ret_t1": -0.55,
-    "ret_t5": null,
+    "ret_t5": 4.1,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1740,7 +1880,7 @@
     "symbol": "600095.SS",
     "name": "湘财股份",
     "ret_t1": -1.66,
-    "ret_t5": null,
+    "ret_t5": -12.05,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1752,7 +1892,7 @@
     "symbol": "002141.SZ",
     "name": "贤丰控股",
     "ret_t1": 1.21,
-    "ret_t5": null,
+    "ret_t5": 5.13,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1764,7 +1904,7 @@
     "symbol": "601988.SS",
     "name": "中国银行",
     "ret_t1": -0.78,
-    "ret_t5": null,
+    "ret_t5": 3.11,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1776,7 +1916,7 @@
     "symbol": "600909.SS",
     "name": "华安证券",
     "ret_t1": -0.99,
-    "ret_t5": null,
+    "ret_t5": -5.19,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1788,7 +1928,7 @@
     "symbol": "600601.SS",
     "name": "方正科技",
     "ret_t1": 3.65,
-    "ret_t5": null,
+    "ret_t5": 6.08,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1800,7 +1940,7 @@
     "symbol": "601398.SS",
     "name": "工商银行",
     "ret_t1": -0.38,
-    "ret_t5": null,
+    "ret_t5": 3.14,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1919,37 +2059,37 @@
     "date": "2026-09-10",
     "symbol": "601991.SS",
     "name": "大唐发电",
-    "ret_t1": null,
+    "ret_t1": -1.73,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-10",
     "symbol": "002141.SZ",
     "name": "贤丰控股",
-    "ret_t1": null,
+    "ret_t1": 9.94,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-10",
     "symbol": "000630.SZ",
     "name": "铜陵有色",
-    "ret_t1": null,
+    "ret_t1": -1.3,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-11",
@@ -2051,6 +2191,42 @@
     "date": "2026-09-13",
     "symbol": "601166.SS",
     "name": "兴业银行",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-14",
+    "symbol": "603328.SS",
+    "name": "依顿电子",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-14",
+    "symbol": "002493.SZ",
+    "name": "荣盛石化",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-14",
+    "symbol": "601939.SS",
+    "name": "建设银行",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
