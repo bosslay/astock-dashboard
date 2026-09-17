@@ -259,7 +259,13 @@ async function load() {
     const res = await fetch(DATA_URL, { cache: 'no-store' });
     const d = await res.json();
     if (PRO_DATA) { render(Object.assign({}, d, PRO_DATA)); }   // 已解锁 → 合并渲染
-    else { render(d); lockPro(d.pro || {}); }
+    else {
+      render(d);
+      // 2026-09-17: 上线开关 OFF 时 (pro.available=false) 不锁任何区块
+      const pro = d.pro || {};
+      if (pro.available === false) return;
+      lockPro(pro);
+    }
   } catch (err) {
     document.getElementById('updated').textContent = '加载失败';
     document.getElementById('regime').textContent = 'ERR';
