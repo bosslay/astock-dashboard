@@ -238,7 +238,14 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 </div>
 
 <script>
-const DATA_URL = new URL('dashboard_data.json', window.location.href).href;
+// 2026-09-17 变现分层: 免费层 (dashboard_free.json) 公开;
+// 付费层 (dashboard_pro.enc.json) 为 AES-GCM 密文, 需月度密钥在**浏览器端**解密.
+const DATA_URL = new URL('dashboard_free.json', window.location.href).href;
+const PRO_URL = new URL('dashboard_pro.enc.json', window.location.href).href;
+const PRO_SECTIONS = [['全球财经快讯', 'global-news'], ['每日推荐', 'timeline'],
+                      ['行业分布', 'industry'], ['历史荐股回溯', 'backtest']];
+let PRO_DATA = null;      // 解锁后的付费数据 (仅内存)
+let PRO_KEY = null;       // 会话内密钥 (不落盘)
 
 function fmtPct(v, d = 1) {
   if (v == null || isNaN(v)) return '—';
@@ -251,7 +258,8 @@ async function load() {
   try {
     const res = await fetch(DATA_URL, { cache: 'no-store' });
     const d = await res.json();
-    render(d);
+    if (PRO_DATA) { render(Object.assign({}, d, PRO_DATA)); }   // 已解锁 → 合并渲染
+    else { render(d); lockPro(d.pro || {}); }
   } catch (err) {
     document.getElementById('updated').textContent = '加载失败';
     document.getElementById('regime').textContent = 'ERR';
@@ -598,10 +606,67 @@ document.addEventListener('DOMContentLoaded', () => {
     const foot = document.createElement('div');
     foot.id = 'dash-footer';
     foot.style.cssText = 'margin:22px 0 8px;padding:14px 16px;border-top:1px solid var(--border,#26334d);font-size:11px;line-height:1.7;color:var(--muted-fg,#94a3b8);text-align:left;';
-    foot.innerHTML = '<b style="color:var(--muted-fg,#94a3b8)">免责声明</b>：本看板为个人量化研究方法的数据记录，推荐结果含随机与概率成分，不构成任何投资建议。股市有风险，入市需谨慎。';
+    foot.innerHTML = '<b style="color:var(--muted-fg,#94a3b8)">免责声明</b>：本看板为个人量化研究方法的数据记录，推荐结果含随机与概率成分，不构成任何投资建议；不提供个股买卖指导。股市有风险，入市需谨慎。';
     wrap.appendChild(foot);
   }
 });
+
+// ─── 付费层: 锁定 UI + 浏览器端 AES-GCM 解密 (2026-09-17) ───
+function lockPro(pro) {
+  PRO_SECTIONS.forEach(([label, id]) => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+    document.querySelectorAll('.sec-title').forEach(t => {
+      if ((t.textContent || '').trim().indexOf(label) === 0) t.style.display = 'none';
+    });
+  });
+  if (document.getElementById('pro-gate')) return;
+  const host = document.getElementById('global-news') || document.querySelector('.wrap');
+  const box = document.createElement('div');
+  box.id = 'pro-gate';
+  box.style.cssText = 'margin:18px 0;padding:16px;border:1px solid var(--border,#26334d);border-radius:10px;background:rgba(96,165,250,.05);';
+  const inc = ((pro && pro.includes) || []).join(' · ') || '全池数据 · 快讯 · 回溯明细';
+  box.innerHTML =
+    '<div style="font-size:14px;font-weight:600;margin-bottom:8px">🔒 ' + ((pro && pro.title) || '完整版（密钥解锁）') + '</div>' +
+    '<div style="font-size:12px;line-height:1.7;color:var(--muted-fg,#94a3b8);margin-bottom:10px">包含：' + inc + '</div>' +
+    '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">' +
+    '<input id="pro-key" placeholder="输入本月密钥" style="flex:1;min-width:180px;padding:8px 10px;border:1px solid var(--border,#26334d);border-radius:6px;background:transparent;color:inherit;font-size:13px">' +
+    '<button id="pro-btn" style="padding:8px 16px;border:0;border-radius:6px;background:#60A5FA;color:#0b1220;font-weight:600;cursor:pointer;font-size:13px">解锁</button></div>' +
+    '<div id="pro-msg" style="font-size:11px;color:var(--muted-fg,#94a3b8);margin-top:8px">' + ((pro && pro.key_hint) || '在公众号发送「完整版」获取本月密钥') + '</div>' +
+    '<div style="font-size:11px;color:var(--muted-fg,#94a3b8);margin-top:6px">密钥每月轮换；解锁仅在本页内存中完成，不上传任何信息。</div>';
+  host.parentNode.insertBefore(box, host);
+  document.getElementById('pro-btn').onclick = unlockPro;
+  document.getElementById('pro-key').addEventListener('keydown', e => { if (e.key === 'Enter') unlockPro(); });
+}
+
+async function unlockPro() {
+  const msg = document.getElementById('pro-msg');
+  const key = (document.getElementById('pro-key').value || '').trim();
+  if (!key) { msg.textContent = '请输入密钥'; return; }
+  msg.textContent = '解密中…';
+  try {
+    const enc = await (await fetch(PRO_URL, { cache: 'no-store' })).json();
+    const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+    const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(key), 'PBKDF2', false, ['deriveKey']);
+    const ck = await crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: b64(enc.salt), iterations: enc.iter, hash: 'SHA-256' },
+      base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+    const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(enc.iv) }, ck, b64(enc.ct));
+    PRO_DATA = JSON.parse(new TextDecoder().decode(plain));
+    PRO_KEY = key;
+    const g = document.getElementById('pro-gate'); if (g) g.remove();
+    PRO_SECTIONS.forEach(([label, id]) => {
+      const el = document.getElementById(id); if (el) el.style.display = '';
+      document.querySelectorAll('.sec-title').forEach(t => {
+        if ((t.textContent || '').trim().indexOf(label) === 0) t.style.display = '';
+      });
+    });
+    const res = await fetch(DATA_URL, { cache: 'no-store' });
+    render(Object.assign({}, await res.json(), PRO_DATA));
+  } catch (e) {
+    msg.textContent = '❌ 密钥不正确或已过期（密钥每月轮换）';
+  }
+}
 
 load();
 setInterval(load, 60000);

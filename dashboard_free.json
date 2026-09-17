@@ -1,0 +1,38 @@
+{
+ "generated_at": "2026-09-17T14:43:07",
+ "mode": "recommendation",
+ "snapshot_missing": false,
+ "gate": {
+  "state": "IN",
+  "pool_index": 11.246,
+  "ma30": 10.761,
+  "as_of": "2026-09-17",
+  "snapshot_missing": false
+ },
+ "summary": {
+  "total_recommendations": 51,
+  "covered_industries": 28,
+  "latest_macro": "transition",
+  "latest_trade_date": "2026-09-16"
+ },
+ "macro": {
+  "regime": "transition",
+  "confidence": 0.429,
+  "signals": {},
+  "source": "macro_detector+global_signals",
+  "description": "信号混杂，方向不明，波动加大"
+ },
+ "tier": "free",
+ "notice": "本页为数据观察工具，展示量化统计与大盘环境，不构成任何投资建议；不提供个股买卖指导。股市有风险，入市需谨慎。",
+ "pro": {
+  "available": true,
+  "title": "完整版（密钥解锁）",
+  "includes": [
+   "全池行业分布",
+   "全球快讯（每日 10 条）",
+   "完整回溯明细（每笔验证记录）",
+   "宏观信号明细 / 历史统计"
+  ],
+  "key_hint": "在公众号发送「完整版」获取本月密钥"
+ }
+}
