@@ -1,25 +1,25 @@
 {
- "generated_at": "2026-09-18T04:31:01",
+ "generated_at": "2026-09-19T04:31:22",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 10.9,
-  "ma30": 10.471,
-  "as_of": "2026-09-17",
+  "pool_index": 11.288,
+  "ma30": 10.778,
+  "as_of": "2026-09-18",
   "snapshot_missing": false
  },
  "summary": {
-  "total_recommendations": 51,
+  "total_recommendations": 54,
   "covered_industries": 28,
   "latest_macro": "transition",
-  "latest_trade_date": "2026-09-17"
+  "latest_trade_date": "2026-09-18"
  },
  "nav_curve": [],
  "holdings": [],
  "industry_dist": {
   "电子器件": 5,
-  "铜": 4,
+  "铜": 5,
   "生物制药": 1,
   "化纤行业": 1,
   "有色金属": 3,
@@ -27,7 +27,7 @@
   "其他专业服务": 1,
   "房地产": 1,
   "电子信息": 2,
-  "电子元件": 2,
+  "电子元件": 3,
   "家电行业": 1,
   "机械行业": 1,
   "电力行业": 1,
@@ -40,7 +40,7 @@
   "石油加工": 2,
   "国有银行": 2,
   "乘用车": 1,
-  "房地产开发": 1,
+  "房地产开发": 2,
   "通信传输设备": 1,
   "集成电路": 1,
   "火电": 1,
@@ -49,9 +49,9 @@
  },
  "macro": {
   "regime": "transition",
-  "confidence": 0.333,
+  "confidence": 0.5,
   "signals": {
-   "fear_greed": 28.6857142857143,
+   "fear_greed": 29.1142857142857,
    "fear_greed_rating": "fear"
   },
   "source": "macro_detector+global_signals",
@@ -59,93 +59,128 @@
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-09-18 04:33",
+  "fetched_at": "2026-09-19 04:33",
   "items": [
    {
-    "time": "04:30",
-    "text": "美国至9月11日当周外国央行持有美国国债 187.26亿美元，前值-111.46亿美元。",
+    "time": "04:33",
+    "text": "特朗普称，他儿子告诉他，会把俄罗斯人出的那份婚礼份子钱还回去。",
     "tags": [
-     "市场",
      "国际"
     ]
    },
    {
-    "time": "04:30",
-    "text": "【Meta关联数据中心首次涉足美国垃圾债市场】CleanSpark Inc. 正寻求通过首次垃圾债发行筹集约22.3亿美元，用于建设与 Meta Platforms Inc. 相关联的人工智能基础设施。据知情人士透露，这批五年期票据的初步定",
+    "time": "04:32",
+    "text": "特朗普被问及小特朗普婚礼相关捐款一事时表示：这完全合规。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:28",
+    "text": "特朗普谈肯尼迪中心：准备好解决问题了，我们有位敌对的法官。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:26",
+    "text": "特朗普：白宫将不再陈列《纽约时报》与《华盛顿邮报》。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:26",
+    "text": "美联储：美国上周银行存款19.657万亿美元，之前一周19.566万亿美元。",
+    "tags": [
+     "央行",
+     "国际"
+    ]
+   },
+   {
+    "time": "04:26",
+    "text": "特朗普批评《纽约时报》与《华盛顿邮报》两家媒体，称其很“恶心”。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:23",
+    "text": "美国卫生部长肯尼迪就麻疹问题表态：呼吁民众接种疫苗。",
+    "tags": [
+     "国际"
+    ]
+   },
+   {
+    "time": "04:22",
+    "text": "【俄国家原子能公司称库尔斯克核电站冷却塔遭袭 运行未受影响】当地时间9月18日，俄罗斯国家原子能公司通报称，17日，乌军无人机坠落在俄库尔斯克核电站二期1号机组冷却塔上时发生爆炸，造成轻微损坏。机组继续以100%功率运行，本底辐射水平正常、",
     "tags": [
      "公司",
      "国际"
     ]
    },
    {
-    "time": "04:29",
-    "text": "【美国返还中方两批64件文物艺术品和古生物化石】中国国家文物局16日和17日分别在中国驻美国大使馆、中国驻纽约总领事馆接收美方返还的两批共64件（套）文物艺术品和古生物化石。（新华社）",
+    "time": "04:22",
+    "text": "特朗普谈麻疹：相信我们会处理得很好。",
     "tags": [
      "国际"
     ]
    },
    {
-    "time": "04:29",
-    "text": "伊朗国家广播电视台否认了周四晚间哈尔克岛附近发生爆炸的相关报道。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "04:15",
-    "text": "市场消息：美国五角大楼考虑从欧洲撤出近三分之一的美军。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "04:07",
-    "text": "美国最大区域电网运营商PJM: 受美国中大西洋、中西部地区电力高负荷影响，已启动需求响应客户参与节电。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "04:01",
-    "text": "伊朗国家广播电视台（IRIB）：暂无确认报道称在指定时间内哈尔格岛附近发生爆炸。",
-    "tags": [
-     "国际"
-    ]
-   },
-   {
-    "time": "04:00",
-    "text": "【美股收盘：三大股指集体收涨】道指涨0.62%，标普500指数涨1.14%，纳指涨1.68%。Generac控股涨18.33%，超微电脑涨9.48%，Astera Labs Inc涨9.08%，Arm Holdings Plc涨8.57%，",
+    "time": "04:21",
+    "text": "【大豆基金收跌1%，与地产ETF领跌美股大类资产类ETF】周五（9月18日），大豆基金收跌1.04%，美国房地产ETF跌0.96%，农产品基金跌0.95%，美国国债20+年ETF、美国布伦特油价基金、日元做多、罗素2000指数ETF、道指E",
     "tags": [
      "市场",
-     "焦点"
-    ]
-   },
-   {
-    "time": "04:00",
-    "text": "【俄罗斯第九届国家杜马（议会下院）选举开始】俄罗斯第九届国家杜马（议会下院）选举于当地时间9月18日8时在堪察加边疆区和楚科奇自治州率先开始投票。这是俄罗斯自2022年对乌克兰开展特别军事行动以来首次举行全国性议会选举。根据俄中央选举委员会",
-    "tags": [
      "国际"
-    ]
-   },
-   {
-    "time": "04:00",
-    "text": "【纳斯达克中国金龙指数收涨0.16%】海川证券涨27.92%，天演药业涨6.31%，大全新能源涨5.48%，小马智行涨5.11%，燃石医学涨4.79%。",
-    "tags": [
-     "市场",
-     "焦点"
     ]
    }
   ]
  },
  "backtest": {
-  "as_of": "2026-09-18",
-  "total_picks": 39,
-  "avg_t1": 0.41,
-  "avg_t5": 0.87,
+  "as_of": "2026-09-19",
+  "total_picks": 42,
+  "avg_t1": 0.56,
+  "avg_t5": 0.67,
   "avg_t20": null,
   "win_rate_t1": 0.333,
-  "win_rate_t5": 0.524,
+  "win_rate_t5": 0.5,
   "picks": [
+   {
+    "date": "2026-09-18_evening",
+    "symbol": "001979.SZ",
+    "name": "招商蛇口",
+    "industry": "房地产开发",
+    "price": 7.07,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-18_evening",
+    "symbol": "002579.SZ",
+    "name": "中京电子",
+    "industry": "电子元件",
+    "price": 19.89,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
+   {
+    "date": "2026-09-18_evening",
+    "symbol": "000630.SZ",
+    "name": "铜陵有色",
+    "industry": "铜",
+    "price": 6.09,
+    "t1": null,
+    "t5": null,
+    "t20": null,
+    "excess_t1": null,
+    "excess_t5": null
+   },
    {
     "date": "2026-09-17_evening",
     "symbol": "001896.SZ",
@@ -188,10 +223,10 @@
     "name": "特发信息",
     "industry": "通信传输设备",
     "price": 17.23,
-    "t1": null,
+    "t1": -1.56,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -2.49,
     "excess_t5": null
    },
    {
@@ -200,10 +235,10 @@
     "name": "华天科技",
     "industry": "集成电路",
     "price": 16.85,
-    "t1": null,
+    "t1": 10.01,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": 9.07,
     "excess_t5": null
    },
    {
@@ -212,10 +247,10 @@
     "name": "广汇能源",
     "industry": "石油加工",
     "price": 6.89,
-    "t1": null,
+    "t1": -1.9,
     "t5": null,
     "t20": null,
-    "excess_t1": null,
+    "excess_t1": -2.83,
     "excess_t5": null
    },
    {
@@ -333,10 +368,10 @@
     "industry": "电力行业",
     "price": 6.02,
     "t1": -1.73,
-    "t5": null,
+    "t5": -3.46,
     "t20": null,
     "excess_t1": -1.66,
-    "excess_t5": null
+    "excess_t5": -4.07
    },
    {
     "date": "2026-09-10_evening",
@@ -345,10 +380,10 @@
     "industry": "电子器件",
     "price": 6.41,
     "t1": 9.94,
-    "t5": null,
+    "t5": 2.52,
     "t20": null,
     "excess_t1": 10.01,
-    "excess_t5": null
+    "excess_t5": 1.91
    },
    {
     "date": "2026-09-10_evening",
@@ -357,10 +392,10 @@
     "industry": "有色金属",
     "price": 6.5,
     "t1": -1.3,
-    "t5": null,
+    "t5": -1.3,
     "t20": null,
     "excess_t1": -1.23,
-    "excess_t5": null
+    "excess_t5": -1.91
    },
    {
     "date": "2026-09-09_evening",
@@ -1212,6 +1247,41 @@
       "shares": 200
      }
     ]
+   },
+   {
+    "date": "2026-09-18",
+    "n_recs": 3,
+    "exec_date": "2026-09-21",
+    "trade_date": "2026-09-18",
+    "macro_regime": "transition",
+    "industries": [
+     "房地产开发",
+     "电子元件",
+     "铜"
+    ],
+    "stocks": [
+     {
+      "symbol": "001979.SZ",
+      "name": "招商蛇口",
+      "industry": "房地产开发",
+      "price": 7.07,
+      "shares": 200
+     },
+     {
+      "symbol": "002579.SZ",
+      "name": "中京电子",
+      "industry": "电子元件",
+      "price": 19.89,
+      "shares": 100
+     },
+     {
+      "symbol": "000630.SZ",
+      "name": "铜陵有色",
+      "industry": "铜",
+      "price": 6.09,
+      "shares": 200
+     }
+    ]
    }
   ],
   "performance_rows": [
@@ -1544,7 +1614,7 @@
     "symbol": "601991.SS",
     "name": "大唐发电",
     "ret_t1": -1.73,
-    "ret_t5": null,
+    "ret_t5": -3.46,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1556,7 +1626,7 @@
     "symbol": "002141.SZ",
     "name": "贤丰控股",
     "ret_t1": 9.94,
-    "ret_t5": null,
+    "ret_t5": 2.52,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1568,7 +1638,7 @@
     "symbol": "000630.SZ",
     "name": "铜陵有色",
     "ret_t1": -1.3,
-    "ret_t5": null,
+    "ret_t5": -1.3,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
@@ -1759,37 +1829,37 @@
     "date": "2026-09-16",
     "symbol": "000070.SZ",
     "name": "特发信息",
-    "ret_t1": null,
+    "ret_t1": -1.56,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-16",
     "symbol": "002185.SZ",
     "name": "华天科技",
-    "ret_t1": null,
+    "ret_t1": 10.01,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-16",
     "symbol": "600256.SS",
     "name": "广汇能源",
-    "ret_t1": null,
+    "ret_t1": -1.9,
     "ret_t5": null,
     "ret_t20": null,
     "excess_t1": null,
     "excess_t5": null,
     "excess_t20": null,
-    "status": null
+    "status": "open"
    },
    {
     "date": "2026-09-17",
@@ -1819,6 +1889,42 @@
     "date": "2026-09-17",
     "symbol": "600313.SS",
     "name": "农发种业",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-18",
+    "symbol": "001979.SZ",
+    "name": "招商蛇口",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-18",
+    "symbol": "002579.SZ",
+    "name": "中京电子",
+    "ret_t1": null,
+    "ret_t5": null,
+    "ret_t20": null,
+    "excess_t1": null,
+    "excess_t5": null,
+    "excess_t20": null,
+    "status": null
+   },
+   {
+    "date": "2026-09-18",
+    "symbol": "000630.SZ",
+    "name": "铜陵有色",
     "ret_t1": null,
     "ret_t5": null,
     "ret_t20": null,
