@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<html lang="zh-CN"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>数据看板 · A股量化观察</title>
@@ -9,7 +8,7 @@
 <script>
 window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
-<script defer src="/_vercel/insights/script.js"></script>
+<script defer="" src="/_vercel/insights/script.js"></script>
 <style>
   /* ── ui-ux-pro-max: Flat Design · slate dark · Inter · 移动端优先 ── */
   :root {
@@ -194,36 +193,91 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 <header>
   <h1><span class="logo-dot"></span>数据看板</h1>
-  <span class="updated" id="updated">—</span>
+  <span class="updated" id="updated">09-19 04:31</span>
 </header>
 
 <!-- 宏观状态 -->
 <div class="regime-bar">
-  <span class="regime-badge" id="regime">—</span>
-  <span class="regime-desc" id="regime-desc"></span>
+  <span class="regime-badge" id="regime" style="background: rgba(96, 165, 250, 0.12); color: rgb(96, 165, 250);">观望</span>
+  <span class="regime-desc" id="regime-desc">信号混杂，方向不明，波动加大 置信 50%</span>
 </div>
 
 <!-- 核心 KPI (2026-09-20 整改: 去掉计数类指标) -->
 <div class="kpis">
   <div class="kpi"><div class="label">宏观状态</div>
-    <div class="value" id="k-regime">—</div><div class="sub" id="k-regime-sub"></div></div>
+    <div class="value flat" id="k-regime">观望</div><div class="sub" id="k-regime-sub">基于 2026-09-18 收盘</div></div>
   <div class="kpi"><div class="label">覆盖行业</div>
-    <div class="value" id="k-ind">—</div><div class="sub">观测池</div></div>
+    <div class="value flat" id="k-ind">28</div><div class="sub">观测池</div></div>
 </div>
 
 <!-- 全球宏观信号 -->
 <div class="sec-title">全球宏观信号</div>
-<div class="signals" id="signals"></div>
+<div class="signals" id="signals"><div class="signal"><div class="s-label">恐惧贪婪</div>
+      <div class="s-val up">+29.1</div></div></div>
 
 <!-- 全球财经快讯 (公开新闻源: 新浪 7x24) -->
-<div class="sec-title">全球财经快讯 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)" id="gn-ts"></span></div>
-<div id="global-news"></div>
+<div class="sec-title">全球财经快讯 <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted-fg)" id="gn-ts">· 09-19 04:33 更新</span></div>
+<div id="global-news"><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:33</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>特朗普称，他儿子告诉他，会把俄罗斯人出的那份婚礼份子钱还回去。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:32</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>特朗普被问及小特朗普婚礼相关捐款一事时表示：这完全合规。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:28</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>特朗普谈肯尼迪中心：准备好解决问题了，我们有位敌对的法官。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:26</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>特朗普：白宫将不再陈列《纽约时报》与《华盛顿邮报》。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:26</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">央行</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>美联储：美国上周银行存款19.657万亿美元，之前一周19.566万亿美元。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:26</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>特朗普批评《纽约时报》与《华盛顿邮报》两家媒体，称其很“恶心”。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:23</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>美国卫生部长肯尼迪就麻疹问题表态：呼吁民众接种疫苗。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:22</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">公司</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>【俄国家原子能公司称库尔斯克核电站冷却塔遭袭 运行未受影响】当地时间9月18日，俄罗斯国家原子能公司通报称，17日，乌军无人机坠落在俄库尔斯克核电站二期1号机组冷却塔上时发生爆炸，造成轻微损坏。机组继续以100%功率运行，本底辐射水平正常、</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:22</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>特朗普谈麻疹：相信我们会处理得很好。</div><div class="gn-item" style="padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5">
+      <span style="color:var(--muted-fg);font-variant-numeric:tabular-nums;margin-right:8px">04:21</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">市场</span><span style="font-size:10px;color:var(--muted-fg);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:1px">国际</span>【大豆基金收跌1%，与地产ETF领跌美股大类资产类ETF】周五（9月18日），大豆基金收跌1.04%，美国房地产ETF跌0.96%，农产品基金跌0.95%，美国国债20+年ETF、美国布伦特油价基金、日元做多、罗素2000指数ETF、道指E</div></div>
 
 <!-- 行业分布 -->
 <div class="sec-title">行业分布</div>
-<div id="industry"></div>
+<div id="industry"><div class="pie-wrap">
+    <div class="pie-box"><canvas id="pie-canvas" width="300" height="300" style="width: 150px; height: 150px;"></canvas>
+      <div class="pie-center"><b>33</b><span>观测池</span></div></div>
+    <div class="pie-legend">
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#34D399"></span>
+        <span class="pl-name">金融行业</span>
+        <span class="pl-val">11只 · 33%</span>
+      </div>
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#60A5FA"></span>
+        <span class="pl-name">电子器件</span>
+        <span class="pl-val">5只 · 15%</span>
+      </div>
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#FBBF24"></span>
+        <span class="pl-name">铜</span>
+        <span class="pl-val">5只 · 15%</span>
+      </div>
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#F87171"></span>
+        <span class="pl-name">有色金属</span>
+        <span class="pl-val">3只 · 9%</span>
+      </div>
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#C084FC"></span>
+        <span class="pl-name">电子元件</span>
+        <span class="pl-val">3只 · 9%</span>
+      </div>
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#2DD4BF"></span>
+        <span class="pl-name">电子信息</span>
+        <span class="pl-val">2只 · 6%</span>
+      </div>
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#FB923C"></span>
+        <span class="pl-name">石油加工</span>
+        <span class="pl-val">2只 · 6%</span>
+      </div>
+      <div class="pie-li">
+        <span class="pie-dot" style="background:#F472B6"></span>
+        <span class="pl-name">国有银行</span>
+        <span class="pl-val">2只 · 6%</span>
+      </div>
+    </div></div></div>
 
-</div>
+<div id="dash-footer" style="margin: 22px 0px 8px; padding: 14px 16px; border-top: 1px solid var(--border,#26334d); font-size: 11px; line-height: 1.7; color: var(--muted-fg,#94a3b8); text-align: left;"><b style="color:var(--muted-fg,#94a3b8)">免责声明</b>：本页为个人研究方法的环境记录（宏观状态与行业统计），不构成任何投资建议；不提供个股买卖指导。股市有风险，入市需谨慎。</div></div>
 
 <script>
 // 2026-09-20 整改: 付费层已整体下线 (原分层方案作废), 只保留公开层 dashboard_free.json.
@@ -429,5 +483,6 @@ document.addEventListener('DOMContentLoaded', () => {
 load();
 setInterval(load, 60000);
 </script>
-</body>
-</html>
+
+
+</body></html>
