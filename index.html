@@ -238,10 +238,10 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 </div>
 
 <script>
-// 2026-09-17 变现分层: 免费层 (dashboard_free.json) 公开;
-// 付费层 (dashboard_pro.enc.json) 为 AES-GCM 密文, 需月度密钥在**浏览器端**解密.
+// 2026-09-20 整改: 付费层已整体下线 (原分层方案作废), 只保留公开层 dashboard_free.json.
+// 原付费层 (dashboard_pro.enc.json / pro.html / qr/pro.png) 已从本仓库删除.
 const DATA_URL = new URL('dashboard_free.json', window.location.href).href;
-const PRO_URL = new URL('dashboard_pro.enc.json', window.location.href).href;
+const PRO_URL = null;   // 2026-09-20 整改: 付费层已下线
 const PRO_SECTIONS = [['全球财经快讯', 'global-news'], ['每日推荐', 'timeline'],
                       ['行业分布', 'industry'], ['历史荐股回溯', 'backtest']];
 let PRO_DATA = null;      // 解锁后的付费数据 (仅内存)
@@ -633,12 +633,12 @@ function lockPro(pro) {
   box.style.cssText = 'margin:18px 0;padding:16px;border:1px solid var(--border,#26334d);border-radius:10px;background:rgba(96,165,250,.05);';
   const inc = ((pro && pro.includes) || []).join(' · ') || '全池数据 · 快讯 · 回溯明细';
   box.innerHTML =
-    '<div style="font-size:14px;font-weight:600;margin-bottom:8px">🔒 ' + ((pro && pro.title) || '完整版（密钥解锁）') + '</div>' +
+    '<div style="font-size:14px;font-weight:600;margin-bottom:8px">🔒 ' + ((pro && pro.title) || '（已下线）') + '</div>' +
     '<div style="font-size:12px;line-height:1.7;color:var(--muted-fg,#94a3b8);margin-bottom:10px">包含：' + inc + '</div>' +
     '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">' +
     '<input id="pro-key" placeholder="输入本月密钥" style="flex:1;min-width:180px;padding:8px 10px;border:1px solid var(--border,#26334d);border-radius:6px;background:transparent;color:inherit;font-size:13px">' +
     '<button id="pro-btn" style="padding:8px 16px;border:0;border-radius:6px;background:#60A5FA;color:#0b1220;font-weight:600;cursor:pointer;font-size:13px">解锁</button></div>' +
-    '<div id="pro-msg" style="font-size:11px;color:var(--muted-fg,#94a3b8);margin-top:8px">' + ((pro && pro.key_hint) || '在公众号发送「完整版」获取本月密钥') + '</div>' +
+    '<div id="pro-msg" style="font-size:11px;color:var(--muted-fg,#94a3b8);margin-top:8px">' + ((pro && pro.key_hint) || '（该功能已下线）') + '</div>' +
     '<div style="font-size:11px;color:var(--muted-fg,#94a3b8);margin-top:6px">密钥每月轮换；解锁仅在本页内存中完成，不上传任何信息。</div>';
   host.parentNode.insertBefore(box, host);
   document.getElementById('pro-btn').onclick = unlockPro;
