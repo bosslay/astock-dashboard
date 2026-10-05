@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05T20:07:21",
+ "generated_at": "2026-10-05T20:08:44",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
@@ -60,10 +60,10 @@
   "signals": {
    "fear_greed": 38.2857142857143,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": 7.191355531833099,
+   "copper_gold_trend_20d": 7.175978481196821,
    "yield_spread_10y2y_bp": 128.39999198913574,
-   "vix": 16.149999618530273,
-   "dxy_trend_20d": 3.106085203622344,
+   "vix": 16.15999984741211,
+   "dxy_trend_20d": 3.1111324834001364,
    "cftc_copper_mm_net": 78058.0,
    "cftc_copper_mm_change": -4464.0,
    "cftc_copper_as_of": "2026-09-29"
@@ -73,7 +73,7 @@
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-10-05 20:07",
+  "fetched_at": "2026-10-05 20:08",
   "items": [
    {
     "time": "20:06",
@@ -86,7 +86,8 @@
     "time": "20:06",
     "text": "巴西股指期货在首轮选举后大涨8.3%。",
     "tags": [
-     "市场"
+     "市场",
+     "焦点"
     ]
    },
    {
