@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-12T08:28:02",
+ "generated_at": "2026-10-12T08:34:19",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "IN",
-  "pool_index": 10.791,
-  "ma30": 10.687,
-  "as_of": "2026-10-08",
+  "pool_index": 10.395,
+  "ma30": 10.393,
+  "as_of": "2026-10-09",
   "snapshot_missing": false
  },
  "summary": {
@@ -14,11 +14,11 @@
   "latest_macro": "risk_on",
   "latest_trade_date": "2026-10-08",
   "data_freshness": {
-   "fund_flow_asof": "2026-09-24",
-   "fund_flow_age_days": 14,
-   "fund_flow_inherited": true,
-   "snapshot_generated_at": "2026-10-09T11:49:14",
-   "snapshot_end": "2026-10-08"
+   "fund_flow_asof": "2026-10-09",
+   "fund_flow_age_days": 0,
+   "fund_flow_inherited": false,
+   "snapshot_generated_at": "2026-10-11T20:22:06",
+   "snapshot_end": "2026-10-09"
   }
  },
  "industry_dist": {
@@ -63,10 +63,10 @@
   "signals": {
    "fear_greed": 45.0,
    "fear_greed_rating": "fear",
-   "copper_gold_trend_20d": 9.218966447800291,
+   "copper_gold_trend_20d": 9.112533688070389,
    "yield_spread_10y2y_bp": 118.69997978210449,
    "vix": 14.84000015258789,
-   "dxy_trend_20d": 2.700587837720181,
+   "dxy_trend_20d": 2.6854993406549177,
    "cftc_copper_mm_net": 61134.0,
    "cftc_copper_mm_change": -16924.0,
    "cftc_copper_as_of": "2026-10-06"
@@ -76,8 +76,23 @@
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-10-12 08:28",
+  "fetched_at": "2026-10-12 08:34",
   "items": [
+   {
+    "time": "08:31",
+    "text": "【中信证券：看好射频氮化镓行业发展】中信证券研报称，Wolfspeed获美国战争部30年期15亿美元（约合人民币101亿元）有条件贷款承诺，计划重点投入氮化镓产品，Yole预计全球射频氮化镓市场规模将由2025年的13亿美元增长至2030年",
+    "tags": [
+     "观点",
+     "国际"
+    ]
+   },
+   {
+    "time": "08:29",
+    "text": "【沙特与科威特、卡塔尔和埃及分别签署能源合作协议】据沙特阿拉伯国家通讯社周日报道称，沙特能源大臣分别与科威特、卡塔尔和埃及签署谅解备忘录，加强能源领域合作。其中，与卡塔尔签署的协议为双方在石油、天然气和石化领域开展合作建立了框架，包括探讨联",
+    "tags": [
+     "国际"
+    ]
+   },
    {
     "time": "08:28",
     "text": "【中金：“科技+红利”的哑铃型配置结构重视程度有望提升】中金公司研报表示，2026年上半年，A股科技成长风格受益于AI产业链、高端制造等领域的高景气，延续结构性行情。7月以来，全球AI产业链负面叙事增多，叠加海外流动性预期收紧及中东地缘局势",
@@ -136,24 +151,6 @@
     "tags": [
      "公司",
      "市场",
-     "国际"
-    ]
-   },
-   {
-    "time": "08:16",
-    "text": "欧洲斯托克50指数期货上涨0.4%，德国DAX指数期货上涨0.4%，英国富时指数期货上涨0.3%。",
-    "tags": [
-     "市场",
-     "国际"
-    ]
-   },
-   {
-    "time": "08:16",
-    "text": "【韩国债券涨势或将止步 交易员们正为加息预期做准备】策略师表示，随着韩国政府稳定市场波动举措的效果逐步消退，市场对进一步收紧货币政策的预期升温，韩国债券的本轮上涨行情可能只是昙花一现。全球债券收益率处于数十年高位，伽马资产管理、韩亚证券等机",
-    "tags": [
-     "宏观",
-     "市场",
-     "央行",
      "国际"
     ]
    }
