@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-26T04:31:52",
+ "generated_at": "2026-11-26T04:44:45",
  "mode": "recommendation",
  "snapshot_missing": false,
  "gate": {
   "state": "OUT",
-  "pool_index": 11.357,
-  "ma30": 11.61,
-  "as_of": "2026-11-24",
+  "pool_index": 10.711,
+  "ma30": 11.32,
+  "as_of": "2026-11-25",
   "snapshot_missing": false
  },
  "summary": {
@@ -15,10 +15,10 @@
   "latest_trade_date": "2026-11-19",
   "data_freshness": {
    "fund_flow_asof": "2026-11-18",
-   "fund_flow_age_days": 6,
+   "fund_flow_age_days": 7,
    "fund_flow_inherited": true,
-   "snapshot_generated_at": "2026-11-25T09:02:22",
-   "snapshot_end": "2026-11-24"
+   "snapshot_generated_at": "2026-11-26T04:41:02",
+   "snapshot_end": "2026-11-25"
   }
  },
  "industry_dist": {
@@ -78,11 +78,11 @@
   "regime": "risk_on",
   "confidence": 0.462,
   "signals": {
-   "fear_greed": 15.4347197106691,
+   "fear_greed": 15.3775768535262,
    "fear_greed_rating": "extreme fear",
-   "copper_gold_trend_20d": -7.186531173345545,
-   "vix": 28.049999237060547,
-   "dxy_trend_20d": 1.452197988270787,
+   "copper_gold_trend_20d": -7.260252111797816,
+   "vix": 28.110000610351562,
+   "dxy_trend_20d": 1.4551320835630266,
    "cftc_copper_mm_net": 28692.0,
    "cftc_copper_mm_change": -6372.0,
    "cftc_copper_as_of": "2026-11-17"
@@ -92,8 +92,15 @@
  },
  "global_news": {
   "source": "sina_7x24_global",
-  "fetched_at": "2026-11-26 04:32",
+  "fetched_at": "2026-11-26 04:45",
   "items": [
+   {
+    "time": "04:34",
+    "text": "市场消息：俄罗斯驻摩尔多瓦大使馆表示，已收到有关计划进行反俄挑衅的情报。大使馆呼吁基希讷乌避免采取鲁莽的升级步骤。",
+    "tags": [
+     "国际"
+    ]
+   },
    {
     "time": "04:28",
     "text": "纽约期金突破3610美元/盎司，日内涨0.53%。",
@@ -161,13 +168,6 @@
     "tags": [
      "公司",
      "国际"
-    ]
-   },
-   {
-    "time": "03:54",
-    "text": "【CoreWeave和英伟达信用风险指标创新高】CoreWeave Inc.和英伟达信用风险指标周三再创历史新高，衡量市场担忧程度的指标也再次升至3月份以来未见的水平，华尔街对科技行业为人工智能(AI)融资而创纪录举债的担忧日益加剧。根据I",
-    "tags": [
-     "市场"
     ]
    }
   ]
